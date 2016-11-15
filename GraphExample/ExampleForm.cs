@@ -10,6 +10,7 @@ using Graph;
 using System.Drawing.Drawing2D;
 using Graph.Compatibility;
 using Graph.Items;
+using GraphNodes.NagiosItems;
 
 namespace GraphNodes
 {
@@ -96,6 +97,8 @@ namespace GraphNodes
 		{
 			//e.Cancel = true;
 			e.Connection.DoubleClick -= new EventHandler<NodeConnectionEventArgs> (OnConnectionDoubleClick);
+			int fromHash = e.Connection.From.Node.GetHashCode ();
+			int toHash = e.Connection.To.Node.GetHashCode();
 		}
 
 		void OnShowElementMenu(object sender, AcceptElementLocationEventArgs e)
@@ -148,12 +151,8 @@ namespace GraphNodes
 
 		private void SomeNode_MouseDown(object sender, MouseEventArgs e)
 		{
-			var node = new Node("Some node");
-			node.AddItem(new NodeLabelItem("Entry 1", true, false));
-			node.AddItem(new NodeLabelItem("Entry 2", true, false));
-			node.AddItem(new NodeLabelItem("Entry 3", false, true));
-			node.AddItem(new NodeTextBoxItem("TEXTTEXT", false, true));
-			node.AddItem(new NodeDropDownItem(new string[] { "1", "2", "3", "4" }, 0, false, false));
+			var node = new NagiosItems.NagiosNodeHostObject ("Nagios HOST"); //new Node("Some node");
+			
 			this.DoDragDrop(node, DragDropEffects.Copy);
 		}
 
