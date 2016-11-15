@@ -6,6 +6,6 @@
 *.suo
 *.pdb
 *.vshost.exe
-*.vshost.exe
 *.vshost.exe.manifest
 *.csproj.user
+/.vs/
