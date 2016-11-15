@@ -6,3 +6,5 @@ https://msdn.microsoft.com/en-us/library/ms751565(v=vs.110).aspx
 https://msdn.microsoft.com/de-de/library/5y289054.aspx
 
 https://www.google.de/search?client=opera&q=open+source+papdesigner&sourceid=opera&ie=UTF-8&oe=UTF-8#q=c%23+windowsformshost+wpf
+
+https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/toc.html
