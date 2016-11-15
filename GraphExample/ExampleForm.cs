@@ -15,11 +15,22 @@ namespace GraphNodes
 {
 	public partial class ExampleForm : Form
 	{
-		public ExampleForm()
+		public ExampleForm ()
+		{
+			InitializeComponent ();
+
+			graphControl.CompatibilityStrategy = new AlwaysCompatible ();
+
+			graphControl.ConnectionAdded += new EventHandler<AcceptNodeConnectionEventArgs> (OnConnectionAdded);
+			graphControl.ConnectionAdding += new EventHandler<AcceptNodeConnectionEventArgs> (OnConnectionAdding);
+			graphControl.ConnectionRemoving += new EventHandler<AcceptNodeConnectionEventArgs> (OnConnectionRemoved);
+			graphControl.ShowElementMenu += new EventHandler<AcceptElementLocationEventArgs> (OnShowElementMenu);
+		}
+		public void _ExampleForm()
 		{
 			InitializeComponent();
 
-			graphControl.CompatibilityStrategy = new TagTypeCompatibility();
+			graphControl.CompatibilityStrategy = new AlwaysCompatible();
 
 			var someNode = new Node("My Title");
 			someNode.Location = new Point(500, 100);
@@ -84,6 +95,7 @@ namespace GraphNodes
 		void OnConnectionRemoved(object sender, AcceptNodeConnectionEventArgs e)
 		{
 			//e.Cancel = true;
+			e.Connection.DoubleClick -= new EventHandler<NodeConnectionEventArgs> (OnConnectionDoubleClick);
 		}
 
 		void OnShowElementMenu(object sender, AcceptElementLocationEventArgs e)
