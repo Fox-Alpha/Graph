@@ -38,6 +38,7 @@
             this.nodeMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.testMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.graphControl = new Graph.GraphControl();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.nodeMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -127,12 +128,22 @@
             this.graphControl.TabIndex = 0;
             this.graphControl.Text = "graphControl";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(2, 97);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(100, 100);
+            this.textBox1.TabIndex = 6;
+            // 
             // ExampleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1300, 550);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -158,6 +169,7 @@
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.ContextMenuStrip nodeMenu;
 		private System.Windows.Forms.ToolStripMenuItem testMenuItem;
-	}
+        private System.Windows.Forms.TextBox textBox1;
+    }
 }
 
