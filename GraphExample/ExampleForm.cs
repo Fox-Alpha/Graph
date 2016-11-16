@@ -158,12 +158,15 @@ namespace GraphNodes
 
 		private void TextureNode_MouseDown(object sender, MouseEventArgs e)
 		{
-			var textureNode = new Node("Texture");
+            var node = new NagiosItems.NagiosNodeContactObject ("Nagios CONTACT");
+            /*
+            var textureNode = new Node("Texture");
 			textureNode.Location = new Point(300, 150);
 			var imageItem = new NodeImageItem(Properties.Resources.example, 64, 64, false, true);
 			imageItem.Clicked += new EventHandler<NodeItemEventArgs>(OnImgClicked);
 			textureNode.AddItem(imageItem);
-			this.DoDragDrop(textureNode, DragDropEffects.Copy);
+            */
+			this.DoDragDrop(node, DragDropEffects.Copy);
 		}
 
 		private void ColorNode_MouseDown(object sender, MouseEventArgs e)
