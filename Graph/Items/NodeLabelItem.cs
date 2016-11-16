@@ -90,15 +90,24 @@ namespace Graph.Items
 			var size = Measure(graphics);
 			size.Width  = Math.Max(minimumSize.Width, size.Width);
 			size.Height = Math.Max(minimumSize.Height, size.Height);
+            //Brush brush = this.IsImportantNodeItem ? Brushes.Red : Brushes.Black;
 
 			if (this.Input.Enabled != this.Output.Enabled)
 			{
-				if (this.Input.Enabled)
-					graphics.DrawString(this.Text, SystemFonts.MenuFont, Brushes.Black, new RectangleF(location, size), GraphConstants.LeftTextStringFormat);
-				else
-					graphics.DrawString(this.Text, SystemFonts.MenuFont, Brushes.Black, new RectangleF(location, size), GraphConstants.RightTextStringFormat);
-			} else
-				graphics.DrawString(this.Text, SystemFonts.MenuFont, Brushes.Black, new RectangleF(location, size), GraphConstants.CenterTextStringFormat);
-		}
-	}
+                //	if (this.Input.Enabled)
+                //		graphics.DrawString(this.Text, SystemFonts.MenuFont, Brushes.Black, new RectangleF(location, size), GraphConstants.LeftTextStringFormat);
+                //	else
+                //		graphics.DrawString(this.Text, SystemFonts.MenuFont, Brushes.Black, new RectangleF(location, size), GraphConstants.RightTextStringFormat);
+                //} else
+                //	graphics.DrawString(this.Text, SystemFonts.MenuFont, Brushes.Black, new RectangleF(location, size), GraphConstants.CenterTextStringFormat);
+                if (this.Input.Enabled)
+                    graphics.DrawString (this.Text, SystemFonts.MenuFont, this.textBrush, new RectangleF (location, size), GraphConstants.LeftTextStringFormat);
+                else
+                    graphics.DrawString (this.Text, SystemFonts.MenuFont, this.textBrush, new RectangleF (location, size), GraphConstants.RightTextStringFormat);
+            }
+            else
+                graphics.DrawString (this.Text, SystemFonts.MenuFont, this.textBrush, new RectangleF (location, size), GraphConstants.CenterTextStringFormat);
+
+        }
+    }
 }
