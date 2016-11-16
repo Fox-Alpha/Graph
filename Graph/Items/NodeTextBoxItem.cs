@@ -28,6 +28,11 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.ComponentModel;
 
+
+/*
+ * TODO: Erweiter für Multiline TRUE|FALSE
+ * - Max Breite INT
+ */
 namespace Graph.Items
 {
 	public sealed class AcceptNodeTextChangedEventArgs : CancelEventArgs
