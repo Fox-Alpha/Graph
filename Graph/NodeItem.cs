@@ -48,10 +48,46 @@ namespace Graph
 			this.Output		= new NodeOutputConnector(this, enableOutput);
 		}
 
-		public Node					Node			{ get; internal set; }
-		public object				Tag				{ get; set; }
+        public NodeItem (bool enableInput, bool enableOutput, bool importantNodeItem) : this(enableInput, enableOutput)
+        {
+            IsImportantNodeItem = importantNodeItem;
+        }
 
-		public NodeConnector		Input			{ get; private set; }
+        public NodeItem (bool enableInput, bool enableOutput, bool importantNodeItem, Brush normalText, Brush importantText) : this (enableInput, enableOutput, importantNodeItem)
+        {
+            normalTextBrush = normalText;
+            importantTextBrush = importantText;
+        }
+
+
+        public Node					Node			{ get; internal set; }
+		public object				Tag				{ get; set; }
+        public Brush                normalTextBrush         { get; set; } = Brushes.Black;
+        public Brush                importantTextBrush      { get; set; } = Brushes.Red;
+        internal Brush textBrush { get; private set; } = Brushes.Black;
+
+        private bool isImportantNodeItem;
+        public bool IsImportantNodeItem
+        {
+            get
+            {
+                return isImportantNodeItem;
+            }
+
+            set
+            {
+                if (value)
+                {
+                    textBrush = importantTextBrush;
+                }
+                else
+                    textBrush = importantTextBrush;
+                isImportantNodeItem = value;
+            }
+        }
+
+
+        public NodeConnector		Input			{ get; private set; }
 		public NodeConnector		Output			{ get; private set; }
 
 		internal RectangleF			bounds;
@@ -66,5 +102,6 @@ namespace Graph
 		internal abstract void		Render(Graphics graphics, SizeF minimumSize, PointF position);
 
 		public ElementType ElementType { get { return ElementType.NodeItem; } }
-	}
+
+    }
 }
