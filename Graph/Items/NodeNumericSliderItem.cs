@@ -30,6 +30,19 @@ namespace Graph.Items
 	/// </summary>
 	public sealed class NodeNumericSliderItem : NodeSliderItem
 	{
+        bool showNumeric = false;
+        public bool ShowNumeric
+        {
+            get
+            {
+                return showNumeric;
+            }
+
+            set
+            {
+                showNumeric = value;
+            }
+        }
 		/// <summary>
 		/// Construct a new NodeNumericSliderItem.
 		/// </summary>
@@ -43,13 +56,14 @@ namespace Graph.Items
 		/// <param name="outputEnabled">Does the item accept an output to be connected?</param>
 		public NodeNumericSliderItem( string text, float sliderSize, float textSize, float minValue, float maxValue, float defaultValue, bool inputEnabled, bool outputEnabled ) : base( text, sliderSize, textSize, minValue, maxValue, defaultValue, inputEnabled, outputEnabled ) {}
 
-		/// <summary>
-		/// Render the slider.
-		/// </summary>
-		/// <param name="graphics">The <see cref="Graphics"/> instance that should be used for drawing.</param>
-		/// <param name="minimumSize">The smallest size the slider has to fit into.</param>
-		/// <param name="location">Where the slider should be drawn.</param>
-		internal override void Render(Graphics graphics, SizeF minimumSize, PointF location)
+
+        /// <summary>
+        /// Render the slider.
+        /// </summary>
+        /// <param name="graphics">The <see cref="Graphics"/> instance that should be used for drawing.</param>
+        /// <param name="minimumSize">The smallest size the slider has to fit into.</param>
+        /// <param name="location">Where the slider should be drawn.</param>
+        internal override void Render(Graphics graphics, SizeF minimumSize, PointF location)
 		{
 			var size = Measure(graphics);
 			size.Width  = Math.Max(minimumSize.Width, size.Width);
@@ -98,8 +112,9 @@ namespace Graph.Items
 			else
 				graphics.DrawLine(Pens.Black, sliderBox.X + sliderBox.Width, sliderBox.Y, sliderBox.X + sliderBox.Width, sliderBox.Y + sliderBox.Height);
 
-			// Draw value
-			graphics.DrawString(this.Value.ToString(), SystemFonts.MenuFont, Brushes.Black, sliderRect, GraphConstants.LeftTextStringFormat);
+            // Draw value
+            int intValue = (int) Value;
+			graphics.DrawString(showNumeric ? intValue.ToString() : this.Value.ToString(), SystemFonts.MenuFont, Brushes.Black, sliderRect, GraphConstants.LeftTextStringFormat);
 		}
 	}
 }
