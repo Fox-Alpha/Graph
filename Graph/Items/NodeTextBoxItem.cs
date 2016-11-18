@@ -47,17 +47,19 @@ namespace Graph.Items
 	{
 		public event EventHandler<AcceptNodeTextChangedEventArgs> TextChanged;
 
+		#region ctor
 		public NodeTextBoxItem(string text, bool inputEnabled, bool outputEnabled) :
-			base(inputEnabled, outputEnabled)
-		{
-			this.Text = text;
-		}
+			base(inputEnabled, outputEnabled) { this.Text = text; }
 
-		public NodeTextBoxItem(string text) :
-			this(text, false, false)
-		{
-			this.Text = text;
-		}
+		public NodeTextBoxItem (string text, bool inputEnabled, bool outputEnabled, bool _isTitle) :
+			this (text, inputEnabled, outputEnabled) { isTitle = _isTitle; }
+
+		public NodeTextBoxItem (string text) :
+			this(text, false, false) { }
+
+		public NodeTextBoxItem (string text, bool _isTitle) :
+			this (text, false, false, _isTitle) { }
+		#endregion
 
 		#region Name
 		public string Name
@@ -69,6 +71,7 @@ namespace Graph.Items
 
 		#region Text
 		string internalText = string.Empty;
+		
 		public string Text
 		{
 			get { return internalText; }
@@ -78,13 +81,21 @@ namespace Graph.Items
 					return;
 				if (TextChanged != null)
 				{
-					var eventArgs = new AcceptNodeTextChangedEventArgs(internalText, value);
-					TextChanged(this, eventArgs);
+					var eventArgs = new AcceptNodeTextChangedEventArgs (internalText, value);
+					TextChanged (this, eventArgs);
 					if (eventArgs.Cancel)
 						return;
 					internalText = eventArgs.Text;
-				} else
+					this.Node.Title = eventArgs.Text;
+				}
+				else
+				{
 					internalText = value;
+					if (this.Node != null)
+					{
+						this.Node.Title = value;
+					}					
+				}
 				TextSize = Size.Empty;
 			}
 		}
