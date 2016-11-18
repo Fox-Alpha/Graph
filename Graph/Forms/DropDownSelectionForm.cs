@@ -7,11 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Graph
+namespace Graph.Forms
 {
-	sealed partial class SelectionForm : Form
+	sealed partial class DropdownSelectionForm : Form
 	{
-		public SelectionForm()
+		public DropdownSelectionForm()
 		{
 			InitializeComponent();
 		}
