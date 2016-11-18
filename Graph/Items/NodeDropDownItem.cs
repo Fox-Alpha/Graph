@@ -27,6 +27,7 @@ using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
 using System.ComponentModel;
+using Graph.Forms;
 
 namespace Graph.Items
 {
@@ -93,7 +94,7 @@ namespace Graph.Items
 		public override bool OnDoubleClick()
 		{
 			base.OnDoubleClick();
-			var form = new SelectionForm();
+			var form = new DropdownSelectionForm();
 			form.Text = Name ?? "Select item from list";
 			form.Items = Items;
 			form.SelectedIndex = SelectedIndex;
