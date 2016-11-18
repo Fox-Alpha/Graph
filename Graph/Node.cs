@@ -102,6 +102,7 @@ namespace Graph
 		internal readonly List<NodeConnection>	connections			= new List<NodeConnection>();
 		internal readonly NodeTitleItem			titleItem			= new NodeTitleItem();
 		readonly List<NodeItem>					nodeItems			= new List<NodeItem>();
+		internal NodeItem						IsTitleItem;
 
 		public Node(string title)
 		{
@@ -117,6 +118,15 @@ namespace Graph
 				item.Node.RemoveItem(item);
 			nodeItems.Add(item);
 			item.Node = this;
+			if (item.isTitle && IsTitleItem != null)
+			{
+				if (item is NodeLabelItem)
+					this.Title = (item as NodeLabelItem).Text;
+				if (item is NodeTextBoxItem)
+					this.Title = (item as NodeTextBoxItem).Text;
+
+				IsTitleItem = item;
+			}
 		}
 
 		public void RemoveItem(NodeItem item)
