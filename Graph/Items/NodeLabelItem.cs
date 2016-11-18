@@ -37,7 +37,15 @@ namespace Graph.Items
 			this.Text = text;
 		}
 
-		public NodeLabelItem(string text) :
+		public NodeLabelItem (string text, bool inputEnabled, bool outputEnabled, bool _isTitle) :
+			this (text, inputEnabled, outputEnabled)
+		{
+			//this.Text = text;
+
+			this.isTitle = _isTitle;
+		}
+
+		public NodeLabelItem (string text) :
 			this(text, false, false) { }
 
 		#region Text
@@ -51,8 +59,15 @@ namespace Graph.Items
 					return;
 				internalText = value;
 				TextSize = Size.Empty;
+				if (isTitle)
+				{
+					if (this.Node != null)
+						this.Node.Title = internalText;
+				}
 			}
 		}
+
+		
 		#endregion
 
 		internal SizeF TextSize;
