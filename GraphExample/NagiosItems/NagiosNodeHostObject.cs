@@ -138,7 +138,7 @@ namespace GraphNodes.NagiosItems.Host
 			this.AddItem (new NodeTextBoxItem ("host_name", false, true, true) { Tag = "NagiosHostObject", IsImportantNodeItem = true});
 			this.AddItem (new NodeTextBoxItem ("alias", false, false));
 			this.AddItem (new NodeTextBoxItem ("adress", false, false));
-			this.AddItem (new NodeLabelItem ("contacts", true, false) { Tag = "NagiosContact"});
+			this.AddItem (new NodeLabelItem ("Titlecontacts", true, false, true) { Tag = "NagiosContact"});
 			this.AddItem (new NodeLabelItem ("check_command", true, false) { Tag = "NagiosCheckCommand", IsImportantNodeItem = true});
 			this.AddItem (new NodeLabelItem ("contact_groups", true, false) { Tag = "NagiosContactGroup" });
 			this.AddItem (new NodeLabelItem ("notification_period", true, false) { Tag = "NagiosTimePeriod" });
