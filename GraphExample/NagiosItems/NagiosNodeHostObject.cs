@@ -37,9 +37,9 @@ namespace GraphNodes.NagiosItems.Host
         }
     }
 
-    //#####
-    //  Nagios define hostgroup
-    /*
+	//#####
+	//  Nagios define hostgroup
+	/*
     define hostgroup
     {
         i hostgroup_name 
@@ -51,32 +51,32 @@ namespace GraphNodes.NagiosItems.Host
         n action_url url
     }
     */
-    //  #####
-    public sealed class NagiosNodeHostGroupObject : Node
-    {
-        public NagiosNodeHostGroupObject (string title) :
-            base (title)
-        {
-            this.AddItem (new NodeTextBoxItem       ("hostgroup_name", false, true) { Tag = "NagiosHostGroup", IsImportantNodeItem = true });
-            this.AddItem (new NodeTextBoxItem       ("alias", false, false) { IsImportantNodeItem = true });
-            this.AddItem (new NodeLabelItem         ("members", true, true) { Tag = "NagiosHostObject"});
-            this.AddItem (new NodeLabelItem         ("hostgroup_members", true, false) { Tag = "NagiosHostGroup" });
-            this.AddItem (new NodeTextBoxItem       ("notes", false, false));
+	//  #####
+	public sealed class NagiosNodeHostGroupObject : Node
+	{
+		public NagiosNodeHostGroupObject (string title) :
+			base (title)
+		{
+			this.AddItem (new NodeTextBoxItem ("hostgroup_name", false, true) { Tag = "NagiosHostGroup", IsImportantNodeItem = true });
+			this.AddItem (new NodeTextBoxItem ("alias", false, false) { IsImportantNodeItem = true });
+			this.AddItem (new NodeLabelItem ("members", true, true) { Tag = "NagiosHostObject" });
+			this.AddItem (new NodeLabelItem ("hostgroup_members", true, false) { Tag = "NagiosHostGroup" });
+			this.AddItem (new NodeTextBoxItem ("notes", false, false));
 
-            this.AddItem (new NodeLabelItem         ("contacts", true, false) { Tag = "NagiosContact" });
-            this.AddItem (new NodeLabelItem         ("check_command", true, false) { Tag = "NagiosCheckCommand", IsImportantNodeItem = true });
-            
-            this.AddItem (new NodeLabelItem         ("notification_period", true, false) { Tag = "NagiosTimePeriod" });
-            this.AddItem (new NodeLabelItem         ("check_period", true, false) { Tag = "NagiosTimePeriod" });
-            this.AddItem (new NodeCheckboxItem      ("active_checks_enables", false, false));
-            this.AddItem (new NodeCheckboxItem      ("passive_checks_enables", false, false));
+			this.AddItem (new NodeLabelItem ("contacts", true, false) { Tag = "NagiosContact" });
+			this.AddItem (new NodeLabelItem ("check_command", true, false) { Tag = "NagiosCheckCommand", IsImportantNodeItem = true });
 
-            this.AddItem (new NodeNumericSliderItem ("max_check_attemps", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, false) { ShowNumeric = true });
+			this.AddItem (new NodeLabelItem ("notification_period", true, false) { Tag = "NagiosTimePeriod" });
+			this.AddItem (new NodeLabelItem ("check_period", true, false) { Tag = "NagiosTimePeriod" });
+			this.AddItem (new NodeCheckboxItem ("active_checks_enables", false, false));
+			this.AddItem (new NodeCheckboxItem ("passive_checks_enables", false, false));
 
-            this.AddItem (new NodeTextBoxItem   ("Host Options", true, false));
-            this.AddItem (new NodeDropDownItem  (new string [] { "OK", "WARNING", "CRITICAL", "UNKNOWN" }, 0, false, false));
-        }
+			this.AddItem (new NodeNumericSliderItem ("max_check_attemps", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, false) { ShowNumeric = true });
 
+			this.AddItem (new NodeTextBoxItem ("Host Options", true, false));
+			this.AddItem (new NodeDropDownItem (new string [] { "OK", "WARNING", "CRITICAL", "UNKNOWN" }, 0, false, false));
+		}
+	}
     //  Nagios define host
 	public sealed class NagiosNodeHostObject : Node
 	{
@@ -101,5 +101,4 @@ namespace GraphNodes.NagiosItems.Host
 			this.AddItem (new NodeDropDownItem (new string [] { "OK", "WARNING", "CRITICAL", "UNKNOWN" }, 0, false, false));
 		}
 	}
-    }
 }
