@@ -1,0 +1,294 @@
+{
+    "objects": [
+        "host",
+        "hostgroup",
+        "hostdependencie",
+        "hostescalation",
+        "service",
+        "servicegroup",
+        "servicedependencie",
+        "serviceescalation",
+        "timeperiod",
+        "contact",
+        "contactgroup",
+        "command"
+    ],
+    "nodeitems": [
+        {
+            "objectname": "url",
+            "tooltip": "Angabe einer URL",
+            "type": "TextBox",
+            "input": false,
+            "output": true,
+            "tag": "NagiosObjectUrl",
+            "important": false,
+            "multiple": false,
+            "objects": [
+                "host",
+                "service",
+                "hostgroup",
+                "servicegroup"
+            ],
+            "fields": [
+                "notes_url",
+                "action_url"
+            ]
+        },
+        {
+            "objectname": "Hostoptions",
+            "tooltip": "Angabe einer URL",
+            "type": "ChekListBox",
+            "input": false,
+            "output": true,
+            "tag": "NagiosFieldOptions",
+            "important": false,
+            "multiple": false,
+            "values": {
+                "initial_state": [
+                    "o",
+                    "d",
+                    "u"
+                ],
+                "flap_detection_options": [
+                    "o",
+                    "d",
+                    "u"
+                ],
+                "notification_options": [
+                    "d",
+                    "u",
+                    "r",
+                    "f",
+                    "s"
+                ],
+                "stalking_options": [
+                    "o",
+                    "d",
+                    "u"
+                ]
+            },
+            "objects": [
+                "host"
+            ],
+            "names": {
+                "o": "OK",
+                "d": "Down",
+                "u": "Unreachable",
+                "r": "Recover",
+                "f": "Flapping",
+                "s": "SceduledDownTime"
+            },
+            "fields": [
+                "initial_state",
+                "flap_detection_options",
+                "notification_options",
+                "stalking_options"
+            ]
+        },
+        {
+            "objectname": "serviceoptions",
+            "tooltip": "Angabe einer URL",
+            "type": "ChekListBox",
+            "input": "false",
+            "output": true,
+            "tag": "NagiosObjectOptions",
+            "important": false,
+            "multiple": false,
+            "values": {
+                "initial_state": [
+                    "o",
+                    "w",
+                    "u",
+                    "c"
+                ],
+                "flap_detection_options": [
+                    "o",
+                    "w",
+                    "c",
+                    "u"
+                ],
+                "notification_options": [
+                    "w",
+                    "u",
+                    "c",
+                    "r",
+                    "f",
+                    "s"
+                ],
+                "stalking_options": [
+                    "o",
+                    "w",
+                    "u",
+                    "c"
+                ]
+            },
+            "objects": [
+                "service"
+            ],
+            "names": {
+                "o": "OK",
+                "d": "Down",
+                "u": "Unknown",
+                "r": "Recover",
+                "f": "Flapping",
+                "s": "SceduledDownTime",
+                "w": "Warning",
+                "c": "Critical"
+            },
+            "fields": [
+                "initial_state",
+                "flap_detection_options",
+                "notification_options",
+                "stalking_options"
+            ]
+        },
+        {
+            "objectname": "contactoptions",
+            "tooltip": "Angabe einer URL",
+            "type": "DropDown",
+            "input": false,
+            "output": true,
+            "tag": "NagiosObjectOptions",
+            "important": false,
+            "multiple": false,
+            "values": {
+                "host_notification_options": [
+                    "d",
+                    "u",
+                    "r",
+                    "f",
+                    "s",
+                    "n"
+                ],
+                "service_notification_options": [
+                    "w",
+                    "u",
+                    "c",
+                    "r",
+                    "f",
+                    "s",
+                    "n"
+                ]
+            },
+            "objects": [
+                "contact"
+            ],
+            "names": {
+                "d": "Down",
+                "u": "Unreachable",
+                "r": "Recover",
+                "f": "Flapping",
+                "s": "SceduledDownTime",
+                "w": "Warning",
+                "c": "Critical",
+                "n": "none"
+            },
+            "fields": [
+                "host_notification_options",
+                "service_notification_options"
+            ]
+        }
+    ],
+    "fields": [
+        {
+            "objectname": "use",
+            "tooltip": "Benutzung einer Vorlage",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "tag": "",
+            "important": "true",
+            "objects": [
+                "host",
+                "service",
+                "hostdependency",
+                "servicedependency",
+                "serviceescalation",
+                "hostescalation",
+                "hostgroup",
+                "servicegroup",
+                "contact",
+                "contactgroup",
+                "timeperiod",
+                "command"
+            ]
+        },
+        {
+            "objectname": "host_name",
+            "tooltip": "Der kurzname des Hostobjektes",
+            "type": "TextBox",
+            "input": "false",
+            "output": "false",
+            "tag": "",
+            "important": "true",
+            "object": [
+                "host",
+                "service",
+                "hostdependency",
+                "servicedependency",
+                "serviceescalation",
+                "hostescalation"
+            ]
+        },
+        {
+            "objectname": "alias",
+            "host_name": "Alternative Bezeichnung des Host",
+            "type": "TextBox",
+            "input": "false",
+            "output": "false",
+            "tag": "",
+            "important": "true",
+            "object": [
+                "host"
+            ]
+        },
+        {
+            "objectname": "display_name",
+            "host_name": "Der angezeigte Name des Host",
+            "type": "TextBox",
+            "input": "false",
+            "output": "false",
+            "tag": "",
+            "important": "true",
+            "object": [
+                "host"
+            ]
+        },
+        {
+            "objectname": "address",
+            "host_name": "Die Netzwerkadresse des Hostobjektes",
+            "type": "TextBox",
+            "input": "false",
+            "output": "false",
+            "tag": "",
+            "important": "true",
+            "object": [
+                "host"
+            ]
+        },
+        {
+            "objectname": "parents",
+            "host_name": "Parent Hostobjekte",
+            "type": "Label",
+            "input": "true",
+            "output": "false",
+            "tag": "",
+            "important": "true",
+            "object": [
+                "host"
+            ]
+        },
+        {
+            "objectname": "",
+            "host_name": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "tag": "",
+            "important": "false",
+            "object": [
+                "host"
+            ]
+        }
+    ]
+}
