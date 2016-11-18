@@ -62,7 +62,8 @@ namespace Graph
 
         public Node					Node			{ get; internal set; }
 		public object				Tag				{ get; set; }
-        public Brush                normalTextBrush         { get; set; } = Brushes.Black;
+		public bool					isTitle			{ get; internal set; } = false;
+		public Brush                normalTextBrush         { get; set; } = Brushes.Black;
         public Brush                importantTextBrush      { get; set; } = Brushes.Red;
         internal Brush textBrush { get; private set; } = Brushes.Black;
 
