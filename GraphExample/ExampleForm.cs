@@ -10,7 +10,8 @@ using Graph;
 using System.Drawing.Drawing2D;
 using Graph.Compatibility;
 using Graph.Items;
-using GraphNodes.NagiosItems;
+using GraphNodes.NagiosItems.Contact;
+using GraphNodes.NagiosItems.Host;
 
 namespace GraphNodes
 {
@@ -151,14 +152,14 @@ namespace GraphNodes
 
 		private void SomeNode_MouseDown(object sender, MouseEventArgs e)
 		{
-			var node = new NagiosItems.NagiosNodeHostObject ("Nagios HOST"); //new Node("Some node");
+			var node = new NagiosNodeHostObject ("Nagios HOST"); //new Node("Some node");
 			
 			this.DoDragDrop(node, DragDropEffects.Copy);
 		}
 
 		private void TextureNode_MouseDown(object sender, MouseEventArgs e)
 		{
-            var node = new NagiosItems.NagiosNodeContactObject ("Nagios CONTACT");
+            var node = new NagiosNodeContactObject ("Nagios CONTACT");
             /*
             var textureNode = new Node("Texture");
 			textureNode.Location = new Point(300, 150);
