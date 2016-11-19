@@ -193,6 +193,128 @@
     ],
 	/*Nagios Object Attribute*/
 	"fields": [
+		{	/* alias */
+            "objectname": "alias",
+            "tooltip": "Alternative Bezeichnung des Host",
+            "type": "TextBox",
+            "input": "false",
+            "output": "false",
+            "inputtype": null,
+            "outputtype": null,
+            "tag": "",
+            "important": "true",
+            "object": [
+                "host"
+            ]
+        },
+		{	/* check_command */
+            "objectname": "check_command",
+			"tooltip": "Host Check Command",
+            "type": "Label",
+            "input": "true",
+            "output": "false",
+            "inputtype": "command",
+            "outputtype": null,
+            "tag": "",
+            "important": "false",
+            "object": [
+                "host",
+                "service"
+            ]
+        },
+		{	/* check_interval */
+            "objectname": "check_interval",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
+        },
+		{	/* check_period */
+            "objectname": "",
+		},
+		{	/* command_line */
+            "objectname": "",
+		},
+		{	/* command_name */
+            "objectname": "",
+		},
+		{	/* contact_group */
+            "objectname": "",
+		},
+		{	/* contact_name */
+		},
+		{	/* contactgroup_name */
+		},
+		{	/* contactgroups */
+		},
+		{	/* contacts */
+		},
+		{	/* dependent_host_name */
+		},
+		{	/* dependent_service_description */
+		},
+		{	/* first_notification */
+		},
+		{	/* host_name */
+            "objectname": "host_name",
+            "tooltip": "Der kurzname des Hostobjektes",
+            "type": "TextBox",
+            "input": "false",
+            "output": "false",
+            "inputtype": null,
+            "outputtype": null,
+            "tag": "",
+            "important": "true",
+            "object": [
+                "host",
+                "service",
+                "hostdependency",
+                "servicedependency",
+                "serviceescalation",
+                "hostescalation"
+            ]
+        },
+		{	/* host_notification_commands */
+		},
+		{	/* host_notification_options */
+		},
+		{	/* host_notification_period */
+		},
+		{	/* host_notifications_enabled */
+		},
+		{	/* hostgroup_name */
+		},
+		{	/* last_notification */
+		},
+		{	/* max_check_attempts */
+            "objectname": "max_check_attempts",
+			"tooltip": "",
+            "type": "Label",
+            "input": "true",
+            "output": "false",
+            "inputtype": ["host","service"],
+            "outputtype": null,
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
+        },
+		{	/* notification_interval */
+		},
+		{	/* notification_period */
+		},
+		{	/* retry_interval */
+
+
+
 		{	/* Use*/
             "objectname": "use",
             "tooltip": "Benutzung einer Vorlage",
@@ -216,39 +338,6 @@
                 "contactgroup",
                 "timeperiod",
                 "command"
-            ]
-        },
-		{	/* host_name */
-            "objectname": "host_name",
-            "tooltip": "Der kurzname des Hostobjektes",
-            "type": "TextBox",
-            "input": "false",
-            "output": "false",
-            "inputtype": null,
-            "outputtype": null,
-            "tag": "",
-            "important": "true",
-            "object": [
-                "host",
-                "service",
-                "hostdependency",
-                "servicedependency",
-                "serviceescalation",
-                "hostescalation"
-            ]
-        },
-		{	/* alias */
-            "objectname": "alias",
-            "tooltip": "Alternative Bezeichnung des Host",
-            "type": "TextBox",
-            "input": "false",
-            "output": "false",
-            "inputtype": null,
-            "outputtype": null,
-            "tag": "",
-            "important": "true",
-            "object": [
-                "host"
             ]
         },
 		{	/* display_name */
@@ -322,21 +411,6 @@
                 "host"
             ]
         },
-		{	/* check_command */
-            "objectname": "check_command",
-			"tooltip": "Host Check Command",
-            "type": "Label",
-            "input": "true",
-            "output": "false",
-            "inputtype": "command",
-            "outputtype": null,
-            "tag": "",
-            "important": "false",
-            "object": [
-                "host",
-                "service"
-            ]
-        },
 		{	/* initial_state */
             "objectname": "initial_state",
 			"tooltip": "",
@@ -353,20 +427,6 @@
             ]
         },
 		{	/* Dummy */
-            "objectname": "max_check_attempts",
-			"tooltip": "",
-            "type": "Label",
-            "input": "true",
-            "output": "false",
-            "inputtype": "",
-            "outputtype": "",
-            "tag": "",
-            "important": "false",
-            "object": [
-                ""
-            ]
-        },
-		{	/* Dummy */
             "objectname": "",
 			"tooltip": "",
             "type": "Label",
@@ -380,5 +440,140 @@
                 ""
             ]
         },
+
+
+
+		},
+		{	/* service_description */
+		},
+		{	/* service_notification_commands */
+		},
+		{	/* service_notification_options */
+		},
+		{	/* service_notification_period */
+		},
+		{	/* service_notifications_enabled */
+		},
+		{	/* servicegroup_name */
+		},
+		{	/* timeperiod_name */
+		},
+
+
+
+		{	/* 2d_coords */
+		},
+		{	/* 3d_coords */
+		},
+		{	/* action_url */
+		},
+		{	/* active_checks_enabled */
+		},
+		{	/* address */
+		},
+		{	/* addressx */
+		},
+		{	/* can_submit_commands */
+		},
+		{	/* check_freshness */
+		},
+		{	/* contactgroup_members */
+		},
+		{	/* dependency_period */
+		},
+		{	/* dependent_hostgroup_name */
+		},
+		{	/* dependent_servicegroup_name */
+		},
+		{	/* display_name */
+		},
+		{	/* email */
+		},
+		{	/* escalation_options */
+		},
+		{	/* escalation_period */
+		},
+		{	/* event_handler */
+		},
+		{	/* event_handler_enabled */
+		},
+		{	/* exclude */
+		},
+		{	/* execution_failure_criteria */
+		},
+		{	/* first_notification_delay */
+		},
+		{	/* flap_detection_enabled */
+		},
+		{	/* flap_detection_options */
+		},
+		{	/* freshness_threshold */
+		},
+		{	/* high_flap_threshold */
+		},
+		{	/* hostgroup_members */
+		},
+		{	/* hostgroups */
+		},
+		{	/* hourly_value */
+		},
+		{	/* icon_image */
+		},
+		{	/* icon_image_alt */
+		},
+		{	/* inherits_parent */
+		},
+		{	/* initial_state */
+		},
+		{	/* is_volatile */
+		},
+		{	/* low_flap_threshold */
+		},
+		{	/* members */
+		},
+		{	/* minimum_value */
+		},
+		{	/* notes */
+		},
+		{	/* notes_url */
+		},
+		{	/* notification_failure_criteria */
+		},
+		{	/* notification_options */
+		},
+		{	/* notifications_enabled */
+		},
+		{	/* obsess_over_host|obsess */
+		},
+		{	/* obsess_over_service|obsess */
+		},
+		{	/* pager */
+		},
+		{	/* parents */
+		},
+		{	/* passive_checks_enabled */
+		},
+		{	/* process_perf_data */
+		},
+		{	/* retain_nonstatus_information */
+		},
+		{	/* retain_status_information */
+		},
+		{	/* servicegroup_members */
+		},
+		{	/* servicegroups */
+		},
+		{	/* stalking_options */
+		},
+		{	/* statusmap_image */
+		},
+		{	/* vrml_image */
+		},
+		{	/*  */
+		},
+		{	/*  */
+		},
+		{	/*  */
+		},
 	]
 }
