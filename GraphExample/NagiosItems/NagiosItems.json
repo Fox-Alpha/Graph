@@ -1,5 +1,5 @@
 {
-    "objects": [
+	"objects": [
         "host",
         "hostgroup",
         "hostdependencie",
@@ -13,7 +13,9 @@
         "contactgroup",
         "command"
     ],
-    "nodeitems": [
+	"nodes": [
+	],
+	"nodeitems": [
         {
             "objectname": "url",
             "tooltip": "Angabe einer URL",
@@ -37,12 +39,20 @@
         {
             "objectname": "Hostoptions",
             "tooltip": "Angabe einer URL",
-            "type": "ChekListBox",
+            "type": "CheckListBox",
             "input": false,
             "output": true,
             "tag": "NagiosFieldOptions",
             "important": false,
             "multiple": false,
+            "names": {
+                "o": "OK",
+                "d": "Down",
+                "u": "Unreachable",
+                "r": "Recover",
+                "f": "Flapping",
+                "s": "SceduledDownTime"
+            },
             "values": {
                 "initial_state": [
                     "o",
@@ -70,14 +80,6 @@
             "objects": [
                 "host"
             ],
-            "names": {
-                "o": "OK",
-                "d": "Down",
-                "u": "Unreachable",
-                "r": "Recover",
-                "f": "Flapping",
-                "s": "SceduledDownTime"
-            },
             "fields": [
                 "initial_state",
                 "flap_detection_options",
@@ -88,7 +90,7 @@
         {
             "objectname": "serviceoptions",
             "tooltip": "Angabe einer URL",
-            "type": "ChekListBox",
+            "type": "CheckListBox",
             "input": "false",
             "output": true,
             "tag": "NagiosObjectOptions",
@@ -145,7 +147,7 @@
         {
             "objectname": "contactoptions",
             "tooltip": "Angabe einer URL",
-            "type": "DropDown",
+            "type": "CheckListBox",
             "input": false,
             "output": true,
             "tag": "NagiosObjectOptions",
@@ -189,13 +191,16 @@
             ]
         }
     ],
-    "fields": [
-        {
+	/*Nagios Object Attribute*/
+	"fields": [
+		{	/* Use*/
             "objectname": "use",
             "tooltip": "Benutzung einer Vorlage",
             "type": "Label",
             "input": "false",
             "output": "false",
+            "inputtype": null,
+            "outputtype": null,
             "tag": "",
             "important": "true",
             "objects": [
@@ -213,12 +218,14 @@
                 "command"
             ]
         },
-        {
+		{	/* host_name */
             "objectname": "host_name",
             "tooltip": "Der kurzname des Hostobjektes",
             "type": "TextBox",
             "input": "false",
             "output": "false",
+            "inputtype": null,
+            "outputtype": null,
             "tag": "",
             "important": "true",
             "object": [
@@ -230,65 +237,148 @@
                 "hostescalation"
             ]
         },
-        {
+		{	/* alias */
             "objectname": "alias",
-            "host_name": "Alternative Bezeichnung des Host",
+            "tooltip": "Alternative Bezeichnung des Host",
             "type": "TextBox",
             "input": "false",
             "output": "false",
+            "inputtype": null,
+            "outputtype": null,
             "tag": "",
             "important": "true",
             "object": [
                 "host"
             ]
         },
-        {
+		{	/* display_name */
             "objectname": "display_name",
-            "host_name": "Der angezeigte Name des Host",
+            "tooltip": "Der angezeigte Name des Host",
             "type": "TextBox",
             "input": "false",
             "output": "false",
+            "inputtype": null,
+            "outputtype": null,
             "tag": "",
             "important": "true",
             "object": [
                 "host"
             ]
         },
-        {
+		{	/* adress */
             "objectname": "address",
-            "host_name": "Die Netzwerkadresse des Hostobjektes",
+            "tooltip": "Die Netzwerkadresse des Hostobjektes",
             "type": "TextBox",
             "input": "false",
             "output": "false",
+            "inputtype": null,
+            "outputtype": null,
             "tag": "",
             "important": "true",
             "object": [
                 "host"
             ]
         },
-        {
+		{	/* parents */
             "objectname": "parents",
-            "host_name": "Parent Hostobjekte",
+            "tooltip": "Parent Hostobjekte",
             "type": "Label",
             "input": "true",
             "output": "false",
+            "inputtype": "host",
+            "outputtype": null,
             "tag": "",
             "important": "true",
             "object": [
                 "host"
             ]
         },
-        {
-            "objectname": "",
-            "host_name": "",
+		{	/* hourly_value */
+            "objectname": "hourly_value",
+			"tooltip": "Wertigkeit für Benachrichtigungen",
+            "type": "Label",
+            "input": "true",
+            "output": "false",
+            "inputtype": "NumericSlider",
+            "outputtype": null,
+            "tag": "",
+            "important": "false",
+            "object": [
+                "host",
+				"service"
+            ]
+		},
+		{	/* hostgroups */
+            "objectname": "hostgroups",
+			"tooltip": "Hostgruppen Zuordnung",
             "type": "Label",
             "input": "false",
-            "output": "false",
+            "output": "true",
+            "inputtype": null,
+            "outputtype": "hostgroup",
             "tag": "",
             "important": "false",
             "object": [
                 "host"
             ]
-        }
-    ]
+        },
+		{	/* check_command */
+            "objectname": "check_command",
+			"tooltip": "Host Check Command",
+            "type": "Label",
+            "input": "true",
+            "output": "false",
+            "inputtype": "command",
+            "outputtype": null,
+            "tag": "",
+            "important": "false",
+            "object": [
+                "host",
+                "service"
+            ]
+        },
+		{	/* initial_state */
+            "objectname": "initial_state",
+			"tooltip": "",
+            "type": "Label",
+            "input": "true",
+            "output": "false",
+            "inputtype": ["hostoptions", "serviceoptions"],
+            "outputtype": null,
+            "tag": "",
+            "important": "false",
+            "object": [
+                "host",
+                "service"
+            ]
+        },
+		{	/* Dummy */
+            "objectname": "max_check_attempts",
+			"tooltip": "",
+            "type": "Label",
+            "input": "true",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
+        },
+		{	/* Dummy */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
+        },
+	]
 }
