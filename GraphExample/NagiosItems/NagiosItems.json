@@ -216,7 +216,7 @@
             "inputtype": "command",
             "outputtype": null,
             "tag": "",
-            "important": "false",
+            "important": "true",
             "object": [
                 "host",
                 "service"
@@ -231,36 +231,164 @@
             "inputtype": "",
             "outputtype": "",
             "tag": "",
-            "important": "false",
+            "important": "true",
             "object": [
                 ""
             ]
         },
 		{	/* check_period */
             "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* command_line */
             "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* command_name */
             "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* contact_group */
             "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* contact_name */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* contactgroup_name */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* contactgroups */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* contacts */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* dependent_host_name */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* dependent_service_description */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* first_notification */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* host_name */
             "objectname": "host_name",
@@ -282,16 +410,88 @@
             ]
         },
 		{	/* host_notification_commands */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* host_notification_options */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* host_notification_period */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* host_notifications_enabled */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* hostgroup_name */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* last_notification */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* max_check_attempts */
             "objectname": "max_check_attempts",
@@ -302,19 +502,53 @@
             "inputtype": ["host","service"],
             "outputtype": null,
             "tag": "",
-            "important": "false",
+            "important": "true",
             "object": [
                 ""
             ]
         },
 		{	/* notification_interval */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* notification_period */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* retry_interval */
-
-
-
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
+		}
 		{	/* Use*/
             "objectname": "use",
             "tooltip": "Benutzung einer Vorlage",
@@ -391,7 +625,7 @@
             "inputtype": "NumericSlider",
             "outputtype": null,
             "tag": "",
-            "important": "false",
+            "important": "true",
             "object": [
                 "host",
 				"service"
@@ -406,7 +640,7 @@
             "inputtype": null,
             "outputtype": "hostgroup",
             "tag": "",
-            "important": "false",
+            "important": "true",
             "object": [
                 "host"
             ]
@@ -420,7 +654,7 @@
             "inputtype": ["hostoptions", "serviceoptions"],
             "outputtype": null,
             "tag": "",
-            "important": "false",
+            "important": "true",
             "object": [
                 "host",
                 "service"
@@ -435,145 +669,909 @@
             "inputtype": "",
             "outputtype": "",
             "tag": "",
-            "important": "false",
+            "important": "true",
             "object": [
                 ""
             ]
         },
-
-
-
-		},
 		{	/* service_description */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* service_notification_commands */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* service_notification_options */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* service_notification_period */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* service_notifications_enabled */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* servicegroup_name */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 		{	/* timeperiod_name */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
 		},
 
 
 
 		{	/* 2d_coords */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* 3d_coords */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* action_url */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* active_checks_enabled */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* address */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* addressx */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* can_submit_commands */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* check_freshness */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* contactgroup_members */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* dependency_period */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* dependent_hostgroup_name */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* dependent_servicegroup_name */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* display_name */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* email */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* escalation_options */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* escalation_period */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* event_handler */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* event_handler_enabled */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* exclude */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* execution_failure_criteria */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* first_notification_delay */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* flap_detection_enabled */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* flap_detection_options */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* freshness_threshold */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* high_flap_threshold */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* hostgroup_members */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* hostgroups */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* hourly_value */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* icon_image */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* icon_image_alt */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* inherits_parent */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* initial_state */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* is_volatile */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* low_flap_threshold */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* members */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* minimum_value */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* notes */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* notes_url */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* notification_failure_criteria */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* notification_options */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* notifications_enabled */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* obsess_over_host|obsess */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* obsess_over_service|obsess */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* pager */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* parents */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* passive_checks_enabled */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* process_perf_data */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* retain_nonstatus_information */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* retain_status_information */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* servicegroup_members */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* servicegroups */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* stalking_options */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* statusmap_image */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/* vrml_image */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/*  */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/*  */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
 		},
 		{	/*  */
-		},
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "false",
+            "object": [
+                ""
+            ]
+		}
 	]
 }
