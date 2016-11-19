@@ -201,10 +201,14 @@
             "output": "false",
             "inputtype": null,
             "outputtype": null,
-            "tag": "",
+            "tag": "NagiosFieldAlias",
             "important": "true",
             "object": [
-                "host"
+                "host",
+                "hostgroup",
+                "servicegroup",
+                "timeperiod",
+                "contact"
             ]
         },
 		{	/* check_command */
@@ -215,7 +219,7 @@
             "output": "false",
             "inputtype": "command",
             "outputtype": null,
-            "tag": "",
+            "tag": "NagiosFieldCommand",
             "important": "true",
             "object": [
                 "host",
@@ -226,271 +230,288 @@
             "objectname": "check_interval",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
-            "inputtype": "",
+            "inputtype": "numerictextbox",
             "outputtype": "",
-            "tag": "",
+            "tag": "checkinterval",
             "important": "true",
             "object": [
-                ""
+                "host",
+                "service"
             ]
         },
 		{	/* check_period */
-            "objectname": "",
+            "objectname": "check_period",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
-            "inputtype": "",
-            "outputtype": "",
-            "tag": "",
+            "inputtype": "timeperiod",
+            "outputtype": null,
+            "tag": "checkperiod",
             "important": "true",
             "object": [
-                ""
-            ]
+                "host",
+                "service"
+             ]
 		},
 		{	/* command_line */
-            "objectname": "",
+            "objectname": "command_line",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
-            "inputtype": "",
-            "outputtype": "",
-            "tag": "",
+            "inputtype": textbox,
+            "outputtype": null,
+            "tag": "commandline",
             "important": "true",
             "object": [
-                ""
+                "command"
             ]
 		},
 		{	/* command_name */
-            "objectname": "",
+            "objectname": "command_name",
 			"tooltip": "",
-            "type": "Label",
+            "type": "TextBox",
             "input": "false",
-            "output": "false",
-            "inputtype": "",
-            "outputtype": "",
-            "tag": "",
+            "output": "true",
+            "inputtype": null,
+            "outputtype": "check_command",
+            "tag": "commandname",
             "important": "true",
             "object": [
-                ""
+                "command"
             ]
 		},
 		{	/* contact_group */
-            "objectname": "",
+            "objectname": "contact_group",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
-            "inputtype": "",
-            "outputtype": "",
-            "tag": "",
+            "inputtype": null,
+            "outputtype": null,
+            "tag": "contactgroup",
             "important": "true",
             "object": [
-                ""
+                "host",
+                "hostescalation",
+                "service",
+                "serviceescalation"
             ]
 		},
 		{	/* contact_name */
-            "objectname": "",
+            "objectname": "contact_name",
 			"tooltip": "",
             "type": "Label",
             "input": "false",
-            "output": "false",
+            "output": "true",
             "inputtype": "",
             "outputtype": "",
-            "tag": "",
+            "tag": "contactname",
             "important": "true",
             "object": [
-                ""
+                "contact"
             ]
 		},
 		{	/* contactgroup_name */
-            "objectname": "",
+            "objectname": "contactgroup_name",
 			"tooltip": "",
             "type": "Label",
             "input": "false",
             "output": "false",
             "inputtype": "",
             "outputtype": "",
-            "tag": "",
+            "tag": "contactgroupname",
             "important": "true",
             "object": [
-                ""
+                "contactgroup"
             ]
 		},
 		{	/* contactgroups */
-            "objectname": "",
+            "objectname": "contactgroups",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
             "inputtype": "",
             "outputtype": "",
-            "tag": "",
+            "tag": "contactgroups",
             "important": "true",
             "object": [
-                ""
+                "contact"
             ]
 		},
 		{	/* contacts */
-            "objectname": "",
+            "objectname": "contacts",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
             "inputtype": "",
             "outputtype": "",
-            "tag": "",
+            "tag": "contacts",
             "important": "true",
             "object": [
-                ""
+                "host",
+                "hostexcalation",
+                "service",
+                "serviceescalation",
+                "contactgroup"
             ]
 		},
 		{	/* dependent_host_name */
-            "objectname": "",
+            "objectname": "dependent_host_name",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
             "inputtype": "",
             "outputtype": "",
-            "tag": "",
+            "tag": "dependenthostname",
             "important": "true",
             "object": [
-                ""
+                "hostdependencie",
+                "servicedependencie"
             ]
 		},
 		{	/* dependent_service_description */
-            "objectname": "",
+            "objectname": "dependent_service_description",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
             "inputtype": "",
             "outputtype": "",
-            "tag": "",
+            "tag": "dependentservicedescription",
             "important": "true",
             "object": [
-                ""
+                "servicedependencie"
             ]
 		},
 		{	/* first_notification */
-            "objectname": "",
+            "objectname": "first_notification",
 			"tooltip": "",
             "type": "Label",
             "input": "false",
             "output": "false",
             "inputtype": "",
             "outputtype": "",
-            "tag": "",
+            "tag": "firstnotification",
             "important": "true",
             "object": [
-                ""
+                "hostescalation",
+				"serviceescalation"
             ]
 		},
 		{	/* host_name */
             "objectname": "host_name",
             "tooltip": "Der kurzname des Hostobjektes",
             "type": "TextBox",
-            "input": "false",
-            "output": "false",
+            "input": "true",
+            "output": "true",
             "inputtype": null,
             "outputtype": null,
-            "tag": "",
+            "tag": "hostname",
             "important": "true",
             "object": [
                 "host",
-                "service",
+                "hostescalation",
                 "hostdependency",
+                "service",
                 "servicedependency",
-                "serviceescalation",
-                "hostescalation"
+                "serviceescalation"
             ]
         },
 		{	/* host_notification_commands */
-            "objectname": "",
+            "objectname": "host_notification_commands",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
-            "inputtype": "",
+            "inputtype": "command",
             "outputtype": "",
-            "tag": "",
+            "tag": "hostnotificationcommands",
             "important": "true",
             "object": [
-                ""
+                "contact"
             ]
 		},
 		{	/* host_notification_options */
-            "objectname": "",
+            "objectname": "host_notification_options",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
-            "inputtype": "",
+            "inputtype": "contactoptions",
             "outputtype": "",
-            "tag": "",
+            "tag": "hostnotificationoptions",
             "important": "true",
             "object": [
                 ""
             ]
 		},
 		{	/* host_notification_period */
-            "objectname": "",
+            "objectname": "host_notification_period",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
-            "inputtype": "",
+            "inputtype": "timeperiod",
             "outputtype": "",
-            "tag": "",
+            "tag": "hostnotificationperiod",
             "important": "true",
             "object": [
-                ""
+                "contact"
             ]
 		},
 		{	/* host_notifications_enabled */
-            "objectname": "",
+            "objectname": "host_notifications_enabled",
 			"tooltip": "",
-            "type": "Label",
+            "type": "CheckBox",
             "input": "false",
             "output": "false",
             "inputtype": "",
             "outputtype": "",
-            "tag": "",
+            "tag": "hostnotificationsenabled",
             "important": "true",
             "object": [
-                ""
+                "contact"
             ]
 		},
 		{	/* hostgroup_name */
-            "objectname": "",
+            "objectname": "hostgroup_name",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
-            "output": "false",
+            "input": "true",
+            "output": "true",
             "inputtype": "",
             "outputtype": "",
-            "tag": "",
+            "tag": "hostgroupname",
             "important": "true",
             "object": [
-                ""
+                "hostgroup",
+                "hostdependencie",
+                "hostescalation",
+                "service",
+                "servicedependencie",
+                "serviceescalation"
             ]
 		},
 		{	/* last_notification */
-            "objectname": "",
+            "objectname": "last_notification",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
             "inputtype": "",
-            "outputtype": "",
-            "tag": "",
+            "outputtype": "NumericTextBox",
+            "tag": "lastnotification",
             "important": "true",
             "object": [
-                ""
+                "hostescalation",
+                "serviceescalation"
             ]
 		},
 		{	/* max_check_attempts */
@@ -499,277 +520,161 @@
             "type": "Label",
             "input": "true",
             "output": "false",
-            "inputtype": ["host","service"],
+            "inputtype": "NumericTextBox",
             "outputtype": null,
-            "tag": "",
-            "important": "true",
-            "object": [
-                ""
-            ]
-        },
-		{	/* notification_interval */
-            "objectname": "",
-			"tooltip": "",
-            "type": "Label",
-            "input": "false",
-            "output": "false",
-            "inputtype": "",
-            "outputtype": "",
-            "tag": "",
-            "important": "true",
-            "object": [
-                ""
-            ]
-		},
-		{	/* notification_period */
-            "objectname": "",
-			"tooltip": "",
-            "type": "Label",
-            "input": "false",
-            "output": "false",
-            "inputtype": "",
-            "outputtype": "",
-            "tag": "",
-            "important": "true",
-            "object": [
-                ""
-            ]
-		},
-		{	/* retry_interval */
-            "objectname": "",
-			"tooltip": "",
-            "type": "Label",
-            "input": "false",
-            "output": "false",
-            "inputtype": "",
-            "outputtype": "",
-            "tag": "",
-            "important": "true",
-            "object": [
-                ""
-            ]
-		}
-		{	/* Use*/
-            "objectname": "use",
-            "tooltip": "Benutzung einer Vorlage",
-            "type": "Label",
-            "input": "false",
-            "output": "false",
-            "inputtype": null,
-            "outputtype": null,
-            "tag": "",
-            "important": "true",
-            "objects": [
-                "host",
-                "service",
-                "hostdependency",
-                "servicedependency",
-                "serviceescalation",
-                "hostescalation",
-                "hostgroup",
-                "servicegroup",
-                "contact",
-                "contactgroup",
-                "timeperiod",
-                "command"
-            ]
-        },
-		{	/* display_name */
-            "objectname": "display_name",
-            "tooltip": "Der angezeigte Name des Host",
-            "type": "TextBox",
-            "input": "false",
-            "output": "false",
-            "inputtype": null,
-            "outputtype": null,
-            "tag": "",
-            "important": "true",
-            "object": [
-                "host"
-            ]
-        },
-		{	/* adress */
-            "objectname": "address",
-            "tooltip": "Die Netzwerkadresse des Hostobjektes",
-            "type": "TextBox",
-            "input": "false",
-            "output": "false",
-            "inputtype": null,
-            "outputtype": null,
-            "tag": "",
-            "important": "true",
-            "object": [
-                "host"
-            ]
-        },
-		{	/* parents */
-            "objectname": "parents",
-            "tooltip": "Parent Hostobjekte",
-            "type": "Label",
-            "input": "true",
-            "output": "false",
-            "inputtype": "host",
-            "outputtype": null,
-            "tag": "",
-            "important": "true",
-            "object": [
-                "host"
-            ]
-        },
-		{	/* hourly_value */
-            "objectname": "hourly_value",
-			"tooltip": "Wertigkeit für Benachrichtigungen",
-            "type": "Label",
-            "input": "true",
-            "output": "false",
-            "inputtype": "NumericSlider",
-            "outputtype": null,
-            "tag": "",
+            "tag": "maxcheckattempts",
             "important": "true",
             "object": [
                 "host",
 				"service"
             ]
-		},
-		{	/* hostgroups */
-            "objectname": "hostgroups",
-			"tooltip": "Hostgruppen Zuordnung",
-            "type": "Label",
-            "input": "false",
-            "output": "true",
-            "inputtype": null,
-            "outputtype": "hostgroup",
-            "tag": "",
-            "important": "true",
-            "object": [
-                "host"
-            ]
         },
-		{	/* initial_state */
-            "objectname": "initial_state",
+		{	/* notification_interval */
+            "objectname": "notification_interval",
 			"tooltip": "",
             "type": "Label",
             "input": "true",
             "output": "false",
-            "inputtype": ["hostoptions", "serviceoptions"],
-            "outputtype": null,
-            "tag": "",
+            "inputtype": "numeric",
+            "outputtype": "",
+            "tag": "notificationinterval",
+            "important": "true",
+            "object": [
+                "host",
+                "hostescalation",
+                "service",
+                "serviceescalation"
+            ]
+		},
+		{	/* notification_period */
+            "objectname": "notification_period",
+			"tooltip": "",
+            "type": "Label",
+            "input": "true",
+            "output": "false",
+            "inputtype": "timeperiod",
+            "outputtype": "",
+            "tag": "notification_period",
             "important": "true",
             "object": [
                 "host",
                 "service"
             ]
-        },
-		{	/* Dummy */
-            "objectname": "",
+		},
+		{	/* retry_interval */
+            "objectname": "retry_interval",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
             "inputtype": "",
             "outputtype": "",
-            "tag": "",
+            "tag": "retryinterval",
             "important": "true",
             "object": [
-                ""
+                "host",
+                "service"
             ]
-        },
+		}
 		{	/* service_description */
-            "objectname": "",
+            "objectname": "service_description",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
-            "inputtype": "",
+            "inputtype": "TextBox",
             "outputtype": "",
-            "tag": "",
+            "tag": "servicedescription",
             "important": "true",
             "object": [
-                ""
+                "service",
+                "servicedependencie",
+                "serviceescalation"
             ]
 		},
 		{	/* service_notification_commands */
-            "objectname": "",
+            "objectname": "service_notification_commands",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
-            "inputtype": "",
+            "inputtype": "command",
             "outputtype": "",
-            "tag": "",
+            "tag": "servicenotificationcommands",
             "important": "true",
             "object": [
-                ""
+                "contact"
             ]
 		},
 		{	/* service_notification_options */
-            "objectname": "",
+            "objectname": "service_notification_options",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
-            "output": "false",
+            "input": "true",
+            "output": "serviceoptions",
             "inputtype": "",
             "outputtype": "",
-            "tag": "",
+            "tag": "servicenotificationoptions",
             "important": "true",
             "object": [
-                ""
+                "contact"
             ]
 		},
 		{	/* service_notification_period */
-            "objectname": "",
+            "objectname": "service_notification_period",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
-            "inputtype": "",
+            "inputtype": "timeperiod",
             "outputtype": "",
-            "tag": "",
+            "tag": "servicenotificationperiod",
             "important": "true",
             "object": [
-                ""
+                "contact"
             ]
 		},
 		{	/* service_notifications_enabled */
-            "objectname": "",
+            "objectname": "service_notifications_enabled",
 			"tooltip": "",
             "type": "Label",
             "input": "false",
             "output": "false",
             "inputtype": "",
             "outputtype": "",
-            "tag": "",
+            "tag": "servicenotificationsenabled",
             "important": "true",
             "object": [
-                ""
+                "contact"
             ]
 		},
 		{	/* servicegroup_name */
-            "objectname": "",
+            "objectname": "servicegroup_name",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
-            "output": "false",
+            "input": "true",
+            "output": "true",
             "inputtype": "",
             "outputtype": "",
-            "tag": "",
+            "tag": "servicegroupname",
             "important": "true",
             "object": [
-                ""
+                "service",
+                "servicedependencie"
             ]
 		},
 		{	/* timeperiod_name */
-            "objectname": "",
+            "objectname": "timeperiod_name",
 			"tooltip": "",
             "type": "Label",
             "input": "false",
             "output": "false",
             "inputtype": "",
             "outputtype": "",
-            "tag": "",
+            "tag": ""timeperiodname,
             "important": "true",
             "object": [
-                ""
+                "timeperiod"
             ]
 		},
 
@@ -831,20 +736,20 @@
                 ""
             ]
 		},
-		{	/* address */
-            "objectname": "",
-			"tooltip": "",
-            "type": "Label",
+		{	/* adress */
+            "objectname": "address",
+            "tooltip": "Die Netzwerkadresse des Hostobjektes",
+            "type": "TextBox",
             "input": "false",
             "output": "false",
-            "inputtype": "",
-            "outputtype": "",
+            "inputtype": null,
+            "outputtype": null,
             "tag": "",
-            "important": "false",
+            "important": "true",
             "object": [
-                ""
+                "host"
             ]
-		},
+        },
 		{	/* addressx */
             "objectname": "",
 			"tooltip": "",
@@ -1140,31 +1045,32 @@
             ]
 		},
 		{	/* hostgroups */
-            "objectname": "",
-			"tooltip": "",
+            "objectname": "hostgroups",
+			"tooltip": "Hostgruppen Zuordnung",
             "type": "Label",
             "input": "false",
-            "output": "false",
-            "inputtype": "",
-            "outputtype": "",
+            "output": "true",
+            "inputtype": null,
+            "outputtype": "hostgroup",
             "tag": "",
-            "important": "false",
+            "important": "true",
             "object": [
-                ""
+                "host"
             ]
-		},
+        },
 		{	/* hourly_value */
-            "objectname": "",
-			"tooltip": "",
+            "objectname": "hourly_value",
+			"tooltip": "Wertigkeit für Benachrichtigungen",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
-            "inputtype": "",
-            "outputtype": "",
+            "inputtype": "NumericSlider",
+            "outputtype": null,
             "tag": "",
-            "important": "false",
+            "important": "true",
             "object": [
-                ""
+                "host",
+				"service"
             ]
 		},
 		{	/* icon_image */
@@ -1210,19 +1116,20 @@
             ]
 		},
 		{	/* initial_state */
-            "objectname": "",
+            "objectname": "initial_state",
 			"tooltip": "",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
-            "inputtype": "",
-            "outputtype": "",
+            "inputtype": ["hostoptions", "serviceoptions"],
+            "outputtype": null,
             "tag": "",
-            "important": "false",
+            "important": "true",
             "object": [
-                ""
+                "host",
+                "service"
             ]
-		},
+        },
 		{	/* is_volatile */
             "objectname": "",
 			"tooltip": "",
@@ -1392,19 +1299,19 @@
             ]
 		},
 		{	/* parents */
-            "objectname": "",
-			"tooltip": "",
+            "objectname": "parents",
+            "tooltip": "Parent Hostobjekte",
             "type": "Label",
-            "input": "false",
+            "input": "true",
             "output": "false",
-            "inputtype": "",
-            "outputtype": "",
+            "inputtype": "host",
+            "outputtype": null,
             "tag": "",
-            "important": "false",
+            "important": "true",
             "object": [
-                ""
+                "host"
             ]
-		},
+        },
 		{	/* passive_checks_enabled */
             "objectname": "",
 			"tooltip": "",
@@ -1572,6 +1479,46 @@
             "object": [
                 ""
             ]
-		}
+		},
+		{	/* Use*/
+            "objectname": "use",
+            "tooltip": "Benutzung einer Vorlage",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": null,
+            "outputtype": null,
+            "tag": "",
+            "important": "true",
+            "objects": [
+                "host",
+                "service",
+                "hostdependency",
+                "servicedependency",
+                "serviceescalation",
+                "hostescalation",
+                "hostgroup",
+                "servicegroup",
+                "contact",
+                "contactgroup",
+                "timeperiod",
+                "command"
+            ]
+        },
+		{	/* Dummy */
+            "objectname": "",
+			"tooltip": "",
+            "type": "Label",
+            "input": "false",
+            "output": "false",
+            "inputtype": "",
+            "outputtype": "",
+            "tag": "",
+            "important": "true",
+            "object": [
+                ""
+            ]
+        },
+
 	]
 }
