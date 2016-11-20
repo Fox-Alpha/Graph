@@ -67,8 +67,10 @@ namespace Graph.Items
 			}
 		}
 
-		
+
 		#endregion
+
+		public ElementItemType ElementItemType { get { return ElementItemType.NodeLabelItem; } }
 
 		internal SizeF TextSize;
 

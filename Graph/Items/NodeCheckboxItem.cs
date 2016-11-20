@@ -68,7 +68,6 @@ namespace Graph.Items
 		}
 		#endregion
 
-
 		public override bool OnClick()
 		{
 			base.OnClick();
@@ -78,6 +77,7 @@ namespace Graph.Items
 
 		internal SizeF TextSize;
 
+		public ElementItemType ElementItemType { get { return ElementItemType.NodeCheckBoxItem; } }
 
 		internal override SizeF Measure(Graphics graphics)
 		{

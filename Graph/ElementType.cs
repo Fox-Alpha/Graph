@@ -36,4 +36,18 @@ namespace Graph
 		Connection,
 		NodeSelection
 	}
+
+	public enum ElementItemType
+	{
+		NodeCheckBoxItem,
+		NodeCheckListBoxItem,
+		NodeColorItem,
+		NodeDropDownItem,
+		NodeImageItem,
+		NodeLabelItem,
+		NodeNumericSliderItem,
+		NodeSliderItem,
+		NodeTextBoxItem,
+		NodeTitelItem
+	}
 }

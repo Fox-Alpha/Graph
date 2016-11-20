@@ -47,6 +47,8 @@ namespace Graph.Items
 	{
 		public event EventHandler<AcceptNodeTextChangedEventArgs> TextChanged;
 
+		public ElementItemType ElementItemType { get { return ElementItemType.NodeTextBoxItem; } }
+
 		#region ctor
 		public NodeTextBoxItem(string text, bool inputEnabled, bool outputEnabled) :
 			base(inputEnabled, outputEnabled) { this.Text = text; }

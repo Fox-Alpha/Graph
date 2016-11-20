@@ -95,6 +95,8 @@ namespace Graph.Items
 
 		#endregion
 
+		public ElementItemType ElementItemType { get { return ElementItemType.NodeCheckListBoxItem; } }
+
 		internal SizeF TextSize;
 
 		public override bool OnDoubleClick()

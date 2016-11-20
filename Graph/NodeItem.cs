@@ -103,6 +103,5 @@ namespace Graph
 		internal abstract void		Render(Graphics graphics, SizeF minimumSize, PointF position);
 
 		public ElementType ElementType { get { return ElementType.NodeItem; } }
-
-    }
+	}
 }

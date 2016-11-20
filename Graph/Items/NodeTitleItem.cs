@@ -46,6 +46,8 @@ namespace Graph.Items
 		}
 		#endregion
 
+		public ElementItemType ElementItemType { get { return ElementItemType.NodeTitelItem; } }
+
 		internal void ForceResize() { TextSize = Size.Empty; }
 		internal SizeF				TextSize;
 

@@ -43,6 +43,8 @@ namespace Graph.Items
 
 		public Color Color { get; set; }
 
+		public ElementItemType ElementItemType { get { return ElementItemType.NodeColorItem; } }
+
 		#region Text
 		string internalText = string.Empty;
 		public string Text

@@ -46,6 +46,8 @@ namespace Graph.Items
 			this.Value = defaultValue;
 		}
 
+		public ElementItemType ElementItemType { get { return ElementItemType.NodeSliderItem; } }
+
 		#region Text
 		string internalText = string.Empty;
 		public string Text

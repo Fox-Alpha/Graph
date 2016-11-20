@@ -59,6 +59,7 @@ namespace Graph.Items
 			return true;
 		}
 
+		public ElementItemType ElementItemType { get { return ElementItemType.NodeImageItem; } }
 
 		internal override SizeF Measure(Graphics graphics)
 		{

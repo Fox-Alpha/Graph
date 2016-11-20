@@ -58,6 +58,8 @@ namespace Graph.Items
 		}
 		#endregion
 
+		public ElementItemType ElementItemType { get { return ElementItemType.NodeDropDownItem; } }
+
 		#region SelectedIndex
 		private int internalSelectedIndex = -1;
 		public int SelectedIndex
