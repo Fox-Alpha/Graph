@@ -9,3 +9,4 @@
 *.vshost.exe.manifest
 *.csproj.user
 /.vs/
+/packages/
