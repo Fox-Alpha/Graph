@@ -10,6 +10,7 @@ using Graph;
 using System.Drawing.Drawing2D;
 using Graph.Compatibility;
 using Graph.Items;
+using GraphNodes.Nagios;
 using GraphNodes.NagiosItems.Contact;
 using GraphNodes.NagiosItems.Host;
 
@@ -204,6 +205,13 @@ namespace GraphNodes
 		private void OnShowLabelsChanged(object sender, EventArgs e)
 		{
 			graphControl.ShowLabels = showLabelsCheckBox.Checked;
+		}
+
+		private void button1_Click (object sender, EventArgs e)
+		{
+			NagiosJSON myNagios = new NagiosJSON ();
+
+			//myNagios.LoadSettings ();
 		}
 	}
 }
