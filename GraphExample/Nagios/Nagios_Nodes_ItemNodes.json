@@ -13,225 +13,201 @@
         "contactgroup",
         "command"
     ],
-	"nagiosnodes": [
-        "host": {
-			"nodeitems": [
-				"host_name",
-				"alias",
-				"display_name",
-				"address",
-				"parents",
-				"hourly_value",
-				"hostgroups",
-				"check_command",
-				"initial_state",
-				"max_check_attempts",
-				"check_interval",
-				"retry_interval",
-				"active_checks_enabled",
-				"passive_checks_enabled",
-				"check_period",
-				"obsess_over_host|obsess",
-				"check_freshness",
-				"freshness_threshold",
-				"event_handler",
-				"event_handler_enabled",
-				"low_flap_threshold",
-				"high_flap_threshold",
-				"flap_detection_enabled",
-				"flap_detection_options",
-				"process_perf_data",
-				"retain_status_information",
-				"retain_nonstatus_information",
-				"contacts",
-				"contact_groups",
-				"notification_interval",
-				"first_notification_delay",
-				"notification_period",
-				"notification_options",
-				"notifications_enabled",
-				"stalking_options",
-				"notes",
-				"notes_url",
-				"action_url",
-				"icon_image",
-				"icon_image_alt",
-				"vrml_image",
-				"statusmap_image",
-				"2d_coords",
-				"3d_coords"
-			]
-		},
-        "hostgroup": {
-			"nodeitems": [
-				"hostgroup_name",
-				"alias",
-				"members",
-				"hostgroup_members",
-				"notes",
-				"notes_url",
-				"action_url"
-			]
-		},
-        "hostdependencie": {
-			"nodeitems": [
-				"dependent_host_name",
-				"dependent_hostgroup_name",
-				"host_name",
-				"hostgroup_name",
-				"inherits_parent",
-				"execution_failure_criteria",
-				"notification_failure_criteria",
-				"dependency_period",
-			]
-		},
-        "hostescalation": {
-			"nodeitems": [
-				"host_name",
-				"hostgroup_name",
-				"contacts",
-				"contact_groups",
-				"first_notification",
-				"last_notification",
-				"notification_interval",
-				"escalation_period",
-				"escalation_options",
-			]
-		},
-        "service": {
-			"nodeitems": [
-				"host_name",
-				"hostgroup_name",
-				"service_description",
-				"display_name",
-				"parents",
-				"hourly_value",
-				"servicegroups",
-				"is_volatile",
-				"check_command",
-				"initial_state",
-				"max_check_attempts",
-				"check_interval",
-				"retry_interval",
-				"active_checks_enabled",
-				"passive_checks_enabled",
-				"check_period",
-				"obsess_over_service|obsess",
-				"check_freshness",
-				"freshness_threshold",
-				"event_handler",
-				"event_handler_enabled",
-				"low_flap_threshold",
-				"high_flap_threshold",
-				"flap_detection_enabled",
-				"flap_detection_options",
-				"process_perf_data",
-				"retain_status_information",
-				"retain_nonstatus_information",
-				"notification_interval",
-				"first_notification_delay",
-				"notification_period",
-				"notification_options",
-				"notifications_enabled",
-				"contacts",
-				"contact_groups",
-				"stalking_options",
-				"notes",
-				"notes_url",
-				"action_url",
-				"icon_image",
-				"icon_image_alt"
-			]
-		},
-        "servicegroup": {
-			"nodeitems": [
-				"servicegroup_name",
-				"alias",
-				"members",
-				"servicegroup_members",
-				"notes",
-				"notes_url",
-				"action_url",
-			]
-		},
-        "servicedependencie": {
-			"nodeitems": [
-				"dependent_host_name",
-				"dependent_hostgroup_name",
-				"servicegroup_name",
-				"dependent_servicegroup_name",
-				"dependent_service_description",
-				"host_name",
-				"hostgroup_name",
-				"service_description",
-				"inherits_parent",
-				"execution_failure_criteria",
-				"notification_failure_criteria",
-				"dependency_period",
-			]
-		},
-        "serviceescalation": {
-			"nodeitems": [
-				"host_name",
-				"hostgroup_name",
-				"service_description",
-				"contacts",
-				"contact_groups",
-				"first_notification",
-				"last_notification",
-				"notification_interval",
-				"escalation_period",
-				"escalation_options",
-			]
-		},
-        "timeperiod": {
-			"nodeitems": [
-				"timeperiod_name",
-				"alias",
-				"weekday": []
-				"exception": []
-				"exclude",
-			]
-		},
-        "contact": {
-			"nodeitems": [
-				"contact_name",
-				"alias",
-				"contactgroups",
-				"minimum_value",
-				"host_notifications_enabled",
-				"service_notifications_enabled",
-				"host_notification_period",
-				"service_notification_period",
-				"host_notification_options",
-				"service_notification_options",
-				"host_notification_commands",
-				"service_notification_commands",
-				"email",
-				"pager",
-				"addressx",
-				"can_submit_commands",
-				"retain_status_information",
-				"retain_nonstatus_information",
-			]
-		},
-        "contactgroup": {
-			"nodeitems": [
-				"contactgroup_name",
-				"alias",
-				"members",
-				"contactgroup_members",
-			]
-		},
-        "command": {
-			"nodeitems": [
-				"command_name",
-				"command_line",
-			]
-		}
-	],
+	"nagiosnodes": {
+        "host": [
+			"host_name",
+			"alias",
+			"display_name",
+			"address",
+			"parents",
+			"hourly_value",
+			"hostgroups",
+			"check_command",
+			"initial_state",
+			"max_check_attempts",
+			"check_interval",
+			"retry_interval",
+			"active_checks_enabled",
+			"passive_checks_enabled",
+			"check_period",
+			"obsess_over_host|obsess",
+			"check_freshness",
+			"freshness_threshold",
+			"event_handler",
+			"event_handler_enabled",
+			"low_flap_threshold",
+			"high_flap_threshold",
+			"flap_detection_enabled",
+			"flap_detection_options",
+			"process_perf_data",
+			"retain_status_information",
+			"retain_nonstatus_information",
+			"contacts",
+			"contact_groups",
+			"notification_interval",
+			"first_notification_delay",
+			"notification_period",
+			"notification_options",
+			"notifications_enabled",
+			"stalking_options",
+			"notes",
+			"notes_url",
+			"action_url",
+			"icon_image",
+			"icon_image_alt",
+			"vrml_image",
+			"statusmap_image",
+			"2d_coords",
+			"3d_coords"
+		],
+        "hostgroup": [
+			"hostgroup_name",
+			"alias",
+			"members",
+			"hostgroup_members",
+			"notes",
+			"notes_url",
+			"action_url"
+		],
+        "hostdependencie": [
+			"dependent_host_name",
+			"dependent_hostgroup_name",
+			"host_name",
+			"hostgroup_name",
+			"inherits_parent",
+			"execution_failure_criteria",
+			"notification_failure_criteria",
+			"dependency_period",
+		],
+        "hostescalation": [
+			"host_name",
+			"hostgroup_name",
+			"contacts",
+			"contact_groups",
+			"first_notification",
+			"last_notification",
+			"notification_interval",
+			"escalation_period",
+			"escalation_options",
+		],
+        "service": [
+			"host_name",
+			"hostgroup_name",
+			"service_description",
+			"display_name",
+			"parents",
+			"hourly_value",
+			"servicegroups",
+			"is_volatile",
+			"check_command",
+			"initial_state",
+			"max_check_attempts",
+			"check_interval",
+			"retry_interval",
+			"active_checks_enabled",
+			"passive_checks_enabled",
+			"check_period",
+			"obsess_over_service|obsess",
+			"check_freshness",
+			"freshness_threshold",
+			"event_handler",
+			"event_handler_enabled",
+			"low_flap_threshold",
+			"high_flap_threshold",
+			"flap_detection_enabled",
+			"flap_detection_options",
+			"process_perf_data",
+			"retain_status_information",
+			"retain_nonstatus_information",
+			"notification_interval",
+			"first_notification_delay",
+			"notification_period",
+			"notification_options",
+			"notifications_enabled",
+			"contacts",
+			"contact_groups",
+			"stalking_options",
+			"notes",
+			"notes_url",
+			"action_url",
+			"icon_image",
+			"icon_image_alt"
+		],
+        "servicegroup": [
+			"servicegroup_name",
+			"alias",
+			"members",
+			"servicegroup_members",
+			"notes",
+			"notes_url",
+			"action_url",
+		],
+        "servicedependencie": [
+			"dependent_host_name",
+			"dependent_hostgroup_name",
+			"servicegroup_name",
+			"dependent_servicegroup_name",
+			"dependent_service_description",
+			"host_name",
+			"hostgroup_name",
+			"service_description",
+			"inherits_parent",
+			"execution_failure_criteria",
+			"notification_failure_criteria",
+			"dependency_period",
+		],
+        "serviceescalation": [
+			"host_name",
+			"hostgroup_name",
+			"service_description",
+			"contacts",
+			"contact_groups",
+			"first_notification",
+			"last_notification",
+			"notification_interval",
+			"escalation_period",
+			"escalation_options",
+		],
+        "timeperiod": [
+			"timeperiod_name",
+			"alias",
+			"weekday"
+			"exception"
+			"exclude",
+		],
+        "contact": [
+			"contact_name",
+			"alias",
+			"contactgroups",
+			"minimum_value",
+			"host_notifications_enabled",
+			"service_notifications_enabled",
+			"host_notification_period",
+			"service_notification_period",
+			"host_notification_options",
+			"service_notification_options",
+			"host_notification_commands",
+			"service_notification_commands",
+			"email",
+			"pager",
+			"addressx",
+			"can_submit_commands",
+			"retain_status_information",
+			"retain_nonstatus_information",
+		],
+        "contactgroup": [
+			"contactgroup_name",
+			"alias",
+			"members",
+			"contactgroup_members",
+		],
+        "command": [
+			"command_name",
+			"command_line",
+		]
+	},
 	"nagiosnodeitems": {
-		"important": [
+		"important": {
 			"alias": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
@@ -239,7 +215,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -252,7 +228,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -265,7 +241,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -278,7 +254,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -291,7 +267,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -304,7 +280,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -317,7 +293,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -330,7 +306,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -343,7 +319,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -356,7 +332,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -369,7 +345,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -382,7 +358,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -395,7 +371,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -408,7 +384,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -421,7 +397,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -434,7 +410,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -447,7 +423,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -460,7 +436,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -473,7 +449,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -486,7 +462,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -499,7 +475,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -512,7 +488,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -525,7 +501,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -538,7 +514,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -551,7 +527,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -564,7 +540,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -577,7 +553,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -590,7 +566,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -603,7 +579,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -616,7 +592,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -629,7 +605,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -642,14 +618,14 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
 				],
 			},
-		],
-		"additional": [
+		},
+		"additional": {
 			"hostgroups": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
@@ -657,7 +633,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -670,7 +646,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -683,7 +659,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -696,7 +672,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -709,7 +685,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -722,7 +698,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -735,7 +711,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -748,7 +724,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -761,7 +737,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -774,7 +750,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -787,7 +763,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -800,7 +776,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -813,7 +789,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -826,7 +802,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -839,7 +815,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -852,7 +828,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -865,7 +841,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -878,7 +854,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -891,7 +867,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -904,7 +880,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -917,7 +893,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -930,7 +906,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -943,7 +919,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -956,7 +932,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -969,7 +945,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -982,7 +958,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -995,7 +971,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1008,7 +984,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1021,7 +997,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1034,7 +1010,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1047,7 +1023,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1060,7 +1036,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1073,7 +1049,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1086,7 +1062,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1099,7 +1075,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1112,7 +1088,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1125,7 +1101,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1138,7 +1114,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1151,7 +1127,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1164,7 +1140,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1177,7 +1153,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1190,7 +1166,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1203,7 +1179,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1216,13 +1192,25 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
 				],
 			},
-			"exclude",
+			"exclude": {
+				"itemname": "alias",
+				"itemtype": "TextBox",
+				"input": false,
+				"output": false,
+				"tag": null,
+				"isTitel": false,
+				"isimportant": true,
+				"names": [
+				],
+				"values": [
+				],
+			},
 			"dependent_hostgroup_name": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
@@ -1230,7 +1218,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1243,7 +1231,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1256,7 +1244,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1269,7 +1257,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1282,7 +1270,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1295,7 +1283,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1308,7 +1296,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1321,7 +1309,7 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
@@ -1334,188 +1322,12 @@
 				"output": false,
 				"tag": null,
 				"isTitel": false,
-				"important": true",
+				"isimportant": true,
 				"names": [
 				],
 				"values": [
 				],
 			}
-		]
-	},
-	"nodeitems": [
-        {
-            "objectname": "url",
-            "tooltip": "Angabe einer URL",
-            "type": "TextBox",
-            "input": false,
-            "output": true,
-            "tag": "NagiosObjectUrl",
-            "important": false,
-            "multiple": false,
-            "objects": [
-                "host",
-                "service",
-                "hostgroup",
-                "servicegroup"
-            ],
-            "fields": [
-                "notes_url",
-                "action_url"
-            ]
-        },
-        {
-            "objectname": "Hostoptions",
-            "tooltip": "Angabe einer URL",
-            "type": "CheckListBox",
-            "input": false,
-            "output": true,
-            "tag": "NagiosFieldOptions",
-            "important": false,
-            "multiple": false,
-            "names": {
-                "o": "OK",
-                "d": "Down",
-                "u": "Unreachable",
-                "r": "Recover",
-                "f": "Flapping",
-                "s": "SceduledDownTime"
-            },
-            "values": {
-                "initial_state": [
-                    "o",
-                    "d",
-                    "u"
-                ],
-                "flap_detection_options": [
-                    "o",
-                    "d",
-                    "u"
-                ],
-                "notification_options": [
-                    "d",
-                    "u",
-                    "r",
-                    "f",
-                    "s"
-                ],
-                "stalking_options": [
-                    "o",
-                    "d",
-                    "u"
-                ]
-            },
-            "objects": [
-                "host"
-            ],
-            "fields": [
-                "initial_state",
-                "flap_detection_options",
-                "notification_options",
-                "stalking_options"
-            ]
-        },
-        {
-            "objectname": "serviceoptions",
-            "tooltip": "Angabe einer URL",
-            "type": "CheckListBox",
-            "input": "false",
-            "output": true,
-            "tag": "NagiosObjectOptions",
-            "important": false,
-            "multiple": false,
-            "values": {
-                "initial_state": [
-                    "o",
-                    "w",
-                    "u",
-                    "c"
-                ],
-                "flap_detection_options": [
-                    "o",
-                    "w",
-                    "c",
-                    "u"
-                ],
-                "notification_options": [
-                    "w",
-                    "u",
-                    "c",
-                    "r",
-                    "f",
-                    "s"
-                ],
-                "stalking_options": [
-                    "o",
-                    "w",
-                    "u",
-                    "c"
-                ]
-            },
-            "objects": [
-                "service"
-            ],
-            "names": {
-                "o": "OK",
-                "d": "Down",
-                "u": "Unknown",
-                "r": "Recover",
-                "f": "Flapping",
-                "s": "SceduledDownTime",
-                "w": "Warning",
-                "c": "Critical"
-            },
-            "fields": [
-                "initial_state",
-                "flap_detection_options",
-                "notification_options",
-                "stalking_options"
-            ]
-        },
-        {
-            "objectname": "contactoptions",
-            "tooltip": "Angabe einer URL",
-            "type": "CheckListBox",
-            "input": false,
-            "output": true,
-            "tag": "NagiosObjectOptions",
-            "important": false,
-            "multiple": false,
-            "values": {
-                "host_notification_options": [
-                    "d",
-                    "u",
-                    "r",
-                    "f",
-                    "s",
-                    "n"
-                ],
-                "service_notification_options": [
-                    "w",
-                    "u",
-                    "c",
-                    "r",
-                    "f",
-                    "s",
-                    "n"
-                ]
-            },
-            "objects": [
-                "contact"
-            ],
-            "names": {
-                "d": "Down",
-                "u": "Unreachable",
-                "r": "Recover",
-                "f": "Flapping",
-                "s": "SceduledDownTime",
-                "w": "Warning",
-                "c": "Critical",
-                "n": "none"
-            },
-            "fields": [
-                "host_notification_options",
-                "service_notification_options"
-            ]
-        }
-    ],
+		}
+	}
 }
