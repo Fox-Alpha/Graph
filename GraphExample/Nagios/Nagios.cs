@@ -17,13 +17,18 @@ namespace GraphNodes.Nagios
 	[JsonObject (MemberSerialization.OptIn, Title = "nagios")]
 	public class NagiosJSON
 	{
+		#region JSON
 		[JsonProperty ("nagiosobjects")]
 		List<string> listNagiosObjects;
-		[JsonProperty ("nagiosnodes")]
-		Dictionary<string, NagiosNode> listNagiosNodes;
-		[JsonProperty ("nagiosnodeitems")]
-		List<NagiosNodeItem> listNagiosNodeItems;
 
+		[JsonProperty ("nagiosnodes")]
+		Dictionary<string, List<string>> listNagiosNodes = new Dictionary<string, List<string>>();
+
+		[JsonProperty ("nagiosnodeitems")]
+		NagiosNodeItem listNagiosNodeItems;
+		#endregion
+
+		#region Properties
 		public string ObjectDirectory
 		{
 			get
@@ -34,27 +39,50 @@ namespace GraphNodes.Nagios
 			}
 		}
 		public string ObjectPath { get { return Path.Combine (new string [] { ObjectDirectory, "Nagios", "Nagios_Nodes_ItemNodes.json" } );  } }
+		#endregion
 
+		#region Funcs
 		public NagiosJSON ()
 		{
-			if (LoadSettings ())
-			{
-				Debug.WriteLine ("JSON wurde geladen", "NAGIOS");
-			}
-			else
-				Debug.WriteLine ("Laden dere JSON Settings fehlgeschlagen", "NAGIOS");
+			//listNagiosObjects = new List<string> ();
+			//listNagiosNodeItems = new List<NagiosNodeItem> ();
 		}
+
 		public bool LoadSettings ()
 		{
+			JsonSerializerSettings jsonSerializerSettings;
+
+			jsonSerializerSettings = new JsonSerializerSettings ();
+			jsonSerializerSettings.Formatting = Formatting.Indented;
+			jsonSerializerSettings.MissingMemberHandling = MissingMemberHandling.Ignore;
+			jsonSerializerSettings.NullValueHandling = NullValueHandling.Include;
+			jsonSerializerSettings.StringEscapeHandling = StringEscapeHandling.EscapeNonAscii;
+			jsonSerializerSettings.TypeNameHandling = TypeNameHandling.Auto;
+
 			if (File.Exists (ObjectPath))
 			{
-				JsonConvert.PopulateObject (File.ReadAllText (ObjectPath, Encoding.UTF8), this);
+				JsonConvert.PopulateObject (File.ReadAllText (ObjectPath, Encoding.UTF8), this, jsonSerializerSettings);
 				return true;
 			}
 			else
 				return false;
 
 		}
+
+		public bool SaveSettings()
+		{
+			//string JSON = "";
+			//JsonSerializerSettings JsonSettings = new JsonSerializerSettings ();
+			//JsonSettings.MissingMemberHandling = MissingMemberHandling.Ignore;
+			//JsonSettings.Formatting = Formatting.Indented;
+
+			//JSON = JsonConvert.SerializeObject (this, JsonSettings);
+
+			//Debug.WriteLine (JSON, "SaveSettings");
+
+			return true;
+		}
+		#endregion
 	}
 }
 
@@ -66,30 +94,45 @@ namespace Graphnodes.Nagios.Node
 		[JsonProperty ("nodeitems")]
 		List<string> listNagiosNodeItems;
 
-		public NagiosNode()
+		public bool AddNagiosNode (string strNode)
 		{
+			if (!string.IsNullOrWhiteSpace (strNode))
+			{
+				listNagiosNodeItems.Add (strNode);
+				return true;
+			}
 
+			return false;
 		}
+
+		public bool AddNagiosNode (string [] strNode)
+		{
+			if (strNode.Length > 0)
+			{
+				listNagiosNodeItems.AddRange (strNode);
+				return true;
+			}
+
+			return false;
+		}
+		public NagiosNode () { }
 	}
 }
 
 namespace Graphnodes.Nagios.NodeItem
 {
-	[JsonObject (MemberSerialization.OptIn, Title = "nagiosnodeitems")]
+	[JsonObject (MemberSerialization.OptIn)]
 	public class NagiosNodeItem
 	{
 		[JsonProperty ("important")]
-		List<NagiosNodeItemObject> nagiosImportantNodeItemObjects;
+		Dictionary<string, NagiosNodeItemObject> nagiosImportantNodeItemObjects;
 		[JsonProperty ("additional")]
-		List<NagiosNodeItemObject> nagiosAdditionalNodeItemObjects;
+		Dictionary<string, NagiosNodeItemObject> nagiosAdditionalNodeItemObjects;
 
-		public NagiosNodeItem ()
-		{
-
-		}
+		public NagiosNodeItem () { }
 	}
 
-	[JsonObject (MemberSerialization.OptIn, Title = "nagiosnodeitemobjects")]
+	[JsonObject (MemberSerialization.OptIn)]
 	public class NagiosNodeItemObject
 	{
 		[JsonProperty ("itemname")]
@@ -104,17 +147,14 @@ namespace Graphnodes.Nagios.NodeItem
 		public string itemTag { get; set; } = "";
 		[JsonProperty ("isTitel")]
 		public bool isTitel { get; set; } = false;
-		[JsonProperty ("important")]
+		[JsonProperty ("isimportant")]
 		public bool isMandatory { get; set; } = false;
 		[JsonProperty ("names")]
 		public List<string> itemsNames;
 		[JsonProperty ("values")]
 		public List<string> itemsValues;
 
-		public NagiosNodeItemObject ()
-		{
-
-		}
+		public NagiosNodeItemObject (){}
 	}
 
 }
