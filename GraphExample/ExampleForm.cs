@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,8 @@ using Graph.Items;
 using GraphNodes.Nagios;
 using GraphNodes.NagiosItems.Contact;
 using GraphNodes.NagiosItems.Host;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace GraphNodes
 {
@@ -161,13 +164,7 @@ namespace GraphNodes
 		private void TextureNode_MouseDown(object sender, MouseEventArgs e)
 		{
             var node = new NagiosNodeContactObject ("Nagios CONTACT");
-            /*
-            var textureNode = new Node("Texture");
-			textureNode.Location = new Point(300, 150);
-			var imageItem = new NodeImageItem(Properties.Resources.example, 64, 64, false, true);
-			imageItem.Clicked += new EventHandler<NodeItemEventArgs>(OnImgClicked);
-			textureNode.AddItem(imageItem);
-            */
+
 			this.DoDragDrop(node, DragDropEffects.Copy);
 		}
 
@@ -210,6 +207,33 @@ namespace GraphNodes
 		private void button1_Click (object sender, EventArgs e)
 		{
 			NagiosJSON myNagios = new NagiosJSON ();
+
+			JsonSerializerSettings jsonSerializerSettings;
+
+			jsonSerializerSettings = new JsonSerializerSettings ();
+			jsonSerializerSettings.Formatting = Formatting.Indented;
+			jsonSerializerSettings.MissingMemberHandling = MissingMemberHandling.Ignore;
+			jsonSerializerSettings.NullValueHandling = NullValueHandling.Include;
+			jsonSerializerSettings.StringEscapeHandling = StringEscapeHandling.EscapeNonAscii;
+			jsonSerializerSettings.TypeNameHandling = TypeNameHandling.Auto;
+
+			//JsonSerializer serializer = JsonSerializer.CreateDefault (jsonSerializerSettings);
+			//using (StreamReader sr = new StreamReader (myNagios.ObjectPath))
+			//{
+			//	using (JsonReader reader = new JsonTextReader (sr))
+			//	{
+			//		myNagios = serializer.Deserialize<NagiosJSON> (reader);
+			//	}
+			//}
+
+
+			if (myNagios.LoadSettings ())
+			//if (myNagios.SaveSettings ())
+			{
+				Debug.WriteLine ("JSON wurde geladen", "NAGIOS");
+			}
+			else
+				Debug.WriteLine ("Laden dere JSON Settings fehlgeschlagen", "NAGIOS");
 
 			//myNagios.LoadSettings ();
 		}
