@@ -88,14 +88,19 @@ namespace GraphNodes
 						if (nagiosNodes.listNagiosNodeItems.nagiosImportantNodeItemObjects.TryGetValue (str, out nnio))
 						{
 							//	Ist in den Important NodeItems vorhanden
-							node.AddItem (new NodeLabelItem (nnio.itemName, nnio.hasInputConnector, nnio.hasOutputConnector, nnio.isTitel) { Tag = nnio.itemTag, IsImportantNodeItem = nnio.isMandatory });
+							node.AddItem (new NodeLabelItem (
+									nnio.itemName, 
+									nnio.itemConnectors.hasInput, 
+									nnio.itemConnectors.hasOutput, 
+									nnio.isTitel)
+								{ Tag = nnio.itemTag, IsImportantNodeItem = nnio.isMandatory });
 
 							node.Location = new Point (300, 150);
 						}
 						else if (nagiosNodes.listNagiosNodeItems.nagiosAdditionalNodeItemObjects.TryGetValue (str, out nnio))
 						{
 							//	Ist in den Additional NodeItems vorhanden
-							node.AddItem (new NodeLabelItem (nnio.itemName, nnio.hasInputConnector, nnio.hasOutputConnector, nnio.isTitel) { Tag = nnio.itemTag, IsImportantNodeItem = nnio.isMandatory});
+							node.AddItem (new NodeLabelItem (nnio.itemName, nnio.itemConnectors.hasInput, nnio.itemConnectors.hasOutput, nnio.isTitel) { Tag = nnio.itemTag, IsImportantNodeItem = nnio.isMandatory});
 
 							
 						}
