@@ -19,17 +19,20 @@ namespace GraphNodes.Nagios
 	{
 		#region JSON
 		[JsonProperty ("nagiosobjects")]
-		List<string> listNagiosObjects;
+		public List<string> listNagiosObjects;
 
 		[JsonProperty ("nagiosnodes")]
-		Dictionary<string, List<string>> listNagiosNodes = new Dictionary<string, List<string>>();
+		public Dictionary<string, List<string>> listNagiosNodes = new Dictionary<string, List<string>>();
 
 		[JsonProperty ("nagiosnodeitems")]
-		NagiosNodeItem listNagiosNodeItems;
+		public NagiosNodeItem listNagiosNodeItems;
 		#endregion
 
 		#region Properties
-		public string ObjectDirectory
+
+		static string JsonFile { get; set; } = ObjectDirectory + @"\Nagios\Nagios_Nodes_ItemNodes.json";
+
+		static string ObjectDirectory
 		{
 			get
 			{
@@ -38,7 +41,7 @@ namespace GraphNodes.Nagios
 				return AppDomain.CurrentDomain.BaseDirectory;
 			}
 		}
-		public string ObjectPath { get { return Path.Combine (new string [] { ObjectDirectory, "Nagios", "Nagios_Nodes_ItemNodes.json" } );  } }
+		static string ObjectPath { get { return Path.Combine (new string [] { JsonFile } );  } }
 		#endregion
 
 		#region Funcs
@@ -66,7 +69,17 @@ namespace GraphNodes.Nagios
 			}
 			else
 				return false;
+		}
 
+		public bool LoadSettings (string _jsonFile)
+		{
+			if (File.Exists (_jsonFile))
+			{
+				JsonFile = _jsonFile;
+				return LoadSettings ();
+			}
+			else
+				return false;
 		}
 
 		public bool SaveSettings()
@@ -92,7 +105,7 @@ namespace Graphnodes.Nagios.Node
 	public class NagiosNode
 	{
 		[JsonProperty ("nodeitems")]
-		List<string> listNagiosNodeItems;
+		public List<string> listNagiosNodeItems;
 
 		public bool AddNagiosNode (string strNode)
 		{
@@ -125,9 +138,9 @@ namespace Graphnodes.Nagios.NodeItem
 	public class NagiosNodeItem
 	{
 		[JsonProperty ("important")]
-		Dictionary<string, NagiosNodeItemObject> nagiosImportantNodeItemObjects;
+		public Dictionary<string, NagiosNodeItemObject> nagiosImportantNodeItemObjects;
 		[JsonProperty ("additional")]
-		Dictionary<string, NagiosNodeItemObject> nagiosAdditionalNodeItemObjects;
+		public Dictionary<string, NagiosNodeItemObject> nagiosAdditionalNodeItemObjects;
 
 		public NagiosNodeItem () { }
 	}
