@@ -200,7 +200,7 @@ namespace Graphnodes.Nagios.NodeItem
 	public class NagiosNodeItemObjectTags
 	{
 		[JsonProperty ("tag")]
-		public string tag;
+		public string Tag;
 		[JsonProperty ("inputtag")]
 		public List<string> inputObjList;
 		[JsonProperty ("outputtag")]
@@ -221,6 +221,6 @@ namespace Graphnodes.Nagios.NodeItem
 			}
 		}
 
-		NagiosNodeItemObjectConector () { }
+		NagiosNodeItemObjectTags () { }
 	}
 }
