@@ -152,10 +152,12 @@ namespace Graphnodes.Nagios.NodeItem
 		public string itemName { get; set; } = "";
 		[JsonProperty ("itemtype")]
 		public string itemtype { get; set; } = "";  //	TODO: String2Emum
-		[JsonProperty ("input")]
-		public bool hasInputConnector { get; set; } = false;
-		[JsonProperty ("output")]
-		public bool hasOutputConnector { get; set; } = false;
+		[JsonProperty ("connectors")]
+		public NagiosNodeItemConector itemConnectors;
+		//[JsonProperty ("input")]
+		//public bool hasInputConnector { get; set; } = false;
+		//[JsonProperty ("output")]
+		//public bool hasOutputConnector { get; set; } = false;
 		[JsonProperty ("tag")]
 		public string itemTag { get; set; } = "";
 		[JsonProperty ("isTitel")]
@@ -170,4 +172,29 @@ namespace Graphnodes.Nagios.NodeItem
 		public NagiosNodeItemObject (){}
 	}
 
+	[JsonObject (MemberSerialization.OptIn)]
+	public class NagiosNodeItemConector
+	{
+		[JsonProperty ("input")]
+		public List<string> inputObjList;
+		[JsonProperty ("output")]
+		public List<string> outputObjList;
+
+		public bool hasOutput
+		{
+			get
+			{
+				return outputObjList.Count > 0;
+			}
+		}
+		public bool hasInput
+		{
+			get
+			{
+				return inputObjList.Count > 0;
+			}
+		}
+
+		NagiosNodeItemConector () { }
+	}
 }
