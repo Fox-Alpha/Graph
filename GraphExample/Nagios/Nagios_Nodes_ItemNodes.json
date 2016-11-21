@@ -233,7 +233,7 @@
 						"service",
 						"servicedependency",
 						"serviceescalation"
-						],
+					],
 					"output": [
 						"host"
 					]
@@ -250,8 +250,16 @@
 				"itemname": "hostgroup_name",
 				"itemtype": "Label",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": [
+						"hostdependencie",
+						"hostescalation",
+						"service",
+						"servicedependencie",
+						"serviceescalation"
+					],
+					"output":[
+						"hostgroup"
+					]
 				},
 				"tag": "tagHostgroupName",
 				"isTitel": false,
@@ -263,12 +271,12 @@
 			},
 			"host_notifications_enabled": {
 				"itemname": "host_notifications_enabled",
-				"itemtype": "TextBox",
+				"itemtype": "CheckBox",
 				"connectors": {
 					"input": [],
 					"output":[]
 				},
-				"tag": null,
+				"tag": "tagHostNotificationsEnabled",
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -277,13 +285,15 @@
 				],
 			},
 			"host_notification_period": {
-				"itemname": "alias",
-				"itemtype": "TextBox",
+				"itemname": "host_notification_period",
+				"itemtype": "Label",
 				"connectors": {
-					"input": [],
+					"input": [
+						"contact"
+					],
 					"output":[]
 				},
-				"tag": null,
+				"tag": "tagHostNotificationPeriod",
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -292,7 +302,7 @@
 				],
 			},
 			"host_notification_options": {
-				"itemname": "alias",
+				"itemname": "host_notification_options",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -307,13 +317,15 @@
 				],
 			},
 			"host_notification_commands": {
-				"itemname": "alias",
-				"itemtype": "TextBox",
+				"itemname": "host_notification_commands",
+				"itemtype": "Label",
 				"connectors": {
-					"input": [],
+					"input": [
+						"contact"
+					],
 					"output":[]
 				},
-				"tag": null,
+				"tag": "tagHostNotificationCommands",
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -322,13 +334,13 @@
 				],
 			},
 			"check_period": {
-				"itemname": "alias",
-				"itemtype": "TextBox",
+				"itemname": "check_period",
+				"itemtype": "Label",
 				"connectors": {
-					"input": [],
+					"input": ["host", "service"],
 					"output":[]
 				},
-				"tag": null,
+				"tag": "tagCheckPeriod",
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -337,13 +349,13 @@
 				],
 			},
 			"check_command": {
-				"itemname": "alias",
-				"itemtype": "TextBox",
+				"itemname": "check_command",
+				"itemtype": "Label",
 				"connectors": {
-					"input": [],
+					"input": ["host", "service"],
 					"output":[]
 				},
-				"tag": null,
+				"tag": "tagCheckCommand",
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -352,13 +364,13 @@
 				],
 			},
 			"check_interval": {
-				"itemname": "alias",
-				"itemtype": "TextBox",
+				"itemname": "check_interval",
+				"itemtype": "Label",
 				"connectors": {
-					"input": [],
+					"input": ["host", "service"],
 					"output":[]
 				},
-				"tag": null,
+				"tag": "tagCheckInterval",
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -367,13 +379,13 @@
 				],
 			},
 			"max_check_attempts": {
-				"itemname": "alias",
-				"itemtype": "TextBox",
+				"itemname": "max_check_attempts",
+				"itemtype": "Label",
 				"connectors": {
-					"input": [],
+					"input": ["host", "service"],
 					"output":[]
 				},
-				"tag": null,
+				"tag": "tagMaxCheckAttempts",
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -382,13 +394,13 @@
 				],
 			},
 			"retry_interval": {
-				"itemname": "alias",
-				"itemtype": "TextBox",
+				"itemname": "retry_interval",
+				"itemtype": "Label",
 				"connectors": {
-					"input": [],
+					"input": ["host", "service"],
 					"output":[]
 				},
-				"tag": null,
+				"tag": "tagRetryInterval",
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -397,13 +409,19 @@
 				],
 			},
 			"contacts": {
-				"itemname": "alias",
-				"itemtype": "TextBox",
+				"itemname": "contacts",
+				"itemtype": "Label",
 				"connectors": {
-					"input": [],
+					"input": [
+						"host",
+						"hostexcalation",
+						"service",
+						"serviceescalation",
+						"contactgroup"
+					],
 					"output":[]
 				},
-				"tag": null,
+				"tag": "tagContacts",
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -412,13 +430,13 @@
 				],
 			},
 			"contact_name": {
-				"itemname": "alias",
+				"itemname": "contact_name",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
-					"output":[]
+					"output":["contact"]
 				},
-				"tag": null,
+				"tag": "tagContactName",
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -427,13 +445,18 @@
 				],
 			},
 			"contact_groups": {
-				"itemname": "alias",
-				"itemtype": "TextBox",
+				"itemname": "contact_groups",
+				"itemtype": "Label",
 				"connectors": {
-					"input": [],
+					"input": [
+						"host",
+						"hostescalation",
+						"service",
+						"serviceescalation"
+					],
 					"output":[]
 				},
-				"tag": null,
+				"tag": "tagContactGroups",
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -442,13 +465,13 @@
 				],
 			},
 			"contactgroup_name": {
-				"itemname": "alias",
+				"itemname": "contactgroup_name",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
-					"output":[]
+					"output":["contactgroup"]
 				},
-				"tag": null,
+				"tag": "tagContactgroupName",
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
