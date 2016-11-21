@@ -215,11 +215,11 @@
 					"input": [],
 					"output": []
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": true,
 				"isimportant": true,
 				"names": [
@@ -242,11 +242,11 @@
 						"host"
 					]
 				},
-				"tags": [
+				"tags": {
 					"tag": "tagHostName",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -269,11 +269,11 @@
 						"hostgroup"
 					]
 				},
-				"tags": [
+				"tags": {
 					"tag": "tagHostgroupName",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -288,11 +288,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "tagHostNotificationsEnabled",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -309,11 +309,11 @@
 					],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "tagHostNotificationPeriod",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -328,11 +328,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -350,6 +350,11 @@
 					"output":[]
 				},
 				"tag": "tagHostNotificationCommands",
+				"tags": {
+					"tag": "TAG",
+					"inputtag": ["Input1", "Input2"],
+					"outputtag": ["Output1", "Output2"]
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -365,6 +370,11 @@
 					"output":[]
 				},
 				"tag": "tagCheckPeriod",
+				"tags": {
+					"tag": "TAG",
+					"inputtag": ["Input1", "Input2"],
+					"outputtag": ["Output1", "Output2"]
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -380,6 +390,11 @@
 					"output":[]
 				},
 				"tag": "tagCheckCommand",
+				"tags": {
+					"tag": "TAG",
+					"inputtag": ["Input1", "Input2"],
+					"outputtag": ["Output1", "Output2"]
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -395,6 +410,11 @@
 					"output":[]
 				},
 				"tag": "tagCheckInterval",
+				"tags": {
+					"tag": "TAG",
+					"inputtag": ["Input1", "Input2"],
+					"outputtag": ["Output1", "Output2"]
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -410,6 +430,11 @@
 					"output":[]
 				},
 				"tag": "tagMaxCheckAttempts",
+				"tags": {
+					"tag": "TAG",
+					"inputtag": ["Input1", "Input2"],
+					"outputtag": ["Output1", "Output2"]
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -425,6 +450,11 @@
 					"output":[]
 				},
 				"tag": "tagRetryInterval",
+				"tags": {
+					"tag": "TAG",
+					"inputtag": ["Input1", "Input2"],
+					"outputtag": ["Output1", "Output2"]
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -446,6 +476,11 @@
 					"output":[]
 				},
 				"tag": "tagContacts",
+				"tags": {
+					"tag": "TAG",
+					"inputtag": ["Input1", "Input2"],
+					"outputtag": ["Output1", "Output2"]
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -461,6 +496,11 @@
 					"output":["contact"]
 				},
 				"tag": "tagContactName",
+				"tags": {
+					"tag": "TAG",
+					"inputtag": ["Input1", "Input2"],
+					"outputtag": ["Output1", "Output2"]
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -481,6 +521,11 @@
 					"output":[]
 				},
 				"tag": "tagContactGroups",
+				"tags": {
+					"tag": "TAG",
+					"inputtag": ["Input1", "Input2"],
+					"outputtag": ["Output1", "Output2"]
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -496,6 +541,11 @@
 					"output":["contactgroup"]
 				},
 				"tag": "tagContactgroupName",
+				"tags": {
+					"tag": "TAG",
+					"inputtag": ["Input1", "Input2"],
+					"outputtag": ["Output1", "Output2"]
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -510,11 +560,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -529,11 +579,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -548,11 +598,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -567,11 +617,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -586,11 +636,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -605,11 +655,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -624,11 +674,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 
 				"isTitel": false,
 				"isimportant": true,
@@ -644,11 +694,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 
 				"isTitel": false,
 				"isimportant": true,
@@ -664,11 +714,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 
 				"isTitel": false,
 				"isimportant": true,
@@ -684,11 +734,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -703,11 +753,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -722,11 +772,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -741,11 +791,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -760,11 +810,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -779,11 +829,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -798,11 +848,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -819,11 +869,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -838,11 +888,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -857,11 +907,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -876,11 +926,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -895,11 +945,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -914,11 +964,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -933,11 +983,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -952,11 +1002,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -971,11 +1021,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -990,11 +1040,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1009,11 +1059,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1028,11 +1078,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1047,11 +1097,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1066,11 +1116,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1085,11 +1135,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1104,11 +1154,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1123,11 +1173,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1142,11 +1192,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1161,11 +1211,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1180,11 +1230,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1199,11 +1249,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1218,11 +1268,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1237,11 +1287,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1256,11 +1306,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1275,11 +1325,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1294,11 +1344,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1313,11 +1363,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1332,11 +1382,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1351,11 +1401,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1370,11 +1420,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1389,11 +1439,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1408,11 +1458,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1427,11 +1477,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1446,11 +1496,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1465,11 +1515,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1484,11 +1534,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1503,11 +1553,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1522,11 +1572,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1541,11 +1591,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1560,11 +1610,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1579,11 +1629,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1598,11 +1648,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1617,11 +1667,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1636,11 +1686,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1655,11 +1705,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1674,11 +1724,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1693,11 +1743,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1712,11 +1762,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1731,11 +1781,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1750,11 +1800,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1769,11 +1819,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1788,11 +1838,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1807,11 +1857,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -1826,11 +1876,11 @@
 					"input": [],
 					"output":[]
 				},
-				"tags": [
+				"tags": {
 					"tag": "TAG",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
-				],
+				},
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
