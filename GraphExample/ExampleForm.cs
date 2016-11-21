@@ -26,6 +26,7 @@ namespace GraphNodes
 	public partial class ExampleForm : Form
 	{
 		NagiosJSON nagiosNodes;
+		Point mouseClickForMenu;
 
 		public ExampleForm ()
 		{
@@ -81,7 +82,8 @@ namespace GraphNodes
 
 				if(nagiosNodes.listNagiosNodes.TryGetValue(nagObj, out nodeItemsList))
 				{
-					var node = new Node (nagObj);
+					var node = new Node (nagObj) { Tag = nagObj };
+					Matrix inverse_transformation = new Matrix ();
 
 					foreach (var str in nodeItemsList)
 					{
@@ -95,17 +97,15 @@ namespace GraphNodes
 									nnio.isTitel)
 								{ Tag = nnio.itemTag, IsImportantNodeItem = nnio.isMandatory });
 
-							node.Location = new Point (300, 150);
+							//node.Location = new Point (300, 150);
 						}
 						else if (nagiosNodes.listNagiosNodeItems.nagiosAdditionalNodeItemObjects.TryGetValue (str, out nnio))
 						{
 							//	Ist in den Additional NodeItems vorhanden
 							node.AddItem (new NodeLabelItem (nnio.itemName, nnio.itemConnectors.hasInput, nnio.itemConnectors.hasOutput, nnio.isTitel) { Tag = nnio.itemTag, IsImportantNodeItem = nnio.isMandatory});
-
-							
 						}
 					}
-					node.Location = new Point (300, 150);
+					node.Location = (PointF) graphControl.PointToClient (mouseClickForMenu);
 					graphControl.AddNode (node);
 				}
 
@@ -194,6 +194,7 @@ namespace GraphNodes
 				//testMenuItem.Text = "(clicked on nothing)";
 				//nodeMenu.Show(e.Position);
 				nodeMenu.Show (e.Position);
+				mouseClickForMenu = e.Position;
 				e.Cancel = false;
 			} else
 			if (e.Element is Node)
