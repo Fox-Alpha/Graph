@@ -211,10 +211,12 @@
 			"alias": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output": []
+				},
 				"tag": null,
-				"isTitel": false,
+				"isTitel": true,
 				"isimportant": true,
 				"names": [
 				],
@@ -222,11 +224,21 @@
 				],
 			},
 			"host_name": {
-				"itemname": "alias",
+				"itemname": "host_name",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
-				"tag": null,
+				"connectors": {
+					"input": [
+						"hostescalation",
+						"hostdependency",
+						"service",
+						"servicedependency",
+						"serviceescalation"
+						],
+					"output": [
+						"host"
+					]
+				},
+				"tag": "tagHostName",
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -235,11 +247,13 @@
 				],
 			},
 			"hostgroup_name": {
-				"itemname": "alias",
-				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
-				"tag": null,
+				"itemname": "hostgroup_name",
+				"itemtype": "Label",
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
+				"tag": "tagHostgroupName",
 				"isTitel": false,
 				"isimportant": true,
 				"names": [
@@ -248,10 +262,12 @@
 				],
 			},
 			"host_notifications_enabled": {
-				"itemname": "alias",
+				"itemname": "host_notifications_enabled",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -263,8 +279,10 @@
 			"host_notification_period": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -276,8 +294,10 @@
 			"host_notification_options": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -289,8 +309,10 @@
 			"host_notification_commands": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -302,8 +324,10 @@
 			"check_period": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -315,8 +339,10 @@
 			"check_command": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -328,8 +354,10 @@
 			"check_interval": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -341,8 +369,10 @@
 			"max_check_attempts": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -354,8 +384,10 @@
 			"retry_interval": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -367,8 +399,10 @@
 			"contacts": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -380,8 +414,10 @@
 			"contact_name": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -393,8 +429,10 @@
 			"contact_groups": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -406,8 +444,10 @@
 			"contactgroup_name": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -419,8 +459,10 @@
 			"contactgroups": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -432,8 +474,10 @@
 			"service_description": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -445,8 +489,10 @@
 			"servicegroup_name": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -458,8 +504,10 @@
 			"service_notifications_enabled": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -471,8 +519,10 @@
 			"service_notification_period": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -484,8 +534,10 @@
 			"service_notification_options": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -497,8 +549,10 @@
 			"service_notification_commands": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -510,8 +564,10 @@
 			"timeperiod_name": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -523,8 +579,10 @@
 			"command_name": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -536,8 +594,10 @@
 			"command_line": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -549,8 +609,10 @@
 			"dependent_host_name": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -562,8 +624,10 @@
 			"dependent_service_description": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -575,8 +639,10 @@
 			"notification_interval": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -588,8 +654,10 @@
 			"notification_period": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -601,8 +669,10 @@
 			"first_notification": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -614,8 +684,10 @@
 			"last_notification": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -629,8 +701,10 @@
 			"hostgroups": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -642,8 +716,10 @@
 			"hostgroup_members": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -655,8 +731,10 @@
 			"servicegroups": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -668,8 +746,10 @@
 			"servicegroup_members": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -681,8 +761,10 @@
 			"members": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -694,8 +776,10 @@
 			"display_name": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -707,8 +791,10 @@
 			"address": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -720,8 +806,10 @@
 			"hourly_value": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -733,8 +821,10 @@
 			"initial_state": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -746,8 +836,10 @@
 			"active_checks_enabled": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -759,8 +851,10 @@
 			"passive_checks_enabled": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -772,8 +866,10 @@
 			"obsess_over_host|obsess": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -785,8 +881,10 @@
 			"check_freshness": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -798,8 +896,10 @@
 			"freshness_threshold": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -811,8 +911,10 @@
 			"event_handler": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -824,8 +926,10 @@
 			"event_handler_enabled": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -837,8 +941,10 @@
 			"low_flap_threshold": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -850,8 +956,10 @@
 			"high_flap_threshold": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -863,8 +971,10 @@
 			"flap_detection_enabled": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -876,8 +986,10 @@
 			"flap_detection_options": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -889,8 +1001,10 @@
 			"process_perf_data": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -902,8 +1016,10 @@
 			"retain_status_information": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -915,8 +1031,10 @@
 			"retain_nonstatus_information": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -928,8 +1046,10 @@
 			"first_notification_delay": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -941,8 +1061,10 @@
 			"notification_options": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -954,8 +1076,10 @@
 			"notifications_enabled": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -967,8 +1091,10 @@
 			"stalking_options": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -980,8 +1106,10 @@
 			"notes": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -993,8 +1121,10 @@
 			"notes_url": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1006,8 +1136,10 @@
 			"action_url": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1019,8 +1151,10 @@
 			"icon_image": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1032,8 +1166,10 @@
 			"icon_image_alt": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1045,8 +1181,10 @@
 			"vrml_image": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1058,8 +1196,10 @@
 			"statusmap_image": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1071,8 +1211,10 @@
 			"2d_coords": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1084,8 +1226,10 @@
 			"3d_coords": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1097,8 +1241,10 @@
 			"is_volatile": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1110,8 +1256,10 @@
 			"obsess_over_service|obsess": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1123,8 +1271,10 @@
 			"minimum_value": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1136,8 +1286,10 @@
 			"email": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1149,8 +1301,10 @@
 			"pager": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1162,8 +1316,10 @@
 			"addressx": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1175,8 +1331,10 @@
 			"can_submit_commands": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1188,8 +1346,10 @@
 			"contactgroup_members": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1201,8 +1361,10 @@
 			"exclude": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1214,8 +1376,10 @@
 			"dependent_hostgroup_name": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1227,8 +1391,10 @@
 			"dependent_servicegroup_name": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1240,8 +1406,10 @@
 			"dependency_period": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1253,8 +1421,10 @@
 			"execution_failure_criteria": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1266,8 +1436,10 @@
 			"escalation_period": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1279,8 +1451,10 @@
 			"escalation_options": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1292,8 +1466,10 @@
 			"notification_failure_criteria": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1305,8 +1481,10 @@
 			"parents": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
@@ -1318,8 +1496,10 @@
 			"inherits_parent": {
 				"itemname": "alias",
 				"itemtype": "TextBox",
-				"input": false,
-				"output": false,
+				"connectors": {
+					"input": [],
+					"output":[]
+				},
 				"tag": null,
 				"isTitel": false,
 				"isimportant": true,
