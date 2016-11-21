@@ -48,6 +48,7 @@
     <Compile Include="Compatibility\AlwaysCompatible.cs" />
     <Compile Include="Compatibility\NeverCompatible.cs" />
     <Compile Include="Compatibility\ICompatibilityStrategy.cs" />
+    <Compile Include="Compatibility\InOutTagTypeListCompatibility.cs" />
     <Compile Include="Compatibility\TagTypeCompatibility.cs" />
     <Compile Include="Forms\CheckListboxSelectionForm.cs">
       <SubType>Form</SubType>
