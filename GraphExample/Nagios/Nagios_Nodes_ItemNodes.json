@@ -229,7 +229,7 @@
 			},
 			"host_name": {
 				"itemname": "host_name",
-				"itemtype": "TextBox",
+				"itemtype": "Label",
 				"connectors": {
 					"input": [
 						"hostescalation",
@@ -244,8 +244,8 @@
 				},
 				"tags": {
 					"tag": "tagHostName",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagTextBox", "tagOutHostName"],
+					"outputtag": ["tagHostName"]
 				},
 				"isTitel": false,
 				"isimportant": true,
