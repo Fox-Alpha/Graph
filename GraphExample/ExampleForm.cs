@@ -11,16 +11,22 @@ using Graph;
 using System.Drawing.Drawing2D;
 using Graph.Compatibility;
 using Graph.Items;
-using GraphNodes.Nagios;
 using GraphNodes.NagiosItems.Contact;
 using GraphNodes.NagiosItems.Host;
 using Newtonsoft.Json;
 using System.IO;
 
+using GraphNodes.Nagios;
+using Graphnodes.Nagios.Node;
+using Graphnodes.Nagios.NodeItem;
+
+
 namespace GraphNodes
 {
 	public partial class ExampleForm : Form
 	{
+		NagiosJSON nagiosNodes;
+
 		public ExampleForm ()
 		{
 			InitializeComponent ();
@@ -31,7 +37,76 @@ namespace GraphNodes
 			graphControl.ConnectionAdding += new EventHandler<AcceptNodeConnectionEventArgs> (OnConnectionAdding);
 			graphControl.ConnectionRemoving += new EventHandler<AcceptNodeConnectionEventArgs> (OnConnectionRemoved);
 			graphControl.ShowElementMenu += new EventHandler<AcceptElementLocationEventArgs> (OnShowElementMenu);
+
+			//#####
+			//	Laden der Definitionen aus der JSON Datei
+			//#####
+
+			nagiosNodes = new NagiosJSON ();
+
+			if (nagiosNodes.LoadSettings ())
+			{
+				Debug.WriteLine ("JSON wurde geladen", "NAGIOS");
+
+				if (nagiosNodes.listNagiosObjects.Count > 0)
+				{
+					foreach (var nagObject in nagiosNodes.listNagiosObjects)
+					{
+						int index = nodeMenu.Items.Add (
+						new ToolStripMenuItem
+						{
+							Name = "Object_" + nagiosNodes.listNagiosObjects.IndexOf (nagObject),
+							Text = nagiosNodes.listNagiosObjects [nagiosNodes.listNagiosObjects.IndexOf (nagObject)],
+							Tag = nagiosNodes.listNagiosObjects.IndexOf (nagObject)
+						});
+						nodeMenu.Items [index].Click += windowNewMenu_Click;
+					}
+				}
+			}
+			else
+				Debug.WriteLine ("Laden dere JSON Settings fehlgeschlagen", "NAGIOS");
+			//#####
+
 		}
+
+		private void windowNewMenu_Click (object sender, EventArgs e)
+		{
+			if ((sender as ToolStripMenuItem) != null)
+			{
+				int index = (int) (sender as ToolStripMenuItem).Tag;
+				string nagObj = nagiosNodes.listNagiosObjects [index];
+				NagiosNodeItemObject nnio = new NagiosNodeItemObject ();
+				NagiosNode nagNode = new NagiosNode ();
+				List<string> nodeItemsList = new List<string> ();
+
+				if(nagiosNodes.listNagiosNodes.TryGetValue(nagObj, out nodeItemsList))
+				{
+					var node = new Node (nagObj);
+
+					foreach (var str in nodeItemsList)
+					{
+						if (nagiosNodes.listNagiosNodeItems.nagiosImportantNodeItemObjects.TryGetValue (str, out nnio))
+						{
+							//	Ist in den Important NodeItems vorhanden
+							node.AddItem (new NodeLabelItem (nnio.itemName, nnio.hasInputConnector, nnio.hasOutputConnector, nnio.isTitel) { Tag = nnio.itemTag, IsImportantNodeItem = nnio.isMandatory });
+
+							node.Location = new Point (300, 150);
+						}
+						else if (nagiosNodes.listNagiosNodeItems.nagiosAdditionalNodeItemObjects.TryGetValue (str, out nnio))
+						{
+							//	Ist in den Additional NodeItems vorhanden
+							node.AddItem (new NodeLabelItem (nnio.itemName, nnio.hasInputConnector, nnio.hasOutputConnector, nnio.isTitel) { Tag = nnio.itemTag, IsImportantNodeItem = nnio.isMandatory});
+
+							
+						}
+					}
+					node.Location = new Point (300, 150);
+					graphControl.AddNode (node);
+				}
+
+			}
+		}
+
 		public void _ExampleForm()
 		{
 			InitializeComponent();
@@ -111,8 +186,9 @@ namespace GraphNodes
 			if (e.Element == null)
 			{
 				// Show a test menu for when you click on nothing
-				testMenuItem.Text = "(clicked on nothing)";
-				nodeMenu.Show(e.Position);
+				//testMenuItem.Text = "(clicked on nothing)";
+				//nodeMenu.Show(e.Position);
+				nodeMenu.Show (e.Position);
 				e.Cancel = false;
 			} else
 			if (e.Element is Node)
@@ -157,6 +233,7 @@ namespace GraphNodes
 		private void SomeNode_MouseDown(object sender, MouseEventArgs e)
 		{
 			var node = new NagiosNodeHostObject ("Nagios HOST"); //new Node("Some node");
+			
 			
 			this.DoDragDrop(node, DragDropEffects.Copy);
 		}
