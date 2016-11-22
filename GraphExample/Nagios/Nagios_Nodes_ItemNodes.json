@@ -554,7 +554,7 @@
 				],
 			},
 			"contactgroups": {
-				"itemname": "alias",
+				"itemname": "contactgroups",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -573,7 +573,7 @@
 				],
 			},
 			"service_description": {
-				"itemname": "alias",
+				"itemname": "service_description",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -592,7 +592,7 @@
 				],
 			},
 			"servicegroup_name": {
-				"itemname": "alias",
+				"itemname": "servicegroup_name",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -611,7 +611,7 @@
 				],
 			},
 			"service_notifications_enabled": {
-				"itemname": "alias",
+				"itemname": "service_notifications_enabled",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -630,7 +630,7 @@
 				],
 			},
 			"service_notification_period": {
-				"itemname": "alias",
+				"itemname": "service_notification_period",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -649,7 +649,7 @@
 				],
 			},
 			"service_notification_options": {
-				"itemname": "alias",
+				"itemname": "service_notification_options",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -668,7 +668,7 @@
 				],
 			},
 			"service_notification_commands": {
-				"itemname": "alias",
+				"itemname": "service_notification_commands",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -688,7 +688,7 @@
 				],
 			},
 			"timeperiod_name": {
-				"itemname": "alias",
+				"itemname": "timeperiod_name",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -708,7 +708,7 @@
 				],
 			},
 			"command_name": {
-				"itemname": "alias",
+				"itemname": "command_name",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -728,7 +728,7 @@
 				],
 			},
 			"command_line": {
-				"itemname": "alias",
+				"itemname": "command_line",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -747,7 +747,7 @@
 				],
 			},
 			"dependent_host_name": {
-				"itemname": "alias",
+				"itemname": "dependent_host_name",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -766,7 +766,7 @@
 				],
 			},
 			"dependent_service_description": {
-				"itemname": "alias",
+				"itemname": "dependent_service_description",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -785,7 +785,7 @@
 				],
 			},
 			"notification_interval": {
-				"itemname": "alias",
+				"itemname": "notification_interval",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -804,7 +804,7 @@
 				],
 			},
 			"notification_period": {
-				"itemname": "alias",
+				"itemname": "notification_period",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -823,7 +823,7 @@
 				],
 			},
 			"first_notification": {
-				"itemname": "alias",
+				"itemname": "first_notification",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -842,7 +842,7 @@
 				],
 			},
 			"last_notification": {
-				"itemname": "alias",
+				"itemname": "last_notification",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -863,7 +863,7 @@
 		},
 		"additional": {
 			"hostgroups": {
-				"itemname": "alias",
+				"itemname": "hostgroups",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -882,7 +882,7 @@
 				],
 			},
 			"hostgroup_members": {
-				"itemname": "alias",
+				"itemname": "hostgroup_members",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -901,7 +901,7 @@
 				],
 			},
 			"servicegroups": {
-				"itemname": "alias",
+				"itemname": "servicegroups",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -920,7 +920,7 @@
 				],
 			},
 			"servicegroup_members": {
-				"itemname": "alias",
+				"itemname": "servicegroup_members",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -939,7 +939,7 @@
 				],
 			},
 			"members": {
-				"itemname": "alias",
+				"itemname": "members",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -958,7 +958,7 @@
 				],
 			},
 			"display_name": {
-				"itemname": "alias",
+				"itemname": "display_name",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -977,7 +977,7 @@
 				],
 			},
 			"address": {
-				"itemname": "alias",
+				"itemname": "address",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -996,7 +996,7 @@
 				],
 			},
 			"hourly_value": {
-				"itemname": "alias",
+				"itemname": "hourly_value",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1015,7 +1015,7 @@
 				],
 			},
 			"initial_state": {
-				"itemname": "alias",
+				"itemname": "initial_state",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1034,7 +1034,7 @@
 				],
 			},
 			"active_checks_enabled": {
-				"itemname": "alias",
+				"itemname": "active_checks_enabled",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1053,7 +1053,7 @@
 				],
 			},
 			"passive_checks_enabled": {
-				"itemname": "alias",
+				"itemname": "passive_checks_enabled",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1072,7 +1072,7 @@
 				],
 			},
 			"obsess_over_host|obsess": {
-				"itemname": "alias",
+				"itemname": "obsess_over_host",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1091,7 +1091,7 @@
 				],
 			},
 			"check_freshness": {
-				"itemname": "alias",
+				"itemname": "check_freshness",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1110,7 +1110,7 @@
 				],
 			},
 			"freshness_threshold": {
-				"itemname": "alias",
+				"itemname": "freshness_threshold",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1129,7 +1129,7 @@
 				],
 			},
 			"event_handler": {
-				"itemname": "alias",
+				"itemname": "event_handler",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1148,7 +1148,7 @@
 				],
 			},
 			"event_handler_enabled": {
-				"itemname": "alias",
+				"itemname": "event_handler_enabled",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1167,7 +1167,7 @@
 				],
 			},
 			"low_flap_threshold": {
-				"itemname": "alias",
+				"itemname": "low_flap_threshold",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1186,7 +1186,7 @@
 				],
 			},
 			"high_flap_threshold": {
-				"itemname": "alias",
+				"itemname": "high_flap_threshold",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1205,7 +1205,7 @@
 				],
 			},
 			"flap_detection_enabled": {
-				"itemname": "alias",
+				"itemname": "flap_detection_enabled",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1224,7 +1224,7 @@
 				],
 			},
 			"flap_detection_options": {
-				"itemname": "alias",
+				"itemname": "flap_detection_options",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1243,7 +1243,7 @@
 				],
 			},
 			"process_perf_data": {
-				"itemname": "alias",
+				"itemname": "process_perf_data",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1262,7 +1262,7 @@
 				],
 			},
 			"retain_status_information": {
-				"itemname": "alias",
+				"itemname": "retain_status_information",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1281,7 +1281,7 @@
 				],
 			},
 			"retain_nonstatus_information": {
-				"itemname": "alias",
+				"itemname": "retain_nonstatus_information",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1300,7 +1300,7 @@
 				],
 			},
 			"first_notification_delay": {
-				"itemname": "alias",
+				"itemname": "first_notification_delay",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1319,7 +1319,7 @@
 				],
 			},
 			"notification_options": {
-				"itemname": "alias",
+				"itemname": "notification_options",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1338,7 +1338,7 @@
 				],
 			},
 			"notifications_enabled": {
-				"itemname": "alias",
+				"itemname": "notifications_enabled",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1357,7 +1357,7 @@
 				],
 			},
 			"stalking_options": {
-				"itemname": "alias",
+				"itemname": "stalking_options",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1376,7 +1376,7 @@
 				],
 			},
 			"notes": {
-				"itemname": "alias",
+				"itemname": "notes",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1395,7 +1395,7 @@
 				],
 			},
 			"notes_url": {
-				"itemname": "alias",
+				"itemname": "notes_url",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1414,7 +1414,7 @@
 				],
 			},
 			"action_url": {
-				"itemname": "alias",
+				"itemname": "action_url",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1433,7 +1433,7 @@
 				],
 			},
 			"icon_image": {
-				"itemname": "alias",
+				"itemname": "icon_image",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1452,7 +1452,7 @@
 				],
 			},
 			"icon_image_alt": {
-				"itemname": "alias",
+				"itemname": "icon_image_alt",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1471,7 +1471,7 @@
 				],
 			},
 			"vrml_image": {
-				"itemname": "alias",
+				"itemname": "vrml_image",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1490,7 +1490,7 @@
 				],
 			},
 			"statusmap_image": {
-				"itemname": "alias",
+				"itemname": "statusmap_image",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1509,7 +1509,7 @@
 				],
 			},
 			"2d_coords": {
-				"itemname": "alias",
+				"itemname": "2d_coords",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1528,7 +1528,7 @@
 				],
 			},
 			"3d_coords": {
-				"itemname": "alias",
+				"itemname": "3d_coords",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1547,7 +1547,7 @@
 				],
 			},
 			"is_volatile": {
-				"itemname": "alias",
+				"itemname": "is_volatile",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1566,7 +1566,7 @@
 				],
 			},
 			"obsess_over_service|obsess": {
-				"itemname": "alias",
+				"itemname": "obsess_over_service",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1585,7 +1585,7 @@
 				],
 			},
 			"minimum_value": {
-				"itemname": "alias",
+				"itemname": "minimum_value",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1604,7 +1604,7 @@
 				],
 			},
 			"email": {
-				"itemname": "alias",
+				"itemname": "email",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1623,7 +1623,7 @@
 				],
 			},
 			"pager": {
-				"itemname": "alias",
+				"itemname": "pager",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1642,7 +1642,7 @@
 				],
 			},
 			"addressx": {
-				"itemname": "alias",
+				"itemname": "addressx",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1661,7 +1661,7 @@
 				],
 			},
 			"can_submit_commands": {
-				"itemname": "alias",
+				"itemname": "can_submit_commands",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1680,7 +1680,7 @@
 				],
 			},
 			"contactgroup_members": {
-				"itemname": "alias",
+				"itemname": "contactgroup_members",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1699,7 +1699,7 @@
 				],
 			},
 			"exclude": {
-				"itemname": "alias",
+				"itemname": "exclude",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1718,7 +1718,7 @@
 				],
 			},
 			"dependent_hostgroup_name": {
-				"itemname": "alias",
+				"itemname": "dependent_hostgroup_name",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1737,7 +1737,7 @@
 				],
 			},
 			"dependent_servicegroup_name": {
-				"itemname": "alias",
+				"itemname": "dependent_servicegroup_name",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1756,7 +1756,7 @@
 				],
 			},
 			"dependency_period": {
-				"itemname": "alias",
+				"itemname": "dependency_period",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1775,7 +1775,7 @@
 				],
 			},
 			"execution_failure_criteria": {
-				"itemname": "alias",
+				"itemname": "execution_failure_criteria",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1794,7 +1794,7 @@
 				],
 			},
 			"escalation_period": {
-				"itemname": "alias",
+				"itemname": "escalation_period",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1813,7 +1813,7 @@
 				],
 			},
 			"escalation_options": {
-				"itemname": "alias",
+				"itemname": "escalation_options",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1832,7 +1832,7 @@
 				],
 			},
 			"notification_failure_criteria": {
-				"itemname": "alias",
+				"itemname": "notification_failure_criteria",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1851,7 +1851,7 @@
 				],
 			},
 			"parents": {
-				"itemname": "alias",
+				"itemname": "parents",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
@@ -1870,7 +1870,7 @@
 				],
 			},
 			"inherits_parent": {
-				"itemname": "alias",
+				"itemname": "inherits_parent",
 				"itemtype": "TextBox",
 				"connectors": {
 					"input": [],
