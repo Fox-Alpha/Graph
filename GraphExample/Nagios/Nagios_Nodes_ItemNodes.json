@@ -216,7 +216,7 @@
 					"output": []
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagalias",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -329,7 +329,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "taghost_notification_options",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -349,9 +349,8 @@
 					],
 					"output":[]
 				},
-				"tag": "tagHostNotificationCommands",
 				"tags": {
-					"tag": "TAG",
+					"tag": "taghost_notification_commands",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -369,9 +368,8 @@
 					"input": ["host", "service"],
 					"output":[]
 				},
-				"tag": "tagCheckPeriod",
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagcheck_period",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -389,9 +387,8 @@
 					"input": ["host", "service"],
 					"output":[]
 				},
-				"tag": "tagCheckCommand",
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagCheckCommand",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -409,9 +406,8 @@
 					"input": ["host", "service"],
 					"output":[]
 				},
-				"tag": "tagCheckInterval",
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagCheckInterval",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -429,9 +425,8 @@
 					"input": ["host", "service"],
 					"output":[]
 				},
-				"tag": "tagMaxCheckAttempts",
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagMaxCheckAttempts",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -449,9 +444,8 @@
 					"input": ["host", "service"],
 					"output":[]
 				},
-				"tag": "tagRetryInterval",
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagRetryInterval",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -475,9 +469,8 @@
 					],
 					"output":[]
 				},
-				"tag": "tagContacts",
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagContacts",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -495,9 +488,8 @@
 					"input": [],
 					"output":["contact"]
 				},
-				"tag": "tagContactName",
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagContactName",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -520,9 +512,8 @@
 					],
 					"output":[]
 				},
-				"tag": "tagContactGroups",
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagContactGroups",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -540,9 +531,8 @@
 					"input": [],
 					"output":["contactgroup"]
 				},
-				"tag": "tagContactgroupName",
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagContactgroupName",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -561,7 +551,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagcontactgroups",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -580,7 +570,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagservice_description",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -599,7 +589,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagservicegroup_name",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -618,7 +608,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagservice_notifications_enabled",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -637,7 +627,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagservice_notification_period",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -656,7 +646,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagservice_notification_options",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -675,7 +665,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagservice_notification_commands",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -695,7 +685,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagtimeperiod_name",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -715,7 +705,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagcommand_name",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -735,7 +725,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagcommand_line",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -754,7 +744,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagdependent_host_name",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -773,7 +763,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagdependent_service_description",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -792,7 +782,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagnotification_interval",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -811,7 +801,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagnotification_period",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -830,7 +820,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagfirst_notification",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -849,7 +839,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "taglast_notification",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -870,7 +860,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "taghostgroups",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -889,7 +879,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "taghostgroup_members",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -908,7 +898,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagservicegroups",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -927,7 +917,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagservicegroup_members",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -946,7 +936,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagmembers",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -965,7 +955,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagdisplay_name",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -984,7 +974,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagaddress",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1003,7 +993,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "taghourly_value",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1022,7 +1012,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "taginitial_state",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1041,7 +1031,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagactive_checks_enabled",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1060,7 +1050,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagpassive_checks_enabled",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1079,7 +1069,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagobsess_over_host",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1098,7 +1088,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagcheck_freshness",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1117,7 +1107,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagfreshness_threshold",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1136,7 +1126,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagevent_handler",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1155,7 +1145,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagevent_handler_enabled",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1174,7 +1164,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "taglow_flap_threshold",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1193,7 +1183,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "taghigh_flap_threshold",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1212,7 +1202,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagflap_detection_enabled",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1231,7 +1221,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagflap_detection_options",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1250,7 +1240,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagprocess_perf_data",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1269,7 +1259,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagretain_status_information",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1288,7 +1278,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagretain_nonstatus_information",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1307,7 +1297,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagfirst_notification_delay",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1326,7 +1316,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagnotification_options",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1345,7 +1335,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagnotifications_enabled",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1364,7 +1354,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagstalking_options",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1383,7 +1373,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagnotes",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1402,7 +1392,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagnotes_url",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1421,7 +1411,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagaction_url",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1440,7 +1430,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagicon_image",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1459,7 +1449,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagicon_image_alt",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1478,7 +1468,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagvrml_image",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1497,7 +1487,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagstatusmap_image",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1516,7 +1506,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tag2d_coords",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1535,7 +1525,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tag3d_coords",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1554,7 +1544,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagis_volatile",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1573,7 +1563,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagobsess_over_service",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1592,7 +1582,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagminimum_value",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1611,7 +1601,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagemail",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1630,7 +1620,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagpager",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1649,7 +1639,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagaddressx",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1668,7 +1658,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagcan_submit_commands",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1687,7 +1677,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagcontactgroup_members",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1706,7 +1696,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagexclude",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1725,7 +1715,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagdependent_hostgroup_name",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1744,7 +1734,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagdependent_servicegroup_name",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1763,7 +1753,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagdependency_period",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1782,7 +1772,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagexecution_failure_criteria",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1801,7 +1791,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagescalation_period",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1820,7 +1810,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagescalation_options",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1839,7 +1829,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagnotification_failure_criteria",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1858,7 +1848,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "tagparents",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
@@ -1877,7 +1867,7 @@
 					"output":[]
 				},
 				"tags": {
-					"tag": "TAG",
+					"tag": "taginherits_parent",
 					"inputtag": ["Input1", "Input2"],
 					"outputtag": ["Output1", "Output2"]
 				},
