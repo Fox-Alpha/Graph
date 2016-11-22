@@ -217,8 +217,8 @@
 				},
 				"tags": {
 					"tag": "tagalias",
-					"inputtag": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
-					"outputtag": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": true,
 				"isimportant": true,
@@ -236,8 +236,8 @@
 				},
 				"tags": {
 					"tag": "tagHostName",
-					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
-					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -255,8 +255,8 @@
 				},
 				"tags": {
 					"tag": "tagHostgroupName",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -274,8 +274,8 @@
 				},
 				"tags": {
 					"tag": "tagHostNotificationsEnabled",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -293,8 +293,8 @@
 				},
 				"tags": {
 					"tag": "tagHostNotificationPeriod",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -312,8 +312,8 @@
 				},
 				"tags": {
 					"tag": "taghost_notification_options",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -331,8 +331,8 @@
 				},
 				"tags": {
 					"tag": "taghost_notification_commands",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -350,8 +350,8 @@
 				},
 				"tags": {
 					"tag": "tagcheck_period",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -369,8 +369,8 @@
 				},
 				"tags": {
 					"tag": "tagCheckCommand",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -388,8 +388,8 @@
 				},
 				"tags": {
 					"tag": "tagCheckInterval",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -407,8 +407,8 @@
 				},
 				"tags": {
 					"tag": "tagMaxCheckAttempts",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -426,8 +426,8 @@
 				},
 				"tags": {
 					"tag": "tagRetryInterval",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -445,8 +445,8 @@
 				},
 				"tags": {
 					"tag": "tagContacts",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -464,8 +464,8 @@
 				},
 				"tags": {
 					"tag": "tagContactName",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -483,8 +483,8 @@
 				},
 				"tags": {
 					"tag": "tagContactGroups",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -502,8 +502,8 @@
 				},
 				"tags": {
 					"tag": "tagContactgroupName",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -521,8 +521,8 @@
 				},
 				"tags": {
 					"tag": "tagcontactgroups",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -540,8 +540,8 @@
 				},
 				"tags": {
 					"tag": "tagservice_description",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -559,8 +559,8 @@
 				},
 				"tags": {
 					"tag": "tagservicegroup_name",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -578,8 +578,8 @@
 				},
 				"tags": {
 					"tag": "tagservice_notifications_enabled",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -597,8 +597,8 @@
 				},
 				"tags": {
 					"tag": "tagservice_notification_period",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -616,8 +616,8 @@
 				},
 				"tags": {
 					"tag": "tagservice_notification_options",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -635,8 +635,8 @@
 				},
 				"tags": {
 					"tag": "tagservice_notification_commands",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 
 				"isTitel": false,
@@ -655,8 +655,8 @@
 				},
 				"tags": {
 					"tag": "tagtimeperiod_name",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 
 				"isTitel": false,
@@ -675,8 +675,8 @@
 				},
 				"tags": {
 					"tag": "tagcommand_name",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 
 				"isTitel": false,
@@ -695,8 +695,8 @@
 				},
 				"tags": {
 					"tag": "tagcommand_line",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -714,8 +714,8 @@
 				},
 				"tags": {
 					"tag": "tagdependent_host_name",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -733,8 +733,8 @@
 				},
 				"tags": {
 					"tag": "tagdependent_service_description",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -752,8 +752,8 @@
 				},
 				"tags": {
 					"tag": "tagnotification_interval",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -771,8 +771,8 @@
 				},
 				"tags": {
 					"tag": "tagnotification_period",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -790,8 +790,8 @@
 				},
 				"tags": {
 					"tag": "tagfirst_notification",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -809,8 +809,8 @@
 				},
 				"tags": {
 					"tag": "taglast_notification",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -830,8 +830,8 @@
 				},
 				"tags": {
 					"tag": "taghostgroups",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -849,8 +849,8 @@
 				},
 				"tags": {
 					"tag": "taghostgroup_members",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -868,8 +868,8 @@
 				},
 				"tags": {
 					"tag": "tagservicegroups",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -887,8 +887,8 @@
 				},
 				"tags": {
 					"tag": "tagservicegroup_members",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -906,8 +906,8 @@
 				},
 				"tags": {
 					"tag": "tagmembers",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -925,8 +925,8 @@
 				},
 				"tags": {
 					"tag": "tagdisplay_name",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -944,8 +944,8 @@
 				},
 				"tags": {
 					"tag": "tagaddress",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -963,8 +963,8 @@
 				},
 				"tags": {
 					"tag": "taghourly_value",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -982,8 +982,8 @@
 				},
 				"tags": {
 					"tag": "taginitial_state",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1001,8 +1001,8 @@
 				},
 				"tags": {
 					"tag": "tagactive_checks_enabled",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1020,8 +1020,8 @@
 				},
 				"tags": {
 					"tag": "tagpassive_checks_enabled",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1039,8 +1039,8 @@
 				},
 				"tags": {
 					"tag": "tagobsess_over_host",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1058,8 +1058,8 @@
 				},
 				"tags": {
 					"tag": "tagcheck_freshness",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1077,8 +1077,8 @@
 				},
 				"tags": {
 					"tag": "tagfreshness_threshold",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1096,8 +1096,8 @@
 				},
 				"tags": {
 					"tag": "tagevent_handler",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1115,8 +1115,8 @@
 				},
 				"tags": {
 					"tag": "tagevent_handler_enabled",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1134,8 +1134,8 @@
 				},
 				"tags": {
 					"tag": "taglow_flap_threshold",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1153,8 +1153,8 @@
 				},
 				"tags": {
 					"tag": "taghigh_flap_threshold",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1172,8 +1172,8 @@
 				},
 				"tags": {
 					"tag": "tagflap_detection_enabled",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1191,8 +1191,8 @@
 				},
 				"tags": {
 					"tag": "tagflap_detection_options",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1210,8 +1210,8 @@
 				},
 				"tags": {
 					"tag": "tagprocess_perf_data",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1229,8 +1229,8 @@
 				},
 				"tags": {
 					"tag": "tagretain_status_information",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1248,8 +1248,8 @@
 				},
 				"tags": {
 					"tag": "tagretain_nonstatus_information",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1267,8 +1267,8 @@
 				},
 				"tags": {
 					"tag": "tagfirst_notification_delay",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1286,8 +1286,8 @@
 				},
 				"tags": {
 					"tag": "tagnotification_options",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1305,8 +1305,8 @@
 				},
 				"tags": {
 					"tag": "tagnotifications_enabled",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1324,8 +1324,8 @@
 				},
 				"tags": {
 					"tag": "tagstalking_options",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1343,8 +1343,8 @@
 				},
 				"tags": {
 					"tag": "tagnotes",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1362,8 +1362,8 @@
 				},
 				"tags": {
 					"tag": "tagnotes_url",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1381,8 +1381,8 @@
 				},
 				"tags": {
 					"tag": "tagaction_url",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1400,8 +1400,8 @@
 				},
 				"tags": {
 					"tag": "tagicon_image",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1419,8 +1419,8 @@
 				},
 				"tags": {
 					"tag": "tagicon_image_alt",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1438,8 +1438,8 @@
 				},
 				"tags": {
 					"tag": "tagvrml_image",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1457,8 +1457,8 @@
 				},
 				"tags": {
 					"tag": "tagstatusmap_image",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1476,8 +1476,8 @@
 				},
 				"tags": {
 					"tag": "tag2d_coords",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1495,8 +1495,8 @@
 				},
 				"tags": {
 					"tag": "tag3d_coords",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1514,8 +1514,8 @@
 				},
 				"tags": {
 					"tag": "tagis_volatile",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1533,8 +1533,8 @@
 				},
 				"tags": {
 					"tag": "tagobsess_over_service",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1552,8 +1552,8 @@
 				},
 				"tags": {
 					"tag": "tagminimum_value",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1571,8 +1571,8 @@
 				},
 				"tags": {
 					"tag": "tagemail",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1590,8 +1590,8 @@
 				},
 				"tags": {
 					"tag": "tagpager",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1609,8 +1609,8 @@
 				},
 				"tags": {
 					"tag": "tagaddressx",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1628,8 +1628,8 @@
 				},
 				"tags": {
 					"tag": "tagcan_submit_commands",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1647,8 +1647,8 @@
 				},
 				"tags": {
 					"tag": "tagcontactgroup_members",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1666,8 +1666,8 @@
 				},
 				"tags": {
 					"tag": "tagexclude",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1685,8 +1685,8 @@
 				},
 				"tags": {
 					"tag": "tagdependent_hostgroup_name",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1704,8 +1704,8 @@
 				},
 				"tags": {
 					"tag": "tagdependent_servicegroup_name",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1723,8 +1723,8 @@
 				},
 				"tags": {
 					"tag": "tagdependency_period",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1742,8 +1742,8 @@
 				},
 				"tags": {
 					"tag": "tagexecution_failure_criteria",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1761,8 +1761,8 @@
 				},
 				"tags": {
 					"tag": "tagescalation_period",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1780,8 +1780,8 @@
 				},
 				"tags": {
 					"tag": "tagescalation_options",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1799,8 +1799,8 @@
 				},
 				"tags": {
 					"tag": "tagnotification_failure_criteria",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1818,8 +1818,8 @@
 				},
 				"tags": {
 					"tag": "tagparents",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -1837,8 +1837,8 @@
 				},
 				"tags": {
 					"tag": "taginherits_parent",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
