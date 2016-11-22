@@ -9,27 +9,32 @@ using Graph.Items;
 
 namespace GraphNodes.CustomUINodes
 {
-	public sealed class CustomUINodeCheckBox : Node
+	public class CustomUINode : Node
+	{
+		public CustomUINode (string title) :
+			base (title){ }
+	}
+	public sealed class CustomUINodeCheckBox : CustomUINode
 	{
 		public string CheckBoxText { get; set; } = string.Empty;
 
-		CustomUINodeCheckBox (string title) :
+		public CustomUINodeCheckBox (string title) :
 			base (title)
 		{
-			this.AddItem (new NodeCheckboxItem (string.IsNullOrWhiteSpace (CheckBoxText) ? title : CheckBoxText, false, true) { Tag = "CustomUINodeCheckBoxItem", outputTag = new object [] { "tagOutCheckBox" } });
+			this.AddItem (new NodeCheckboxItem (string.IsNullOrWhiteSpace (CheckBoxText) ? title : CheckBoxText, false, true) { Tag = "tagCheckBox", outputTag = new object [] { "tagCheckBox" } });
 		}
 	}
-	public sealed class CustomUINodeCheckListBoxItem : Node
+	public sealed class CustomUINodeCheckListBoxItem : CustomUINode
 	{
-		CustomUINodeCheckListBoxItem (string title) :
+		public CustomUINodeCheckListBoxItem (string title) :
 			base (title)
 		{
-			this.AddItem (new NodeCheckListBoxItem (new string [] { "CustomUINode", "Value1", "Value2", "Value3" }, 0, false, true) { Tag = "CustomUINodeCheckListBoxItem", outputTag = new object [] { "tagOutCheckListBox" } });
+			this.AddItem (new NodeCheckListBoxItem (new string [] { "CustomUINode", "Value1", "Value2", "Value3" }, 0, false, true) { Tag = "tagCheckListBox", outputTag = new object [] { "tagOutCheckListBox" } });
 		}
 	}
-	public sealed class CustomUINodeColorSliderItem : Node
+	public sealed class CustomUINodeColorSliderItem : CustomUINode
 	{
-		CustomUINodeColorSliderItem (string title) :
+		public CustomUINodeColorSliderItem (string title) :
 			base (title)
 		{
 			//this.AddItem (new NodeCheckListBoxItem (new string [] { "CustomUINode", "Value1", "Value2", "Value3" }, 0, false, true) { Tag = "CustomUINodeCheckListBoxItem", outputTag = new object [] { "tagOutCheckListBox" } });
@@ -37,7 +42,7 @@ namespace GraphNodes.CustomUINodes
 			var redChannel = new NodeSliderItem ("R", 64.0f, 16.0f, 0, 1.0f, 0.0f, false, false);
 			var greenChannel = new NodeSliderItem ("G", 64.0f, 16.0f, 0, 1.0f, 0.0f, false, false);
 			var blueChannel = new NodeSliderItem ("B", 64.0f, 16.0f, 0, 1.0f, 0.0f, false, false);
-			var colorItem = new NodeColorItem ("Color", Color.Black, false, true);
+			var colorItem = new NodeColorItem ("Color", Color.Black, false, true) { Tag = "tagCheckListBox" };
 
 			EventHandler<NodeItemEventArgs> channelChangedDelegate = delegate (object s, NodeItemEventArgs args)
 			{
@@ -59,57 +64,70 @@ namespace GraphNodes.CustomUINodes
 
 		}
 	}
-	public sealed class CustomUINodeDropDownItem : Node
+	public sealed class CustomUINodeDropDownItem : CustomUINode
 	{
-		CustomUINodeDropDownItem (string title) :
+		public CustomUINodeDropDownItem (string title) :
 			base (title)
 		{
-			this.AddItem (new NodeDropDownItem (new string [] { "CustomUINode", "Value1", "Value2", "Value3" }, 0, false, true) { Tag = "CustomUINodeDropDownItem", outputTag = new object [] { "tagOutDropDownList" } });
+			this.AddItem (new NodeDropDownItem (new string [] { "CustomUINode", "Value1", "Value2", "Value3" }, 0, false, true) { Tag = "tagDropDown", outputTag = new object [] { "tagOutDropDownList" } });
 		}
 	}
-	public sealed class CustomUINodeImageItem : Node
+	public sealed class CustomUINodeImageItem : CustomUINode
 	{
-		CustomUINodeImageItem (string title) :
-			base (title)
-		{
-		}
-	}
-	public sealed class CustomUINodeLabelItem : Node
-	{
-		CustomUINodeLabelItem (string title) :
-			base (title)
-		{
-			this.AddItem (new NodeLabelItem (title, false, true) { Tag = "CustomUINodeLabelItem", outputTag = new object [] { "tagOutTextLabel" }});
-		}
-	}
-	public sealed class CustomUINodeNumericSliderItem : Node
-	{
-		CustomUINodeNumericSliderItem (string title) :
+		public CustomUINodeImageItem (string title) :
 			base (title)
 		{
 		}
 	}
-	public sealed class CustomUINodeSliderItem : Node
+	public sealed class CustomUINodeLabelItem : CustomUINode
 	{
-		CustomUINodeSliderItem (string title) :
+		public CustomUINodeLabelItem (string title) :
+			base (title)
+		{
+			this.AddItem (new NodeLabelItem (title, false, true) { Tag = "CustomUINodeLabelItem", outputTag = new object [] { "tagTextLabel" }});
+		}
+	}
+	public sealed class CustomUINodeNumericSliderItem : CustomUINode
+	{
+		public CustomUINodeNumericSliderItem (string title) :
 			base (title)
 		{
 		}
 	}
-	public sealed class CustomUINodeMultilineTextBoxItem : Node
+	public sealed class CustomUINodeSliderItem : CustomUINode
 	{
-		CustomUINodeMultilineTextBoxItem (string title) :
+		public CustomUINodeSliderItem (string title) :
 			base (title)
 		{
-			this.AddItem (new NodeTextBoxItem ("CustomUINode", false, true) { Tag = "CustomUINodeMultilineTextBoxItem", outputTag = new object [] { "tagOutMultilineTextBox" } });
 		}
 	}
-	public sealed class CustomUINodeTextBoxItem : Node
+	public sealed class CustomUINodeMultilineTextBoxItem : CustomUINode
 	{
-		CustomUINodeTextBoxItem (string title) :
+		public CustomUINodeMultilineTextBoxItem (string title) :
 			base (title)
 		{
-			this.AddItem (new NodeTextBoxItem ("CustomUINode", false, true) { Tag = "CustomUINodeTextBoxItem", outputTag = new object [] { "tagOutTextBox" } });
+			this.AddItem (new NodeTextBoxItem ("CustomUINode", false, true) { Tag = "CustomUINodeMultilineTextBoxItem", outputTag = new object [] { "tagMultilineText" } });
+		}
+	}
+	public sealed class CustomUINodeTextBoxItem : CustomUINode
+	{
+		public CustomUINodeTextBoxItem (string title) :
+			base (title)
+		{
+			this.AddItem (new NodeTextBoxItem ("CustomUINode", false, true) { Tag = "CustomUINodeTextBoxItem", outputTag = new object [] { "tagTextBox" } });
 		}
 	}
 }
+/*
+ * CustomUINodeCheckBox
+ * CustomUINodeCheckListBoxItem
+ * CustomUINodeDropDownItem
+ * CustomUINodeImageItem
+ * CustomUINodeLabelItem
+ * CustomUINodeNumericSliderItem
+ * CustomUINodeSliderItem
+ * CustomUINodeMultilineTextBoxItem
+ * CustomUINodeTextBoxItem
+ */
+
+//	"tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"
