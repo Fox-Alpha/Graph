@@ -212,13 +212,13 @@
 				"itemname": "alias",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output": []
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagalias",
-					"inputtag": ["Input1", "Input2"],
-					"outputtag": ["Output1", "Output2"]
+					"inputtag": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"outputtag": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"isTitel": true,
 				"isimportant": true,
@@ -231,21 +231,13 @@
 				"itemname": "host_name",
 				"itemtype": "Label",
 				"connectors": {
-					"input": [
-						"hostescalation",
-						"hostdependency",
-						"service",
-						"servicedependency",
-						"serviceescalation"
-					],
-					"output": [
-						"host"
-					]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagHostName",
-					"inputtag": ["tagTextBox", "tagOutHostName"],
-					"outputtag": ["tagHostName"]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -258,16 +250,8 @@
 				"itemname": "hostgroup_name",
 				"itemtype": "Label",
 				"connectors": {
-					"input": [
-						"hostdependencie",
-						"hostescalation",
-						"service",
-						"servicedependencie",
-						"serviceescalation"
-					],
-					"output":[
-						"hostgroup"
-					]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagHostgroupName",
@@ -285,8 +269,8 @@
 				"itemname": "host_notifications_enabled",
 				"itemtype": "CheckBox",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagHostNotificationsEnabled",
@@ -304,10 +288,8 @@
 				"itemname": "host_notification_period",
 				"itemtype": "Label",
 				"connectors": {
-					"input": [
-						"contact"
-					],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagHostNotificationPeriod",
@@ -325,8 +307,8 @@
 				"itemname": "host_notification_options",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "taghost_notification_options",
@@ -344,10 +326,8 @@
 				"itemname": "host_notification_commands",
 				"itemtype": "Label",
 				"connectors": {
-					"input": [
-						"contact"
-					],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "taghost_notification_commands",
@@ -365,8 +345,8 @@
 				"itemname": "check_period",
 				"itemtype": "Label",
 				"connectors": {
-					"input": ["host", "service"],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagcheck_period",
@@ -384,8 +364,8 @@
 				"itemname": "check_command",
 				"itemtype": "Label",
 				"connectors": {
-					"input": ["host", "service"],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagCheckCommand",
@@ -403,8 +383,8 @@
 				"itemname": "check_interval",
 				"itemtype": "Label",
 				"connectors": {
-					"input": ["host", "service"],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagCheckInterval",
@@ -422,8 +402,8 @@
 				"itemname": "max_check_attempts",
 				"itemtype": "Label",
 				"connectors": {
-					"input": ["host", "service"],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagMaxCheckAttempts",
@@ -441,8 +421,8 @@
 				"itemname": "retry_interval",
 				"itemtype": "Label",
 				"connectors": {
-					"input": ["host", "service"],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagRetryInterval",
@@ -460,14 +440,8 @@
 				"itemname": "contacts",
 				"itemtype": "Label",
 				"connectors": {
-					"input": [
-						"host",
-						"hostexcalation",
-						"service",
-						"serviceescalation",
-						"contactgroup"
-					],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagContacts",
@@ -485,8 +459,8 @@
 				"itemname": "contact_name",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":["contact"]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagContactName",
@@ -504,13 +478,8 @@
 				"itemname": "contact_groups",
 				"itemtype": "Label",
 				"connectors": {
-					"input": [
-						"host",
-						"hostescalation",
-						"service",
-						"serviceescalation"
-					],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagContactGroups",
@@ -528,8 +497,8 @@
 				"itemname": "contactgroup_name",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":["contactgroup"]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagContactgroupName",
@@ -547,8 +516,8 @@
 				"itemname": "contactgroups",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagcontactgroups",
@@ -566,8 +535,8 @@
 				"itemname": "service_description",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagservice_description",
@@ -585,8 +554,8 @@
 				"itemname": "servicegroup_name",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagservicegroup_name",
@@ -604,8 +573,8 @@
 				"itemname": "service_notifications_enabled",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagservice_notifications_enabled",
@@ -623,8 +592,8 @@
 				"itemname": "service_notification_period",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagservice_notification_period",
@@ -642,8 +611,8 @@
 				"itemname": "service_notification_options",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagservice_notification_options",
@@ -661,8 +630,8 @@
 				"itemname": "service_notification_commands",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagservice_notification_commands",
@@ -681,8 +650,8 @@
 				"itemname": "timeperiod_name",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagtimeperiod_name",
@@ -701,8 +670,8 @@
 				"itemname": "command_name",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagcommand_name",
@@ -721,8 +690,8 @@
 				"itemname": "command_line",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagcommand_line",
@@ -740,8 +709,8 @@
 				"itemname": "dependent_host_name",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagdependent_host_name",
@@ -759,8 +728,8 @@
 				"itemname": "dependent_service_description",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagdependent_service_description",
@@ -778,8 +747,8 @@
 				"itemname": "notification_interval",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagnotification_interval",
@@ -797,8 +766,8 @@
 				"itemname": "notification_period",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagnotification_period",
@@ -816,8 +785,8 @@
 				"itemname": "first_notification",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagfirst_notification",
@@ -835,8 +804,8 @@
 				"itemname": "last_notification",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "taglast_notification",
@@ -856,8 +825,8 @@
 				"itemname": "hostgroups",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "taghostgroups",
@@ -875,8 +844,8 @@
 				"itemname": "hostgroup_members",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "taghostgroup_members",
@@ -894,8 +863,8 @@
 				"itemname": "servicegroups",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagservicegroups",
@@ -913,8 +882,8 @@
 				"itemname": "servicegroup_members",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagservicegroup_members",
@@ -932,8 +901,8 @@
 				"itemname": "members",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagmembers",
@@ -951,8 +920,8 @@
 				"itemname": "display_name",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagdisplay_name",
@@ -970,8 +939,8 @@
 				"itemname": "address",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagaddress",
@@ -989,8 +958,8 @@
 				"itemname": "hourly_value",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "taghourly_value",
@@ -1008,8 +977,8 @@
 				"itemname": "initial_state",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "taginitial_state",
@@ -1027,8 +996,8 @@
 				"itemname": "active_checks_enabled",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagactive_checks_enabled",
@@ -1046,8 +1015,8 @@
 				"itemname": "passive_checks_enabled",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagpassive_checks_enabled",
@@ -1065,8 +1034,8 @@
 				"itemname": "obsess_over_host",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagobsess_over_host",
@@ -1084,8 +1053,8 @@
 				"itemname": "check_freshness",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagcheck_freshness",
@@ -1103,8 +1072,8 @@
 				"itemname": "freshness_threshold",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagfreshness_threshold",
@@ -1122,8 +1091,8 @@
 				"itemname": "event_handler",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagevent_handler",
@@ -1141,8 +1110,8 @@
 				"itemname": "event_handler_enabled",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagevent_handler_enabled",
@@ -1160,8 +1129,8 @@
 				"itemname": "low_flap_threshold",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "taglow_flap_threshold",
@@ -1179,8 +1148,8 @@
 				"itemname": "high_flap_threshold",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "taghigh_flap_threshold",
@@ -1198,8 +1167,8 @@
 				"itemname": "flap_detection_enabled",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagflap_detection_enabled",
@@ -1217,8 +1186,8 @@
 				"itemname": "flap_detection_options",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagflap_detection_options",
@@ -1236,8 +1205,8 @@
 				"itemname": "process_perf_data",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagprocess_perf_data",
@@ -1255,8 +1224,8 @@
 				"itemname": "retain_status_information",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagretain_status_information",
@@ -1274,8 +1243,8 @@
 				"itemname": "retain_nonstatus_information",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagretain_nonstatus_information",
@@ -1293,8 +1262,8 @@
 				"itemname": "first_notification_delay",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagfirst_notification_delay",
@@ -1312,8 +1281,8 @@
 				"itemname": "notification_options",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagnotification_options",
@@ -1331,8 +1300,8 @@
 				"itemname": "notifications_enabled",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagnotifications_enabled",
@@ -1350,8 +1319,8 @@
 				"itemname": "stalking_options",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagstalking_options",
@@ -1369,8 +1338,8 @@
 				"itemname": "notes",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagnotes",
@@ -1388,8 +1357,8 @@
 				"itemname": "notes_url",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagnotes_url",
@@ -1407,8 +1376,8 @@
 				"itemname": "action_url",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagaction_url",
@@ -1426,8 +1395,8 @@
 				"itemname": "icon_image",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagicon_image",
@@ -1445,8 +1414,8 @@
 				"itemname": "icon_image_alt",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagicon_image_alt",
@@ -1464,8 +1433,8 @@
 				"itemname": "vrml_image",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagvrml_image",
@@ -1483,8 +1452,8 @@
 				"itemname": "statusmap_image",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagstatusmap_image",
@@ -1502,8 +1471,8 @@
 				"itemname": "2d_coords",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tag2d_coords",
@@ -1521,8 +1490,8 @@
 				"itemname": "3d_coords",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tag3d_coords",
@@ -1540,8 +1509,8 @@
 				"itemname": "is_volatile",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagis_volatile",
@@ -1559,8 +1528,8 @@
 				"itemname": "obsess_over_service",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagobsess_over_service",
@@ -1578,8 +1547,8 @@
 				"itemname": "minimum_value",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagminimum_value",
@@ -1597,8 +1566,8 @@
 				"itemname": "email",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagemail",
@@ -1616,8 +1585,8 @@
 				"itemname": "pager",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagpager",
@@ -1635,8 +1604,8 @@
 				"itemname": "addressx",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagaddressx",
@@ -1654,8 +1623,8 @@
 				"itemname": "can_submit_commands",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagcan_submit_commands",
@@ -1673,8 +1642,8 @@
 				"itemname": "contactgroup_members",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagcontactgroup_members",
@@ -1692,8 +1661,8 @@
 				"itemname": "exclude",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagexclude",
@@ -1711,8 +1680,8 @@
 				"itemname": "dependent_hostgroup_name",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagdependent_hostgroup_name",
@@ -1730,8 +1699,8 @@
 				"itemname": "dependent_servicegroup_name",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagdependent_servicegroup_name",
@@ -1749,8 +1718,8 @@
 				"itemname": "dependency_period",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagdependency_period",
@@ -1768,8 +1737,8 @@
 				"itemname": "execution_failure_criteria",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagexecution_failure_criteria",
@@ -1787,8 +1756,8 @@
 				"itemname": "escalation_period",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagescalation_period",
@@ -1806,8 +1775,8 @@
 				"itemname": "escalation_options",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagescalation_options",
@@ -1825,8 +1794,8 @@
 				"itemname": "notification_failure_criteria",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagnotification_failure_criteria",
@@ -1844,8 +1813,8 @@
 				"itemname": "parents",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "tagparents",
@@ -1863,8 +1832,8 @@
 				"itemname": "inherits_parent",
 				"itemtype": "TextLabel",
 				"connectors": {
-					"input": [],
-					"output":[]
+					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
+					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
 				},
 				"tags": {
 					"tag": "taginherits_parent",
