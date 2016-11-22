@@ -210,7 +210,7 @@
 		"important": {
 			"alias": {
 				"itemname": "alias",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output": []
@@ -323,7 +323,7 @@
 			},
 			"host_notification_options": {
 				"itemname": "host_notification_options",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -490,7 +490,7 @@
 			},
 			"contact_name": {
 				"itemname": "contact_name",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":["contact"]
@@ -535,7 +535,7 @@
 			},
 			"contactgroup_name": {
 				"itemname": "contactgroup_name",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":["contactgroup"]
@@ -555,7 +555,7 @@
 			},
 			"contactgroups": {
 				"itemname": "contactgroups",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -574,7 +574,7 @@
 			},
 			"service_description": {
 				"itemname": "service_description",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -593,7 +593,7 @@
 			},
 			"servicegroup_name": {
 				"itemname": "servicegroup_name",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -612,7 +612,7 @@
 			},
 			"service_notifications_enabled": {
 				"itemname": "service_notifications_enabled",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -631,7 +631,7 @@
 			},
 			"service_notification_period": {
 				"itemname": "service_notification_period",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -650,7 +650,7 @@
 			},
 			"service_notification_options": {
 				"itemname": "service_notification_options",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -669,7 +669,7 @@
 			},
 			"service_notification_commands": {
 				"itemname": "service_notification_commands",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -689,7 +689,7 @@
 			},
 			"timeperiod_name": {
 				"itemname": "timeperiod_name",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -709,7 +709,7 @@
 			},
 			"command_name": {
 				"itemname": "command_name",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -729,7 +729,7 @@
 			},
 			"command_line": {
 				"itemname": "command_line",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -748,7 +748,7 @@
 			},
 			"dependent_host_name": {
 				"itemname": "dependent_host_name",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -767,7 +767,7 @@
 			},
 			"dependent_service_description": {
 				"itemname": "dependent_service_description",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -786,7 +786,7 @@
 			},
 			"notification_interval": {
 				"itemname": "notification_interval",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -805,7 +805,7 @@
 			},
 			"notification_period": {
 				"itemname": "notification_period",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -824,7 +824,7 @@
 			},
 			"first_notification": {
 				"itemname": "first_notification",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -843,7 +843,7 @@
 			},
 			"last_notification": {
 				"itemname": "last_notification",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -864,7 +864,7 @@
 		"additional": {
 			"hostgroups": {
 				"itemname": "hostgroups",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -883,7 +883,7 @@
 			},
 			"hostgroup_members": {
 				"itemname": "hostgroup_members",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -902,7 +902,7 @@
 			},
 			"servicegroups": {
 				"itemname": "servicegroups",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -921,7 +921,7 @@
 			},
 			"servicegroup_members": {
 				"itemname": "servicegroup_members",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -940,7 +940,7 @@
 			},
 			"members": {
 				"itemname": "members",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -959,7 +959,7 @@
 			},
 			"display_name": {
 				"itemname": "display_name",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -978,7 +978,7 @@
 			},
 			"address": {
 				"itemname": "address",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -997,7 +997,7 @@
 			},
 			"hourly_value": {
 				"itemname": "hourly_value",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1016,7 +1016,7 @@
 			},
 			"initial_state": {
 				"itemname": "initial_state",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1035,7 +1035,7 @@
 			},
 			"active_checks_enabled": {
 				"itemname": "active_checks_enabled",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1054,7 +1054,7 @@
 			},
 			"passive_checks_enabled": {
 				"itemname": "passive_checks_enabled",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1073,7 +1073,7 @@
 			},
 			"obsess_over_host|obsess": {
 				"itemname": "obsess_over_host",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1092,7 +1092,7 @@
 			},
 			"check_freshness": {
 				"itemname": "check_freshness",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1111,7 +1111,7 @@
 			},
 			"freshness_threshold": {
 				"itemname": "freshness_threshold",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1130,7 +1130,7 @@
 			},
 			"event_handler": {
 				"itemname": "event_handler",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1149,7 +1149,7 @@
 			},
 			"event_handler_enabled": {
 				"itemname": "event_handler_enabled",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1168,7 +1168,7 @@
 			},
 			"low_flap_threshold": {
 				"itemname": "low_flap_threshold",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1187,7 +1187,7 @@
 			},
 			"high_flap_threshold": {
 				"itemname": "high_flap_threshold",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1206,7 +1206,7 @@
 			},
 			"flap_detection_enabled": {
 				"itemname": "flap_detection_enabled",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1225,7 +1225,7 @@
 			},
 			"flap_detection_options": {
 				"itemname": "flap_detection_options",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1244,7 +1244,7 @@
 			},
 			"process_perf_data": {
 				"itemname": "process_perf_data",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1263,7 +1263,7 @@
 			},
 			"retain_status_information": {
 				"itemname": "retain_status_information",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1282,7 +1282,7 @@
 			},
 			"retain_nonstatus_information": {
 				"itemname": "retain_nonstatus_information",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1301,7 +1301,7 @@
 			},
 			"first_notification_delay": {
 				"itemname": "first_notification_delay",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1320,7 +1320,7 @@
 			},
 			"notification_options": {
 				"itemname": "notification_options",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1339,7 +1339,7 @@
 			},
 			"notifications_enabled": {
 				"itemname": "notifications_enabled",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1358,7 +1358,7 @@
 			},
 			"stalking_options": {
 				"itemname": "stalking_options",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1377,7 +1377,7 @@
 			},
 			"notes": {
 				"itemname": "notes",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1396,7 +1396,7 @@
 			},
 			"notes_url": {
 				"itemname": "notes_url",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1415,7 +1415,7 @@
 			},
 			"action_url": {
 				"itemname": "action_url",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1434,7 +1434,7 @@
 			},
 			"icon_image": {
 				"itemname": "icon_image",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1453,7 +1453,7 @@
 			},
 			"icon_image_alt": {
 				"itemname": "icon_image_alt",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1472,7 +1472,7 @@
 			},
 			"vrml_image": {
 				"itemname": "vrml_image",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1491,7 +1491,7 @@
 			},
 			"statusmap_image": {
 				"itemname": "statusmap_image",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1510,7 +1510,7 @@
 			},
 			"2d_coords": {
 				"itemname": "2d_coords",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1529,7 +1529,7 @@
 			},
 			"3d_coords": {
 				"itemname": "3d_coords",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1548,7 +1548,7 @@
 			},
 			"is_volatile": {
 				"itemname": "is_volatile",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1567,7 +1567,7 @@
 			},
 			"obsess_over_service|obsess": {
 				"itemname": "obsess_over_service",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1586,7 +1586,7 @@
 			},
 			"minimum_value": {
 				"itemname": "minimum_value",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1605,7 +1605,7 @@
 			},
 			"email": {
 				"itemname": "email",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1624,7 +1624,7 @@
 			},
 			"pager": {
 				"itemname": "pager",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1643,7 +1643,7 @@
 			},
 			"addressx": {
 				"itemname": "addressx",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1662,7 +1662,7 @@
 			},
 			"can_submit_commands": {
 				"itemname": "can_submit_commands",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1681,7 +1681,7 @@
 			},
 			"contactgroup_members": {
 				"itemname": "contactgroup_members",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1700,7 +1700,7 @@
 			},
 			"exclude": {
 				"itemname": "exclude",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1719,7 +1719,7 @@
 			},
 			"dependent_hostgroup_name": {
 				"itemname": "dependent_hostgroup_name",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1738,7 +1738,7 @@
 			},
 			"dependent_servicegroup_name": {
 				"itemname": "dependent_servicegroup_name",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1757,7 +1757,7 @@
 			},
 			"dependency_period": {
 				"itemname": "dependency_period",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1776,7 +1776,7 @@
 			},
 			"execution_failure_criteria": {
 				"itemname": "execution_failure_criteria",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1795,7 +1795,7 @@
 			},
 			"escalation_period": {
 				"itemname": "escalation_period",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1814,7 +1814,7 @@
 			},
 			"escalation_options": {
 				"itemname": "escalation_options",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1833,7 +1833,7 @@
 			},
 			"notification_failure_criteria": {
 				"itemname": "notification_failure_criteria",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1852,7 +1852,7 @@
 			},
 			"parents": {
 				"itemname": "parents",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
@@ -1871,7 +1871,7 @@
 			},
 			"inherits_parent": {
 				"itemname": "inherits_parent",
-				"itemtype": "TextBox",
+				"itemtype": "TextLabel",
 				"connectors": {
 					"input": [],
 					"output":[]
