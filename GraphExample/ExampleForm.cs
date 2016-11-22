@@ -19,6 +19,7 @@ using System.IO;
 using GraphNodes.Nagios;
 using Graphnodes.Nagios.Node;
 using Graphnodes.Nagios.NodeItem;
+using GraphNodes.CustomUINodes;
 
 
 namespace GraphNodes
@@ -32,7 +33,7 @@ namespace GraphNodes
 		{
 			InitializeComponent ();
 
-			graphControl.CompatibilityStrategy = new AlwaysCompatible ();
+			graphControl.CompatibilityStrategy = new InOutTagTypeListCompatibility ();
 
 			graphControl.ConnectionAdded += new EventHandler<AcceptNodeConnectionEventArgs> (OnConnectionAdded);
 			graphControl.ConnectionAdding += new EventHandler<AcceptNodeConnectionEventArgs> (OnConnectionAdding);
@@ -44,6 +45,7 @@ namespace GraphNodes
 			//#####
 
 			nagiosNodes = new NagiosJSON ();
+			string [] connectorMenuItems = new string [] { "CheckBox", "CheckListBox", "ColorSlider", "DropDown", "Image", "Label", "NumericSlider", "Slider", "MultilineText", "TextBox" };
 
 			if (nagiosNodes.LoadSettings ())
 			{
@@ -53,14 +55,29 @@ namespace GraphNodes
 				{
 					foreach (var nagObject in nagiosNodes.listNagiosObjects)
 					{
-						int index = nodeMenu.Items.Add (
+						int index = objectMenu.Items.Add (
 						new ToolStripMenuItem
 						{
 							Name = "Object_" + nagiosNodes.listNagiosObjects.IndexOf (nagObject),
 							Text = nagiosNodes.listNagiosObjects [nagiosNodes.listNagiosObjects.IndexOf (nagObject)],
 							Tag = nagiosNodes.listNagiosObjects.IndexOf (nagObject)
 						});
-						nodeMenu.Items [index].Click += windowNewMenu_Click;
+						objectMenu.Items [index].Click += ContextMenu_Click;
+					}
+				}
+
+				if (connectorMenuItems.Length > 0)
+				{
+					foreach (var nagConnector in connectorMenuItems)
+					{
+						int index = connectorMenu.Items.Add (
+						new ToolStripMenuItem
+						{
+							Name = "Connect_" + connectorMenuItems.ToList<string>().IndexOf (nagConnector),
+							Text = connectorMenuItems [connectorMenuItems.ToList<string> ().IndexOf (nagConnector)],
+							Tag = connectorMenuItems[connectorMenuItems.ToList<string> ().IndexOf (nagConnector)]
+						});
+						connectorMenu.Items [index].Click += ContextMenu_Click;
 					}
 				}
 			}
@@ -70,45 +87,121 @@ namespace GraphNodes
 
 		}
 
-		private void windowNewMenu_Click (object sender, EventArgs e)
+		private void ContextMenu_Click (object sender, EventArgs e)
 		{
 			if ((sender as ToolStripMenuItem) != null)
 			{
-				int index = (int) (sender as ToolStripMenuItem).Tag;
-				string nagObj = nagiosNodes.listNagiosObjects [index];
-				NagiosNodeItemObject nnio = new NagiosNodeItemObject ();
-				NagiosNode nagNode = new NagiosNode ();
-				List<string> nodeItemsList = new List<string> ();
-
-				if(nagiosNodes.listNagiosNodes.TryGetValue(nagObj, out nodeItemsList))
+				ToolStrip mi = (sender as ToolStripMenuItem).GetCurrentParent ();
+				int menuTag = 0;
+				if (!int.TryParse ((string)mi.Tag, out menuTag))
+					return;
+				switch (menuTag)
 				{
-					var node = new Node (nagObj) { Tag = nagObj };
-					Matrix inverse_transformation = new Matrix ();
-
-					foreach (var str in nodeItemsList)
-					{
-						if (nagiosNodes.listNagiosNodeItems.nagiosImportantNodeItemObjects.TryGetValue (str, out nnio))
-						{
-							//	Ist in den Important NodeItems vorhanden
-							node.AddItem (new NodeLabelItem (
-									nnio.itemName, 
-									nnio.itemConnectors.hasInput, 
-									nnio.itemConnectors.hasOutput, 
-									nnio.isTitel)
-								{ Tag = nnio.itemConnectorsTags.Tag, IsImportantNodeItem = nnio.isMandatory });
-
-							//node.Location = new Point (300, 150);
-						}
-						else if (nagiosNodes.listNagiosNodeItems.nagiosAdditionalNodeItemObjects.TryGetValue (str, out nnio))
-						{
-							//	Ist in den Additional NodeItems vorhanden
-							node.AddItem (new NodeLabelItem (nnio.itemName, nnio.itemConnectors.hasInput, nnio.itemConnectors.hasOutput, nnio.isTitel) { Tag = nnio.itemConnectorsTags.Tag, IsImportantNodeItem = nnio.isMandatory});
-						}
-					}
-					node.Location = (PointF) graphControl.PointToClient (mouseClickForMenu);
-					graphControl.AddNode (node);
+					case 1:
+						//AddNagiosNode (sender as ToolStripMenuItem);
+						break;
+					case 2:
+						AddNagiosNode (sender as ToolStripMenuItem);
+						break;
+					case 3:
+						AddNagiosCustomUIItem (sender as ToolStripMenuItem);
+						break;
 				}
+			}
+		}
 
+		private void AddNagiosCustomUIItem (ToolStripMenuItem toolStripMenuItem)
+		{
+			CustomUINode node = null;
+			switch((string)toolStripMenuItem.Tag)
+			{
+				//	"CheckBox", "CheckListBox", "ColorSlider", "DropDown", "Image", "Label", "NumericSlider", "Slider", "MultilineText", "TextBox" 
+				case "CheckBox":
+					node = new CustomUINodeCheckBox ("CustomUINodeCheckBox");
+					break;
+				case "CheckListBox":
+					node = new CustomUINodeCheckListBoxItem ("CustomUINodeCheckListBoxItem");
+					break;
+				case "ColorSlider":
+					node = new CustomUINodeColorSliderItem ("CustomUINodeColorSliderItem");
+					break;
+				case "DropDown":
+					node = new CustomUINodeDropDownItem ("CustomUINodeDropDownItem");
+					break;
+				case "Image":
+					node = new CustomUINodeImageItem ("CustomUINodeImageItem");
+					break;
+				case "Label":
+					node = new CustomUINodeLabelItem ("CustomUINodeLabelItem");
+					break;
+				case "NumericSlider":
+					node = new CustomUINodeNumericSliderItem ("CustomUINodeNumericSliderItem");
+					break;
+				case "Slider":
+					node = new CustomUINodeSliderItem ("CustomUINodeSliderItem");
+					break;
+				case "MultilineText":
+					node = new CustomUINodeMultilineTextBoxItem ("CustomUINodeMultilineTextBoxItem");
+					break;
+				case "TextBox":
+					node = new CustomUINodeTextBoxItem ("CustomUINodeTextBoxItem");
+					break;
+			}
+
+			if (node != null)
+			{
+				node.Location = (PointF) graphControl.PointToClient (new Point (mouseClickForMenu.X - 100 - node.boundSite.ToSize().Width, mouseClickForMenu.Y) );
+				graphControl.AddNode (node);
+			}
+			else
+			{
+				Node newNode = new Node ("UNDEFINED");
+				NodeItem ni = new NodeLabelItem ("UNDEFINED") { Tag = "UNDEFINED", };
+				newNode.AddItem (ni);
+				graphControl.AddNode (newNode);
+			}
+		}
+
+		private void AddNagiosNode (ToolStripMenuItem sender)
+		{
+			int index = (int) (sender as ToolStripMenuItem).Tag;
+			string nagObj = nagiosNodes.listNagiosObjects [index];
+			NagiosNodeItemObject nnio = new NagiosNodeItemObject ();
+			NagiosNode nagNode = new NagiosNode ();
+			List<string> nodeItemsList = new List<string> ();
+
+			if (nagiosNodes.listNagiosNodes.TryGetValue (nagObj, out nodeItemsList))
+			{
+				var node = new Node (nagObj) { Tag = nagObj };
+				Matrix inverse_transformation = new Matrix ();
+
+				foreach (var str in nodeItemsList)
+				{
+					if (nagiosNodes.listNagiosNodeItems.nagiosImportantNodeItemObjects.TryGetValue (str, out nnio))
+					{
+						//	Ist in den Important NodeItems vorhanden
+						node.AddItem (new NodeLabelItem (
+								nnio.itemName,
+								nnio.itemConnectors.hasInput,
+								nnio.itemConnectors.hasOutput,
+								nnio.isTitel)
+						{
+							Tag = nnio.itemConnectorsTags.Tag,
+							IsImportantNodeItem = nnio.isMandatory,
+							inputTag = nnio.itemConnectorsTags.inputObjList.ToArray<object> (),
+							outputTag = nnio.itemConnectorsTags.outputObjList.ToArray<object> ()
+						});
+
+						//node.Location = new Point (300, 150);
+					}
+					else if (nagiosNodes.listNagiosNodeItems.nagiosAdditionalNodeItemObjects.TryGetValue (str, out nnio))
+					{
+						//	Ist in den Additional NodeItems vorhanden
+						node.AddItem (new NodeLabelItem (nnio.itemName, nnio.itemConnectors.hasInput, nnio.itemConnectors.hasOutput, nnio.isTitel) { Tag = nnio.itemConnectorsTags.Tag, IsImportantNodeItem = nnio.isMandatory, inputTag = nnio.itemConnectorsTags.inputObjList.ToArray<object> (), outputTag = nnio.itemConnectorsTags.outputObjList.ToArray<object> () });
+					}
+				}
+				node.Location = (PointF) graphControl.PointToClient (mouseClickForMenu);
+				graphControl.AddNode (node);
 			}
 		}
 
@@ -186,31 +279,38 @@ namespace GraphNodes
 			int toHash = e.Connection.To.Node.GetHashCode();
 		}
 
-		void OnShowElementMenu(object sender, AcceptElementLocationEventArgs e)
+		void OnShowElementMenu (object sender, AcceptElementLocationEventArgs e)
 		{
 			if (e.Element == null)
 			{
 				// Show a test menu for when you click on nothing
 				//testMenuItem.Text = "(clicked on nothing)";
 				//nodeMenu.Show(e.Position);
-				nodeMenu.Show (e.Position);
+				objectMenu.Show (e.Position);
 				mouseClickForMenu = e.Position;
 				e.Cancel = false;
 			} else
 			if (e.Element is Node)
 			{
 				// Show a test menu for a node
-				testMenuItem.Text = ((Node)e.Element).Title;
-				nodeMenu.Show(e.Position);
+				testMenuItem.Text = ((Node) e.Element).Title;
+				nodeMenu.Show (e.Position);
 				e.Cancel = false;
 			} else
-			if (e.Element is NodeItem)
+			//if (e.Element is NodeItem)
+			//{
+			//	// Show a test menu for a nodeItem
+			//	testMenuItem.Text = e.Element.GetType ().Name;
+			//	nodeMenu.Show (e.Position);
+			//	e.Cancel = false;
+			//}
+			if (e.Element is NodeConnector || e.Element is NodeItem)
 			{
-				// Show a test menu for a nodeItem
-				testMenuItem.Text = e.Element.GetType().Name;
-				nodeMenu.Show(e.Position);
+				mouseClickForMenu = e.Position;
+				connectorMenu.Show (e.Position);
 				e.Cancel = false;
-			} else
+			}
+			else
 			{
 				// if you don't want to show a menu for this item (but perhaps show a menu for something more higher up) 
 				// then you can cancel the event
