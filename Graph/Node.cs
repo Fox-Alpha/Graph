@@ -60,6 +60,7 @@ namespace Graph
 	public class Node : IElement
 	{
 		public string			Title			{ get { return titleItem.Title; } set { titleItem.Title = value; } }
+		public SizeF boundSite { get { return this.bounds.Size; }  }
 
 		#region Collapsed
 		internal bool			internalCollapsed;
