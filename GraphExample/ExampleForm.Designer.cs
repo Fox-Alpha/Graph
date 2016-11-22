@@ -29,7 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			Graph.Compatibility.AlwaysCompatible alwaysCompatible1 = new Graph.Compatibility.AlwaysCompatible();
+			Graph.Compatibility.AlwaysCompatible alwaysCompatible2 = new Graph.Compatibility.AlwaysCompatible();
 			this.label1 = new System.Windows.Forms.Label();
 			this.showLabelsCheckBox = new System.Windows.Forms.CheckBox();
 			this.label2 = new System.Windows.Forms.Label();
@@ -39,7 +39,11 @@
 			this.testMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.graphControl = new Graph.GraphControl();
 			this.button1 = new System.Windows.Forms.Button();
+			this.objectMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.connectorMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.nodeMenu.SuspendLayout();
+			this.connectorMenu.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -99,7 +103,9 @@
 			this.nodeMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.testMenuItem});
 			this.nodeMenu.Name = "NodeMenu";
-			this.nodeMenu.Size = new System.Drawing.Size(96, 26);
+			this.nodeMenu.Size = new System.Drawing.Size(153, 48);
+			this.nodeMenu.Tag = "1";
+			this.nodeMenu.Text = "TestNode";
 			// 
 			// testMenuItem
 			// 
@@ -114,7 +120,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.graphControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.graphControl.CompatibilityStrategy = alwaysCompatible1;
+			this.graphControl.CompatibilityStrategy = alwaysCompatible2;
 			this.graphControl.FocusElement = null;
 			this.graphControl.HighlightCompatible = true;
 			this.graphControl.LargeGridStep = 128F;
@@ -138,6 +144,28 @@
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
+			// objectMenu
+			// 
+			this.objectMenu.Name = "NodeMenu";
+			this.objectMenu.Size = new System.Drawing.Size(61, 4);
+			this.objectMenu.Tag = "2";
+			this.objectMenu.Text = "Objecte";
+			// 
+			// connectorMenu
+			// 
+			this.connectorMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+			this.connectorMenu.Name = "NodeMenu";
+			this.connectorMenu.Size = new System.Drawing.Size(96, 26);
+			this.connectorMenu.Tag = "3";
+			this.connectorMenu.Text = "Connectoren";
+			// 
+			// toolStripMenuItem1
+			// 
+			this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+			this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+			this.toolStripMenuItem1.Text = "Test";
+			// 
 			// ExampleForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +183,7 @@
 			this.Name = "ExampleForm";
 			this.Text = "Form1";
 			this.nodeMenu.ResumeLayout(false);
+			this.connectorMenu.ResumeLayout(false);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -171,6 +200,9 @@
 		private System.Windows.Forms.ContextMenuStrip nodeMenu;
 		private System.Windows.Forms.ToolStripMenuItem testMenuItem;
 		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.ContextMenuStrip objectMenu;
+		private System.Windows.Forms.ContextMenuStrip connectorMenu;
+		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
 	}
 }
 
