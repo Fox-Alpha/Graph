@@ -213,12 +213,12 @@
 				"itemtype": "TextLabel",
 				"connectors": {
 					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
-					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
+					"output": []
 				},
 				"tags": {
 					"tag": "tagalias",
-					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
-					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
+					"inputtag": ["tagTextBox"],
+					"outputtag": []
 				},
 				"isTitel": true,
 				"isimportant": true,
@@ -236,8 +236,8 @@
 				},
 				"tags": {
 					"tag": "tagHostName",
-					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
-					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
+					"inputtag": ["tagCheckListBox", "tagTextBox"],
+					"outputtag": ["tagCheckListBox", "tagDropDown", "tagLabel", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -255,8 +255,8 @@
 				},
 				"tags": {
 					"tag": "tagHostgroupName",
-					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
-					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
+					"inputtag": ["tagTextBox"],
+					"outputtag": ["tagCheckListBox", "tagDropDown", "tagLabel", "tagTextBox"]
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -270,12 +270,12 @@
 				"itemtype": "CheckBox",
 				"connectors": {
 					"input": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"],
-					"output": ["host","hostgroup","hostdependencie","hostescalation","service",  "servicegroup","servicedependencie","serviceescalation","timeperiod","contact","contactgroup","command"]
+					"output": []
 				},
 				"tags": {
 					"tag": "tagHostNotificationsEnabled",
-					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
-					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
+					"inputtag": ["tagCheckBox"],
+					"outputtag": []
 				},
 				"isTitel": false,
 				"isimportant": true,
@@ -293,7 +293,7 @@
 				},
 				"tags": {
 					"tag": "tagHostNotificationPeriod",
-					"inputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"],
+					"inputtag": ["tagCheckListBox", "tagDropDown", "tagLabel", "tagTextBox"],
 					"outputtag": ["tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"]
 				},
 				"isTitel": false,
