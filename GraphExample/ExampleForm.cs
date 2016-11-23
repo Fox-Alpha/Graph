@@ -481,36 +481,50 @@ namespace GraphNodes
 
 		private void button1_Click (object sender, EventArgs e)
 		{
-			NagiosJSON myNagios = new NagiosJSON ();
+            //#####
+            //	Laden der Definitionen aus der JSON Datei
+            //#####
 
-			JsonSerializerSettings jsonSerializerSettings;
+            nagiosNodes = new NagiosJSON ();
+            string [] connectorMenuItems = new string [] { "CheckBox", "CheckListBox", "ColorSlider", "DropDown", "Image", "Label", "NumericSlider", "Slider", "MultilineText", "TextBox" };
 
-			jsonSerializerSettings = new JsonSerializerSettings ();
-			jsonSerializerSettings.Formatting = Formatting.Indented;
-			jsonSerializerSettings.MissingMemberHandling = MissingMemberHandling.Ignore;
-			jsonSerializerSettings.NullValueHandling = NullValueHandling.Include;
-			jsonSerializerSettings.StringEscapeHandling = StringEscapeHandling.EscapeNonAscii;
-			jsonSerializerSettings.TypeNameHandling = TypeNameHandling.Auto;
+            if (nagiosNodes.LoadSettings ())
+            {
+                Debug.WriteLine ("JSON wurde geladen", "NAGIOS");
 
-			//JsonSerializer serializer = JsonSerializer.CreateDefault (jsonSerializerSettings);
-			//using (StreamReader sr = new StreamReader (myNagios.ObjectPath))
-			//{
-			//	using (JsonReader reader = new JsonTextReader (sr))
-			//	{
-			//		myNagios = serializer.Deserialize<NagiosJSON> (reader);
-			//	}
-			//}
+                if (nagiosNodes.listNagiosObjects.Count > 0)
+                {
+                    foreach (var nagObject in nagiosNodes.listNagiosObjects)
+                    {
+                        int index = objectMenu.Items.Add (
+                        new ToolStripMenuItem
+                        {
+                            Name = "Object_" + nagiosNodes.listNagiosObjects.IndexOf (nagObject),
+                            Text = nagiosNodes.listNagiosObjects [nagiosNodes.listNagiosObjects.IndexOf (nagObject)],
+                            Tag = nagiosNodes.listNagiosObjects.IndexOf (nagObject)
+                        });
+                        objectMenu.Items [index].Click += ContextMenu_Click;
+                    }
+                }
 
-
-			if (myNagios.LoadSettings ())
-			//if (myNagios.SaveSettings ())
-			{
-				Debug.WriteLine ("JSON wurde geladen", "NAGIOS");
-			}
-			else
-				Debug.WriteLine ("Laden dere JSON Settings fehlgeschlagen", "NAGIOS");
-
-			//myNagios.LoadSettings ();
-		}
-	}
+                if (connectorMenuItems.Length > 0)
+                {
+                    foreach (var nagConnector in connectorMenuItems)
+                    {
+                        int index = connectorMenu.Items.Add (
+                        new ToolStripMenuItem
+                        {
+                            Name = "Connect_" + connectorMenuItems.ToList<string> ().IndexOf (nagConnector),
+                            Text = connectorMenuItems [connectorMenuItems.ToList<string> ().IndexOf (nagConnector)],
+                            Tag = connectorMenuItems [connectorMenuItems.ToList<string> ().IndexOf (nagConnector)]
+                        });
+                        connectorMenu.Items [index].Click += ContextMenu_Click;
+                    }
+                }
+            }
+            else
+                Debug.WriteLine ("Laden dere JSON Settings fehlgeschlagen", "NAGIOS");
+            //#####
+        }
+    }
 }
