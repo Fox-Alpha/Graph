@@ -28,8 +28,67 @@ namespace GraphNodes
 	{
 		NagiosJSON nagiosNodes;
 		Point mouseClickForMenu;
+        Node clickedNode;
+        NodeItem clickedNodeItem;
+        NodeConnector clickedNodeItemConnector;
 
-		public ExampleForm ()
+
+		public void _ExampleForm()
+		{
+			InitializeComponent();
+
+			graphControl.CompatibilityStrategy = new AlwaysCompatible();
+
+			var someNode = new Node("My Title");
+			someNode.Location = new Point(500, 100);
+			var check1Item = new NodeCheckboxItem("Check 1", true, false) { Tag = 31337 };
+			someNode.AddItem(check1Item);
+			someNode.AddItem(new NodeCheckboxItem("Check 2", true, false) { Tag = 42f });
+			
+			graphControl.AddNode(someNode);
+
+			var colorNode = new Node("Color");
+			colorNode.Location = new Point(200, 50);
+			var redChannel		= new NodeSliderItem("R", 64.0f, 16.0f, 0, 1.0f, 0.0f, false, false);
+			var greenChannel	= new NodeSliderItem("G", 64.0f, 16.0f, 0, 1.0f, 0.0f, false, false);
+			var blueChannel		= new NodeSliderItem("B", 64.0f, 16.0f, 0, 1.0f, 0.0f, false, false);
+			var colorItem		= new NodeColorItem("Color", Color.Black, false, true) { Tag = 1337 };
+
+			EventHandler<NodeItemEventArgs> channelChangedDelegate = delegate(object sender, NodeItemEventArgs args)
+			{
+				var red = redChannel.Value;
+				var green = blueChannel.Value;
+				var blue = greenChannel.Value;
+				colorItem.Color = Color.FromArgb((int)Math.Round(red * 255), (int)Math.Round(green * 255), (int)Math.Round(blue * 255));
+			};
+			redChannel.ValueChanged		+= channelChangedDelegate;
+			greenChannel.ValueChanged	+= channelChangedDelegate;
+			blueChannel.ValueChanged	+= channelChangedDelegate;
+
+
+			colorNode.AddItem(redChannel);
+			colorNode.AddItem(greenChannel);
+			colorNode.AddItem(blueChannel);
+
+			colorItem.Clicked += new EventHandler<NodeItemEventArgs>(OnColClicked);
+			colorNode.AddItem(colorItem);
+			graphControl.AddNode(colorNode);
+
+			var textureNode = new Node("Texture");
+			textureNode.Location = new Point(300, 150);
+			var imageItem = new NodeImageItem(Properties.Resources.example, 64, 64, false, true) { Tag = 1000f };
+			imageItem.Clicked += new EventHandler<NodeItemEventArgs>(OnImgClicked);
+			textureNode.AddItem(imageItem);
+			graphControl.AddNode(textureNode);
+
+			graphControl.ConnectionAdded	+= new EventHandler<AcceptNodeConnectionEventArgs>(OnConnectionAdded);
+			graphControl.ConnectionAdding	+= new EventHandler<AcceptNodeConnectionEventArgs>(OnConnectionAdding);
+			graphControl.ConnectionRemoving += new EventHandler<AcceptNodeConnectionEventArgs>(OnConnectionRemoved);
+			graphControl.ShowElementMenu	+= new EventHandler<AcceptElementLocationEventArgs>(OnShowElementMenu);
+
+			graphControl.Connect(colorItem, check1Item);
+		}
+        public ExampleForm ()
 		{
 			InitializeComponent ();
 
@@ -98,7 +157,8 @@ namespace GraphNodes
 				switch (menuTag)
 				{
 					case 1:
-						//AddNagiosNode (sender as ToolStripMenuItem);
+                        //Add NodeItemInput to cliecked Node
+                        AddNodeItem2Node (sender as ToolStripMenuItem);
 						break;
 					case 2:
 						AddNagiosNode (sender as ToolStripMenuItem);
@@ -110,13 +170,61 @@ namespace GraphNodes
 			}
 		}
 
-		private void AddNagiosCustomUIItem (ToolStripMenuItem toolStripMenuItem)
+        private void AddNodeItem2Node (ToolStripMenuItem toolStripMenuItem)
+        {
+            NodeItem nodeItem = null;
+            switch ((string) toolStripMenuItem.Tag)
+            {
+                //	"CheckBox", "CheckListBox", "ColorSlider", "DropDown", "Image", "Label", "NumericSlider", "Slider", "MultilineText", "TextBox" 
+                //	"tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"
+
+                case "CheckBox":
+                    nodeItem = new NodeCheckboxItem ("NodeCheckboxItem", false, true) { Tag = "tagCheckBox", outputTag = new string [] { "tagCheckBox" } };
+                    break;
+                case "CheckListBox":
+                    nodeItem = new NodeCheckListBoxItem (new string [] { "NodeCheckListBoxItem" }, 0, false, true) { Tag = "tagCheckListBox", outputTag = new string [] { "tagCheckListBox" }};
+                    break;
+                case "ColorSlider":
+                    nodeItem = new NodeSliderItem ("NodeSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagColorSlider", outputTag = new string [] { "tagColorSlider" }};
+                    break;
+                case "DropDown":
+                    nodeItem = new NodeDropDownItem (new string [] { "NodeDropDownItem" }, 1, false, true) { Tag = "tagDropDown", outputTag = new string [] { "tagDropDown" }};
+                    break;
+                case "Image":
+                    nodeItem = new NodeImageItem (Properties.Resources.example, 64, 64, false, true) { Tag = "tagImage" , outputTag = new string [] { "tagImage" }};
+                    break;
+                case "Label":
+                    nodeItem = new NodeLabelItem ("NodeLabelItem") { Tag = "tagLabel" , outputTag = new string [] { "tagLabel" } };
+                    break;
+                case "NumericSlider":
+                    nodeItem = new NodeNumericSliderItem ("NodeNumericSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagNumericSlider", outputTag = new string [] { "tagNumericSlider" } };
+                    break;
+                case "Slider":
+                    nodeItem = new NodeSliderItem ("NodeSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagSlider", outputTag = new string [] { "tagSlider" } };
+                    break;
+                case "MultilineText":
+                    //nodeItem = new NodeMultilineTextBoxItem ("NodeMultilineTextBoxItem", false, true) { Tag = "tagMultilineText", outputTag = new string [] { "tagMultilineText" } };
+                    break;
+                case "TextBox":
+                    nodeItem = new NodeTextBoxItem ("NodeTextBoxItem", false, true) { Tag = "tagTextBox", outputTag = new string [] { "tagTextBox" } };
+                    break;
+                default:
+                    break;
+            }
+            Node node = clickedNode;
+            if (node != null)
+            {
+                node.AddItem (nodeItem);
+            }
+        }
+
+        private void AddNagiosCustomUIItem (ToolStripMenuItem toolStripMenuItem)
 		{
 			CustomUINode node = null;
 			switch((string)toolStripMenuItem.Tag)
 			{
-				//	"CheckBox", "CheckListBox", "ColorSlider", "DropDown", "Image", "Label", "NumericSlider", "Slider", "MultilineText", "TextBox" 
-				case "CheckBox":
+                //	"CheckBox", "CheckListBox", "ColorSlider", "DropDown", "Image", "Label", "NumericSlider", "Slider", "MultilineText", "TextBox" 
+                case "CheckBox":
 					node = new CustomUINodeCheckBox ("CustomUINodeCheckBox");
 					break;
 				case "CheckListBox":
@@ -150,7 +258,16 @@ namespace GraphNodes
 
 			if (node != null)
 			{
-				node.Location = (PointF) graphControl.PointToClient (new Point (mouseClickForMenu.X - 100 - node.boundSite.ToSize().Width, mouseClickForMenu.Y) );
+                if (node.Items.Count<NodeItem>() > 0 && clickedNodeItem != null)
+                {
+                    if(graphControl.Connect (node.Items.First<NodeItem> (), clickedNodeItem) != null)
+                    {
+                        node.Title = (string)clickedNodeItem.Tag;
+                    }
+
+                }
+                    
+                node.Location = (PointF) graphControl.PointToClient (new Point (mouseClickForMenu.X - 100 - node.boundSite.ToSize().Width, mouseClickForMenu.Y) );
 				graphControl.AddNode (node);
 			}
 			else
@@ -162,7 +279,7 @@ namespace GraphNodes
 			}
 		}
 
-		private void AddNagiosNode (ToolStripMenuItem sender)
+        private void AddNagiosNode (ToolStripMenuItem sender)
 		{
 			int index = (int) (sender as ToolStripMenuItem).Tag;
 			string nagObj = nagiosNodes.listNagiosObjects [index];
@@ -172,7 +289,10 @@ namespace GraphNodes
 
 			if (nagiosNodes.listNagiosNodes.TryGetValue (nagObj, out nodeItemsList))
 			{
-				var node = new Node (nagObj) { Tag = nagObj };
+
+                nodeItemsList.Sort ();
+
+                var node = new Node (nagObj) { Tag = nagObj };
 				Matrix inverse_transformation = new Matrix ();
 
 				foreach (var str in nodeItemsList)
@@ -205,61 +325,6 @@ namespace GraphNodes
 			}
 		}
 
-		public void _ExampleForm()
-		{
-			InitializeComponent();
-
-			graphControl.CompatibilityStrategy = new AlwaysCompatible();
-
-			var someNode = new Node("My Title");
-			someNode.Location = new Point(500, 100);
-			var check1Item = new NodeCheckboxItem("Check 1", true, false) { Tag = 31337 };
-			someNode.AddItem(check1Item);
-			someNode.AddItem(new NodeCheckboxItem("Check 2", true, false) { Tag = 42f });
-			
-			graphControl.AddNode(someNode);
-
-			var colorNode = new Node("Color");
-			colorNode.Location = new Point(200, 50);
-			var redChannel		= new NodeSliderItem("R", 64.0f, 16.0f, 0, 1.0f, 0.0f, false, false);
-			var greenChannel	= new NodeSliderItem("G", 64.0f, 16.0f, 0, 1.0f, 0.0f, false, false);
-			var blueChannel		= new NodeSliderItem("B", 64.0f, 16.0f, 0, 1.0f, 0.0f, false, false);
-			var colorItem		= new NodeColorItem("Color", Color.Black, false, true) { Tag = 1337 };
-
-			EventHandler<NodeItemEventArgs> channelChangedDelegate = delegate(object sender, NodeItemEventArgs args)
-			{
-				var red = redChannel.Value;
-				var green = blueChannel.Value;
-				var blue = greenChannel.Value;
-				colorItem.Color = Color.FromArgb((int)Math.Round(red * 255), (int)Math.Round(green * 255), (int)Math.Round(blue * 255));
-			};
-			redChannel.ValueChanged		+= channelChangedDelegate;
-			greenChannel.ValueChanged	+= channelChangedDelegate;
-			blueChannel.ValueChanged	+= channelChangedDelegate;
-
-
-			colorNode.AddItem(redChannel);
-			colorNode.AddItem(greenChannel);
-			colorNode.AddItem(blueChannel);
-
-			colorItem.Clicked += new EventHandler<NodeItemEventArgs>(OnColClicked);
-			colorNode.AddItem(colorItem);
-			graphControl.AddNode(colorNode);
-
-			var textureNode = new Node("Texture");
-			textureNode.Location = new Point(300, 150);
-			var imageItem = new NodeImageItem(Properties.Resources.example, 64, 64, false, true) { Tag = 1000f };
-			imageItem.Clicked += new EventHandler<NodeItemEventArgs>(OnImgClicked);
-			textureNode.AddItem(imageItem);
-			graphControl.AddNode(textureNode);
-
-			graphControl.ConnectionAdded	+= new EventHandler<AcceptNodeConnectionEventArgs>(OnConnectionAdded);
-			graphControl.ConnectionAdding	+= new EventHandler<AcceptNodeConnectionEventArgs>(OnConnectionAdding);
-			graphControl.ConnectionRemoving += new EventHandler<AcceptNodeConnectionEventArgs>(OnConnectionRemoved);
-			graphControl.ShowElementMenu	+= new EventHandler<AcceptElementLocationEventArgs>(OnShowElementMenu);
-
-			graphControl.Connect(colorItem, check1Item);
-		}
 
 		void OnImgClicked(object sender, NodeItemEventArgs e)
 		{
@@ -281,7 +346,11 @@ namespace GraphNodes
 
 		void OnShowElementMenu (object sender, AcceptElementLocationEventArgs e)
 		{
-			if (e.Element == null)
+            clickedNode = null;
+            clickedNodeItem = null;
+            clickedNodeItemConnector = null;
+
+            if (e.Element == null)
 			{
 				// Show a test menu for when you click on nothing
 				//testMenuItem.Text = "(clicked on nothing)";
@@ -289,14 +358,15 @@ namespace GraphNodes
 				objectMenu.Show (e.Position);
 				mouseClickForMenu = e.Position;
 				e.Cancel = false;
-			} else
-			if (e.Element is Node)
+			}
+            else if ((e.Element is Node) && !(e.Element is CustomUINode))
 			{
 				// Show a test menu for a node
-				testMenuItem.Text = ((Node) e.Element).Title;
+				//testMenuItem.Text = ((Node) e.Element).Title;
+                clickedNode = (Node) e.Element;
 				nodeMenu.Show (e.Position);
 				e.Cancel = false;
-			} else
+			} 
 			//if (e.Element is NodeItem)
 			//{
 			//	// Show a test menu for a nodeItem
@@ -304,13 +374,35 @@ namespace GraphNodes
 			//	nodeMenu.Show (e.Position);
 			//	e.Cancel = false;
 			//}
-			if (e.Element is NodeConnector || e.Element is NodeItem)
+            else if (e.Element is NodeConnector)
 			{
-				mouseClickForMenu = e.Position;
-				connectorMenu.Show (e.Position);
+                clickedNodeItemConnector = (NodeConnector) e.Element;
+                clickedNodeItem = (NodeItem) clickedNodeItemConnector.Item;
+                mouseClickForMenu = e.Position;
+                connectorMenu.Tag = "3";
+                connectorMenu.Show (e.Position);
+
 				e.Cancel = false;
 			}
-			else
+            else if (e.Element is NodeItem)
+            {
+                clickedNodeItem = (NodeItem) e.Element;
+                mouseClickForMenu = e.Position;
+                connectorMenu.Tag = "3";
+                connectorMenu.Show (e.Position);
+
+                e.Cancel = false;
+            }
+            else if (e.Element is CustomUINode)
+            {
+                clickedNode = (CustomUINode) e.Element;
+                mouseClickForMenu = e.Position;
+                connectorMenu.Tag = "1";
+                connectorMenu.Show (e.Position);
+
+                e.Cancel = false;
+            }
+            else
 			{
 				// if you don't want to show a menu for this item (but perhaps show a menu for something more higher up) 
 				// then you can cancel the event
