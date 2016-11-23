@@ -94,7 +94,7 @@ namespace Graph
                     textBrush = importantTextBrush;
                 }
                 else
-                    textBrush = importantTextBrush;
+                    textBrush = normalTextBrush;
                 isImportantNodeItem = value;
             }
         }
