@@ -182,7 +182,7 @@ namespace GraphNodes
                     nodeItem = new NodeCheckboxItem ("NodeCheckboxItem", false, true) { Tag = "tagCheckBox", outputTag = new string [] { "tagCheckBox" } };
                     break;
                 case "CheckListBox":
-                    nodeItem = new NodeCheckListBoxItem (new string [] { "NodeCheckListBoxItem" }, 0, false, true) { Tag = "tagCheckListBox", outputTag = new string [] { "tagCheckListBox" }};
+                    nodeItem = new NodeCheckListBoxItem (new string [] { "NodeCheckListBoxItem" }, 0, false, true) { Tag = "tagCheckListBox", outputTag = new string [] { "tagCheckListBox" } };
                     break;
                 case "ColorSlider":
                     nodeItem = new NodeSliderItem ("NodeSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagColorSlider", outputTag = new string [] { "tagColorSlider" }};
@@ -194,7 +194,7 @@ namespace GraphNodes
                     nodeItem = new NodeImageItem (Properties.Resources.example, 64, 64, false, true) { Tag = "tagImage" , outputTag = new string [] { "tagImage" }};
                     break;
                 case "Label":
-                    nodeItem = new NodeLabelItem ("NodeLabelItem") { Tag = "tagLabel" , outputTag = new string [] { "tagLabel" } };
+                    nodeItem = new NodeLabelItem ("NodeLabelItem", true, true) { Tag = "tagLabel", inputTag = new string [] { "tagLabel" }, outputTag = new string [] { "tagLabel" } };
                     break;
                 case "NumericSlider":
                     nodeItem = new NodeNumericSliderItem ("NodeNumericSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagNumericSlider", outputTag = new string [] { "tagNumericSlider" } };
