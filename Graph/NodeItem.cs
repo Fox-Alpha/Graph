@@ -59,7 +59,17 @@ namespace Graph
             importantTextBrush = importantText;
         }
 
+        public string itemText
+        {
+            get { return itemText; }
+            private set
+            {
+                if (value == itemText)
+                    return;
 
+                itemText = value;
+            }
+        }
         public Node					Node			{ get; internal set; }
 		public object				Tag				{ get; set; }
 		public object[] inputTag { get; set; }
