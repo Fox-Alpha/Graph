@@ -30,7 +30,7 @@ namespace Graph.Items
 	/// </summary>
 	public sealed class NodeNumericSliderItem : NodeSliderItem
 	{
-		public ElementItemType ElementItemType { get { return ElementItemType.NodeNumericSliderItem; } }
+		//public ElementItemType ElementItemType { get { return ElementItemType.NodeNumericSliderItem; } }
 
 		bool showNumeric = false;
         public bool ShowNumeric
