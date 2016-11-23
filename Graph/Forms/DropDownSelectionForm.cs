@@ -17,7 +17,7 @@ namespace Graph.Forms
 		}
 
 
-		public int		SelectedIndex { get { return TextComboBox.SelectedIndex; } set { TextComboBox.SelectedIndex = value; } }
+		public int		SelectedIndex { get { return TextComboBox.SelectedIndex; } set { TextComboBox.SelectedIndex = value <= TextComboBox.Items.Count?value:-1; } }
 		public string[] Items 
 		{ 
 			get 
