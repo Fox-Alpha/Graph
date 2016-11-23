@@ -29,7 +29,7 @@ namespace GraphNodes.CustomUINodes
 		public CustomUINodeCheckListBoxItem (string title) :
 			base (title)
 		{
-			this.AddItem (new NodeCheckListBoxItem (new string [] { "CustomUINode", "Value1", "Value2", "Value3" }, 0, false, true) { Tag = "tagCheckListBox", outputTag = new object [] { "tagOutCheckListBox" } });
+			this.AddItem (new NodeCheckListBoxItem (new string [] { "CustomUINode", "Value1", "Value2", "Value3" }, 0, false, true) { Tag = "tagCheckListBox", outputTag = new object [] { "tagCheckListBox" } });
 		}
 	}
 	public sealed class CustomUINodeColorSliderItem : CustomUINode
@@ -42,7 +42,7 @@ namespace GraphNodes.CustomUINodes
 			var redChannel = new NodeSliderItem ("R", 64.0f, 16.0f, 0, 1.0f, 0.0f, false, false);
 			var greenChannel = new NodeSliderItem ("G", 64.0f, 16.0f, 0, 1.0f, 0.0f, false, false);
 			var blueChannel = new NodeSliderItem ("B", 64.0f, 16.0f, 0, 1.0f, 0.0f, false, false);
-			var colorItem = new NodeColorItem ("Color", Color.Black, false, true) { Tag = "tagCheckListBox" };
+			var colorItem = new NodeColorItem ("Color", Color.Black, false, true) { Tag = "tagColorSlider", outputTag = new object [] { "tagCheckListBox" } };
 
 			EventHandler<NodeItemEventArgs> channelChangedDelegate = delegate (object s, NodeItemEventArgs args)
 			{
@@ -69,7 +69,7 @@ namespace GraphNodes.CustomUINodes
 		public CustomUINodeDropDownItem (string title) :
 			base (title)
 		{
-			this.AddItem (new NodeDropDownItem (new string [] { "CustomUINode", "Value1", "Value2", "Value3" }, 0, false, true) { Tag = "tagDropDown", outputTag = new object [] { "tagOutDropDownList" } });
+			this.AddItem (new NodeDropDownItem (new string [] { "CustomUINode", "Value1", "Value2", "Value3" }, 0, false, true) { Tag = "tagDropDown", outputTag = new object [] { "tagDropDownList" } });
 		}
 	}
 	public sealed class CustomUINodeImageItem : CustomUINode
@@ -77,6 +77,7 @@ namespace GraphNodes.CustomUINodes
 		public CustomUINodeImageItem (string title) :
 			base (title)
 		{
+            this.AddItem (new NodeImageItem (Properties.Resources.example, 64, 64, false, true) { Tag = "tagImage", outputTag = new string [] { "tagImage" } });
 		}
 	}
 	public sealed class CustomUINodeLabelItem : CustomUINode
@@ -84,7 +85,7 @@ namespace GraphNodes.CustomUINodes
 		public CustomUINodeLabelItem (string title) :
 			base (title)
 		{
-			this.AddItem (new NodeLabelItem (title, false, true) { Tag = "CustomUINodeLabelItem", outputTag = new object [] { "tagTextLabel" }});
+			this.AddItem (new NodeLabelItem (title, true, true) { Tag = "tagLabelItem", inputTag = new object [] { "tagLabel" }, outputTag = new object [] { "tagLabel" }});
 		}
 	}
 	public sealed class CustomUINodeNumericSliderItem : CustomUINode
@@ -92,21 +93,24 @@ namespace GraphNodes.CustomUINodes
 		public CustomUINodeNumericSliderItem (string title) :
 			base (title)
 		{
-		}
+            this.AddItem (new NodeNumericSliderItem ("NodeNumericSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagNumericSlider", outputTag = new string [] { "tagNumericSlider", "tagSlider" } });
+        }
 	}
 	public sealed class CustomUINodeSliderItem : CustomUINode
 	{
 		public CustomUINodeSliderItem (string title) :
 			base (title)
 		{
-		}
+            this.AddItem (new NodeNumericSliderItem ("NodeSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagSlider", outputTag = new string [] { "tagNumericSlider", "tagSlider" } });
+        }
 	}
 	public sealed class CustomUINodeMultilineTextBoxItem : CustomUINode
 	{
 		public CustomUINodeMultilineTextBoxItem (string title) :
 			base (title)
 		{
-			this.AddItem (new NodeTextBoxItem ("CustomUINode", false, true) { Tag = "CustomUINodeMultilineTextBoxItem", outputTag = new object [] { "tagMultilineText" } });
+            //  TODO: gegen MultilineTextBox ersetzen
+			this.AddItem (new NodeTextBoxItem ("CustomUINode", false, true) { Tag = "tegMultilineTextBoxItem", outputTag = new object [] { "tagMultilineText" } });
 		}
 	}
 	public sealed class CustomUINodeTextBoxItem : CustomUINode
@@ -114,7 +118,7 @@ namespace GraphNodes.CustomUINodes
 		public CustomUINodeTextBoxItem (string title) :
 			base (title)
 		{
-			this.AddItem (new NodeTextBoxItem ("CustomUINode", false, true) { Tag = "CustomUINodeTextBoxItem", outputTag = new object [] { "tagTextBox" } });
+			this.AddItem (new NodeTextBoxItem ("CustomUINode", false, true) { Tag = "tagTextBoxItem", outputTag = new object [] { "tagTextBox" } });
 		}
 	}
 }
