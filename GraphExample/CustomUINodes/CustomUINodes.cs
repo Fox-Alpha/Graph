@@ -69,7 +69,7 @@ namespace GraphNodes.CustomUINodes
 		public CustomUINodeDropDownItem (string title) :
 			base (title)
 		{
-			this.AddItem (new NodeDropDownItem (new string [] { "CustomUINode", "Value1", "Value2", "Value3" }, 0, false, true) { Tag = "tagDropDown", outputTag = new object [] { "tagDropDownList" } });
+			this.AddItem (new NodeDropDownItem (new string [] { "CustomUINode", "Value1", "Value2", "Value3" }, 0, false, true) { Tag = "tagDropDown", outputTag = new object [] { "tagDropDown" } });
 		}
 	}
 	public sealed class CustomUINodeImageItem : CustomUINode
