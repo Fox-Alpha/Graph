@@ -1042,6 +1042,22 @@ namespace Graph
 		}
 		#endregion
 
+		#region GetElementNode
+		private Node GetElementNode(IElement element)
+		{
+			if (element == null)
+				return null;
+			switch (element.ElementType)
+			{
+				default:
+				case ElementType.Connection:		return null;
+				case ElementType.InputConnector:	return ((NodeInputConnector)element).Node;
+				case ElementType.OutputConnector:	return ((NodeInputConnector)element).Node;
+				case ElementType.NodeItem:			return ((NodeItem)element).Node;
+				case ElementType.Node:				return (Node)element;
+			}
+		}
+		#endregion
 
 
 		#region OnMouseWheel
@@ -1233,7 +1249,12 @@ namespace Graph
 					command = CommandMode.Edit;
 				} else
 					command = CommandMode.MarqueSelection;
-			} else
+			}
+            else if (e.Button == MouseButtons.Right && (ModifierKeys == Keys.Shift))
+            {
+                System.Diagnostics.Debug.WriteLine ("Rechte MT + SHIFT");
+            }
+            else
 			{
 				DragElement = null;
 				command = CommandMode.TranslateView;
@@ -1641,25 +1662,6 @@ namespace Graph
 		}
 
 		#endregion
-
-		#region GetElementNode
-		private Node GetElementNode(IElement element)
-		{
-			if (element == null)
-				return null;
-			switch (element.ElementType)
-			{
-				default:
-				case ElementType.Connection:		return null;
-				case ElementType.InputConnector:	return ((NodeInputConnector)element).Node;
-				case ElementType.OutputConnector:	return ((NodeInputConnector)element).Node;
-				case ElementType.NodeItem:			return ((NodeItem)element).Node;
-				case ElementType.Node:				return (Node)element;
-			}
-		}
-		#endregion
-
-
 
 		#region OnMouseUp
 		protected override void OnMouseUp(MouseEventArgs e)
