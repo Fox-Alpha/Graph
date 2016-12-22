@@ -29,19 +29,24 @@
 		private void InitializeComponent()
 		{
             this.components = new System.ComponentModel.Container();
-            Graph.Compatibility.AlwaysCompatible alwaysCompatible1 = new Graph.Compatibility.AlwaysCompatible();
+            Graph.Compatibility.AlwaysCompatible alwaysCompatible5 = new Graph.Compatibility.AlwaysCompatible();
             this.label1 = new System.Windows.Forms.Label();
             this.showLabelsCheckBox = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.nodeMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.testMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.graphControl = new Graph.GraphControl();
             this.button1 = new System.Windows.Forms.Button();
             this.objectMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.connectorMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.nodeMenu.SuspendLayout();
+            this.graphControl = new Graph.GraphControl();
+            this.NodeOptionMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.MenuItemRename = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemRemove = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemConnections = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemEnableInput = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemEnableOutput = new System.Windows.Forms.ToolStripMenuItem();
+            this.NodeOptionMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -98,39 +103,10 @@
             // 
             // nodeMenu
             // 
-            this.nodeMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.testMenuItem});
             this.nodeMenu.Name = "NodeMenu";
-            this.nodeMenu.Size = new System.Drawing.Size(96, 26);
+            this.nodeMenu.Size = new System.Drawing.Size(61, 4);
             this.nodeMenu.Tag = "1";
             this.nodeMenu.Text = "TestNode";
-            // 
-            // testMenuItem
-            // 
-            this.testMenuItem.Name = "testMenuItem";
-            this.testMenuItem.Size = new System.Drawing.Size(95, 22);
-            this.testMenuItem.Text = "Test";
-            // 
-            // graphControl
-            // 
-            this.graphControl.AllowDrop = true;
-            this.graphControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.graphControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.graphControl.CompatibilityStrategy = alwaysCompatible1;
-            this.graphControl.FocusElement = null;
-            this.graphControl.HighlightCompatible = true;
-            this.graphControl.LargeGridStep = 128F;
-            this.graphControl.LargeStepGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.graphControl.Location = new System.Drawing.Point(108, 12);
-            this.graphControl.Name = "graphControl";
-            this.graphControl.ShowLabels = false;
-            this.graphControl.Size = new System.Drawing.Size(1180, 526);
-            this.graphControl.SmallGridStep = 16F;
-            this.graphControl.SmallStepGridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.graphControl.TabIndex = 0;
-            this.graphControl.Text = "graphControl";
             // 
             // button1
             // 
@@ -156,6 +132,74 @@
             this.connectorMenu.Tag = "3";
             this.connectorMenu.Text = "Connectoren";
             // 
+            // graphControl
+            // 
+            this.graphControl.AllowDrop = true;
+            this.graphControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.graphControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.graphControl.CompatibilityStrategy = alwaysCompatible5;
+            this.graphControl.FocusElement = null;
+            this.graphControl.HighlightCompatible = true;
+            this.graphControl.LargeGridStep = 128F;
+            this.graphControl.LargeStepGridColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.graphControl.Location = new System.Drawing.Point(108, 12);
+            this.graphControl.Name = "graphControl";
+            this.graphControl.ShowLabels = false;
+            this.graphControl.Size = new System.Drawing.Size(1180, 526);
+            this.graphControl.SmallGridStep = 16F;
+            this.graphControl.SmallStepGridColor = System.Drawing.SystemColors.ActiveCaption;
+            this.graphControl.TabIndex = 0;
+            this.graphControl.Text = "graphControl";
+            // 
+            // NodeOptionMenu
+            // 
+            this.NodeOptionMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuItemRename,
+            this.MenuItemRemove,
+            this.MenuItemConnections});
+            this.NodeOptionMenu.Name = "NodeMenu";
+            this.NodeOptionMenu.Size = new System.Drawing.Size(153, 92);
+            this.NodeOptionMenu.Tag = "1";
+            this.NodeOptionMenu.Text = "Optionen";
+            // 
+            // MenuItemRename
+            // 
+            this.MenuItemRename.Name = "MenuItemRename";
+            this.MenuItemRename.Size = new System.Drawing.Size(152, 22);
+            this.MenuItemRename.Text = "Umbenennen";
+            this.MenuItemRename.Click += new System.EventHandler(this.MenuItemRename_Click);
+            // 
+            // MenuItemRemove
+            // 
+            this.MenuItemRemove.Name = "MenuItemRemove";
+            this.MenuItemRemove.Size = new System.Drawing.Size(152, 22);
+            this.MenuItemRemove.Text = "Entfernen";
+            this.MenuItemRemove.Click += new System.EventHandler(this.MenuItemRemove_Click);
+            // 
+            // MenuItemConnections
+            // 
+            this.MenuItemConnections.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuItemEnableInput,
+            this.MenuItemEnableOutput});
+            this.MenuItemConnections.Enabled = false;
+            this.MenuItemConnections.Name = "MenuItemConnections";
+            this.MenuItemConnections.Size = new System.Drawing.Size(152, 22);
+            this.MenuItemConnections.Text = "Conections";
+            // 
+            // MenuItemEnableInput
+            // 
+            this.MenuItemEnableInput.Name = "MenuItemEnableInput";
+            this.MenuItemEnableInput.Size = new System.Drawing.Size(152, 22);
+            this.MenuItemEnableInput.Text = "Input";
+            // 
+            // MenuItemEnableOutput
+            // 
+            this.MenuItemEnableOutput.Name = "MenuItemEnableOutput";
+            this.MenuItemEnableOutput.Size = new System.Drawing.Size(152, 22);
+            this.MenuItemEnableOutput.Text = "Output";
+            // 
             // ExampleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -172,7 +216,7 @@
             this.DoubleBuffered = true;
             this.Name = "ExampleForm";
             this.Text = "Form1";
-            this.nodeMenu.ResumeLayout(false);
+            this.NodeOptionMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,10 +231,15 @@
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.ContextMenuStrip nodeMenu;
-		private System.Windows.Forms.ToolStripMenuItem testMenuItem;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.ContextMenuStrip objectMenu;
 		private System.Windows.Forms.ContextMenuStrip connectorMenu;
-	}
+        private System.Windows.Forms.ContextMenuStrip NodeOptionMenu;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemRename;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemRemove;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemConnections;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemEnableInput;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemEnableOutput;
+    }
 }
 
