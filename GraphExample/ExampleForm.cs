@@ -19,7 +19,7 @@ using System.IO;
 using GraphNodes.Nagios;
 using Graphnodes.Nagios.Node;
 using Graphnodes.Nagios.NodeItem;
-using GraphNodes.CustomUINodes;
+using GraphNodes.CustomUI.Nodes;
 
 
 namespace GraphNodes
@@ -157,7 +157,7 @@ namespace GraphNodes
 				switch (menuTag)
 				{
 					case 1:
-                        //Add NodeItemInput to cliecked Node
+                        //Add NodeItemInput to clicked Node
                         AddNodeItem2Node (sender as ToolStripMenuItem);
 						break;
 					case 2:
@@ -175,46 +175,10 @@ namespace GraphNodes
             NodeItem nodeItem = null;
             switch ((string) toolStripMenuItem.Tag)
             {
+                case "Bla":
+                    break;
                 //	"CheckBox", "CheckListBox", "ColorSlider", "DropDown", "Image", "Label", "NumericSlider", "Slider", "MultilineText", "TextBox" 
                 //	"tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"
-
-                case "CheckBox":
-                    nodeItem = new NodeCheckboxItem ("NodeCheckboxItem", false, true) { Tag = "tagCheckBox", outputTag = new string [] { "tagCheckBox" } };
-                    break;
-                case "CheckListBox":
-                    nodeItem = new NodeCheckListBoxItem (new string [] { "NodeCheckListBoxItem" }, 0, false, true) { Tag = "tagCheckListBox", outputTag = new string [] { "tagCheckListBox" } };
-                    break;
-                case "ColorSlider":
-                    nodeItem = new NodeSliderItem ("NodeSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagColorSlider", outputTag = new string [] { "tagColorSlider" }};
-                    break;
-                case "DropDown":
-                    nodeItem = new NodeDropDownItem (new string [] { "NodeDropDownItem" }, 1, false, true) { Tag = "tagDropDown", outputTag = new string [] { "tagDropDown" }};
-                    break;
-                case "Image":
-                    nodeItem = new NodeImageItem (Properties.Resources.example, 64, 64, false, true) { Tag = "tagImage" , outputTag = new string [] { "tagImage" }};
-                    break;
-                case "Label":
-                    nodeItem = new NodeLabelItem ("NodeLabelItem", true, true) { Tag = "tagLabel", inputTag = new string [] { "tagLabel" }, outputTag = new string [] { "tagLabel" } };
-                    break;
-                case "NumericSlider":
-                    nodeItem = new NodeNumericSliderItem ("NodeNumericSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagNumericSlider", outputTag = new string [] { "tagNumericSlider" } };
-                    break;
-                case "Slider":
-                    nodeItem = new NodeSliderItem ("NodeSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagSlider", outputTag = new string [] { "tagSlider" } };
-                    break;
-                case "MultilineText":
-                    //nodeItem = new NodeMultilineTextBoxItem ("NodeMultilineTextBoxItem", false, true) { Tag = "tagMultilineText", outputTag = new string [] { "tagMultilineText" } };
-                    break;
-                case "TextBox":
-                    nodeItem = new NodeTextBoxItem ("NodeTextBoxItem", false, true) { Tag = "tagTextBox", outputTag = new string [] { "tagTextBox" } };
-                    break;
-                default:
-                    break;
-            }
-            Node node = clickedNode;
-            if (node != null)
-            {
-                node.AddItem (nodeItem);
             }
         }
 
@@ -364,7 +328,13 @@ namespace GraphNodes
 				// Show a test menu for a node
 				//testMenuItem.Text = ((Node) e.Element).Title;
                 clickedNode = (Node) e.Element;
-				nodeMenu.Show (e.Position);
+                if (ModifierKeys == Keys.Shift)
+                {
+                    NodeOptionMenu.Show (e.Position);
+                }
+                else
+				    nodeMenu.Show (e.Position);
+
 				e.Cancel = false;
 			} 
 			//if (e.Element is NodeItem)
@@ -525,6 +495,22 @@ namespace GraphNodes
             else
                 Debug.WriteLine ("Laden dere JSON Settings fehlgeschlagen", "NAGIOS");
             //#####
+        }
+
+        private void MenuItemRename_Click (object sender, EventArgs e)
+        {
+            //  Umbenennen einer NodeGruppe
+            var form = new TextEditForm ();
+            form.Text = "Title Umbenennen";
+            form.InputText = clickedNode.Title;
+            var result = form.ShowDialog ();
+            if (result == DialogResult.OK)
+                clickedNode.Title = form.InputText;
+        }
+
+        private void MenuItemRemove_Click (object sender, EventArgs e)
+        {
+            //  Entfernen einer Node
         }
     }
 }
