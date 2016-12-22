@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Graph;
 using Graph.Items;
 
-namespace GraphNodes.CustomUINodes
+namespace GraphNodes.CustomUI.Nodes
 {
 	public class CustomUINode : Node
 	{
@@ -121,6 +121,128 @@ namespace GraphNodes.CustomUINodes
 			this.AddItem (new NodeTextBoxItem ("CustomUINode", false, true) { Tag = "tagTextBoxItem", outputTag = new object [] { "tagTextBox" } });
 		}
 	}
+}
+namespace GraphNodes.CustomUI.Items
+{
+    public class CustomUIItem
+    {
+        public string CheckBoxText { get; set; } = string.Empty;
+        public string [] CheckListBoxListItems = new string [] { "CustomUINode", "Value1", "Value2", "Value3" };
+        public string [] DropDownListItems = new string [] { "CustomUINode", "Value1", "Value2", "Value3" }
+
+        public  CustomUIItem ()
+        {
+        }
+
+        public NodeLabelItem CustomUIItemLabel(string title)
+        {
+            return new NodeLabelItem (title, true, true) { Tag = "tagLabelItem", inputTag = new object [] { "tagLabel" }, outputTag = new object [] { "tagLabel" } };
+        }
+
+        public NodeLabelItem CustomUIItemTextBox (string title)
+        {
+            return new NodeLabelItem (title, true, true) { Tag = "tagLabelItem", inputTag = new object [] { "tagLabel" }, outputTag = new object [] { "tagLabel" } };
+        }
+
+        public NodeLabelItem CustomUIItemMultilineTextBox (string title)
+        {
+            return new NodeLabelItem (title, true, true) { Tag = "tagLabelItem", inputTag = new object [] { "tagLabel" }, outputTag = new object [] { "tagLabel" } };
+        }
+
+        public NodeCheckboxItem CustomUIItemCheckBox (string title)
+        {
+            return new NodeCheckboxItem (string.IsNullOrWhiteSpace (CheckBoxText) ? title : CheckBoxText, false, true) { Tag = "tagCheckBox", outputTag = new object [] { "tagCheckBox" } };
+        }
+
+        public NodeCheckListBoxItem CustomUIItemCheckListBox (string title, string [] ListItems)
+        {
+            if (ListItems.Length > 0)
+            {
+                CheckListBoxListItems = ListItems;
+            }
+            return new NodeCheckListBoxItem (CheckListBoxListItems, 0, false, true) { Tag = "tagCheckListBox", inputTag = new object [] { "tagCheckListBox" }, outputTag = new object [] { "tagCheckListBox" } };
+        }
+
+        public NodeDropDownItem CustomUIItemDropDown (string title, string [] ListItems)
+        {
+            if (ListItems.Length > 0)
+            {
+                CheckListBoxListItems = ListItems;
+            }
+            return new NodeDropDownItem (DropDownListItems, 0, false, true) { Tag = "tagDropDown", outputTag = new object [] { "tagDropDown" } };
+        }
+
+        public NodeLabelItem CustomUIItemSlider (string title)
+        {
+            return new NodeLabelItem (title, true, true) { Tag = "tagLabelItem", inputTag = new object [] { "tagLabel" }, outputTag = new object [] { "tagLabel" } };
+        }
+
+        public NodeNumericSliderItem CustomUIItemNumericSlider (string title)
+        {
+            return new NodeNumericSliderItem ("NodeNumericSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagNumericSlider", outputTag = new string [] { "tagNumericSlider", "tagSlider" } };
+        }
+
+        public NodeLabelItem CustomUIItemColorSlider (string title)
+        {
+            return new NodeLabelItem (title, true, true) { Tag = "tagLabelItem", inputTag = new object [] { "tagLabel" }, outputTag = new object [] { "tagLabel" } };
+        }
+
+        public NodeImageItem CustomUIItemImage (string title)
+        {
+            return new NodeImageItem (Properties.Resources.example, 64, 64, false, true) { Tag = "tagImage", outputTag = new string [] { "tagImage" } };
+        }
+    }
+
+    class dummy
+    {
+        NodeItem nodeItem;
+        Node clickedNode;
+        dummy ()
+        {
+            switch ("")
+            {
+            
+                case "CheckBox":
+                        nodeItem = new NodeCheckboxItem ("NodeCheckboxItem", false, true) { Tag = "tagCheckBox", outputTag = new string [] { "tagCheckBox" } };
+                break;
+                    case "CheckListBox":
+                        nodeItem = new NodeCheckListBoxItem (new string [] { "NodeCheckListBoxItem" }, 0, false, true) { Tag = "tagCheckListBox", outputTag = new string [] { "tagCheckListBox" } };
+                break;
+                    case "ColorSlider":
+                        nodeItem = new NodeSliderItem ("NodeSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagColorSlider", outputTag = new string [] { "tagColorSlider" } };
+                break;
+                    case "DropDown":
+                        nodeItem = new NodeDropDownItem (new string [] { "NodeDropDownItem" }, 1, false, true) { Tag = "tagDropDown", outputTag = new string [] { "tagDropDown" } };
+                break;
+                    case "Image":
+                        nodeItem = new NodeImageItem (Properties.Resources.example, 64, 64, false, true) { Tag = "tagImage", outputTag = new string [] { "tagImage" } };
+                break;
+                    case "Label":
+                        nodeItem = new NodeLabelItem ("NodeLabelItem", true, true) { Tag = "tagLabel", inputTag = new string [] { "tagLabel" }, outputTag = new string [] { "tagLabel" } };
+                break;
+                    case "NumericSlider":
+                        nodeItem = new NodeNumericSliderItem ("NodeNumericSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagNumericSlider", outputTag = new string [] { "tagNumericSlider" } };
+                break;
+                    case "Slider":
+                        nodeItem = new NodeSliderItem ("NodeSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagSlider", outputTag = new string [] { "tagSlider" } };
+                break;
+                    case "MultilineText":
+                        //nodeItem = new NodeMultilineTextBoxItem ("NodeMultilineTextBoxItem", false, true) { Tag = "tagMultilineText", outputTag = new string [] { "tagMultilineText" } };
+                        break;
+                    case "TextBox":
+                        nodeItem = new NodeTextBoxItem ("NodeTextBoxItem", false, true) { Tag = "tagTextBox", outputTag = new string [] { "tagTextBox" } };
+                break;
+                default:
+                        break;
+            }
+            Node node = clickedNode;
+            if (node != null)
+            {
+                node.AddItem (nodeItem);
+            }
+
+        }
+    }
 }
 /*
  * CustomUINodeCheckBox
