@@ -128,7 +128,7 @@ namespace GraphNodes.CustomUI.Items
     {
         public string CheckBoxText { get; set; } = string.Empty;
         public string [] CheckListBoxListItems = new string [] { "CustomUINode", "Value1", "Value2", "Value3" };
-        public string [] DropDownListItems = new string [] { "CustomUINode", "Value1", "Value2", "Value3" }
+        public string [] DropDownListItems = new string [] { "CustomUINode", "Value1", "Value2", "Value3" };
 
         public  CustomUIItem ()
         {
@@ -139,14 +139,15 @@ namespace GraphNodes.CustomUI.Items
             return new NodeLabelItem (title, true, true) { Tag = "tagLabelItem", inputTag = new object [] { "tagLabel" }, outputTag = new object [] { "tagLabel" } };
         }
 
-        public NodeLabelItem CustomUIItemTextBox (string title)
+        public NodeTextBoxItem CustomUIItemTextBox (string title)
         {
-            return new NodeLabelItem (title, true, true) { Tag = "tagLabelItem", inputTag = new object [] { "tagLabel" }, outputTag = new object [] { "tagLabel" } };
+            return new NodeTextBoxItem ("CustomUINode", false, true) { Tag = "tagTextBoxItem", outputTag = new object [] { "tagTextBox" } };
         }
 
-        public NodeLabelItem CustomUIItemMultilineTextBox (string title)
+        public NodeTextBoxItem CustomUIItemMultilineTextBox (string title)
         {
-            return new NodeLabelItem (title, true, true) { Tag = "tagLabelItem", inputTag = new object [] { "tagLabel" }, outputTag = new object [] { "tagLabel" } };
+            //  TODO: gegen MultilineTextBox ersetzen
+            return new NodeTextBoxItem ("CustomUINode", false, true) { Tag = "tegMultilineTextBoxItem", outputTag = new object [] { "tagMultilineText" } };
         }
 
         public NodeCheckboxItem CustomUIItemCheckBox (string title)
@@ -172,9 +173,9 @@ namespace GraphNodes.CustomUI.Items
             return new NodeDropDownItem (DropDownListItems, 0, false, true) { Tag = "tagDropDown", outputTag = new object [] { "tagDropDown" } };
         }
 
-        public NodeLabelItem CustomUIItemSlider (string title)
+        public NodeNumericSliderItem CustomUIItemSlider (string title)
         {
-            return new NodeLabelItem (title, true, true) { Tag = "tagLabelItem", inputTag = new object [] { "tagLabel" }, outputTag = new object [] { "tagLabel" } };
+            return new NodeNumericSliderItem ("NodeSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagSlider", outputTag = new string [] { "tagNumericSlider", "tagSlider" } };
         }
 
         public NodeNumericSliderItem CustomUIItemNumericSlider (string title)
@@ -182,9 +183,30 @@ namespace GraphNodes.CustomUI.Items
             return new NodeNumericSliderItem ("NodeNumericSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagNumericSlider", outputTag = new string [] { "tagNumericSlider", "tagSlider" } };
         }
 
-        public NodeLabelItem CustomUIItemColorSlider (string title)
+        public NodeItem[] CustomUIItemColorSlider (string title)
         {
-            return new NodeLabelItem (title, true, true) { Tag = "tagLabelItem", inputTag = new object [] { "tagLabel" }, outputTag = new object [] { "tagLabel" } };
+            NodeItem [] CustomUIColorSlider; 
+
+            var redChannel = new NodeSliderItem ("R", 64.0f, 16.0f, 0, 1.0f, 0.0f, false, false);
+            var greenChannel = new NodeSliderItem ("G", 64.0f, 16.0f, 0, 1.0f, 0.0f, false, false);
+            var blueChannel = new NodeSliderItem ("B", 64.0f, 16.0f, 0, 1.0f, 0.0f, false, false);
+            var colorItem = new NodeColorItem ("Color", Color.Black, false, true) { Tag = "tagColorSlider", outputTag = new object [] { "tagCheckListBox" } };
+
+            EventHandler<NodeItemEventArgs> channelChangedDelegate = delegate (object s, NodeItemEventArgs args)
+            {
+                var red = redChannel.Value;
+                var blue = blueChannel.Value;
+                var green = greenChannel.Value;
+                colorItem.Color = Color.FromArgb ((int) Math.Round (red * 255), (int) Math.Round (green * 255), (int) Math.Round (blue * 255));
+            };
+            redChannel.ValueChanged += channelChangedDelegate;
+            greenChannel.ValueChanged += channelChangedDelegate;
+            blueChannel.ValueChanged += channelChangedDelegate;
+
+
+            CustomUIColorSlider = new NodeItem[] { (NodeItem)redChannel, (NodeItem) greenChannel, (NodeItem) blueChannel, (NodeItem) colorItem };
+
+            return CustomUIColorSlider;
         }
 
         public NodeImageItem CustomUIItemImage (string title)
@@ -193,13 +215,14 @@ namespace GraphNodes.CustomUI.Items
         }
     }
 
-    class dummy
+    class dummyNodeItem
     {
+        string strDummy = string.Empty;
         NodeItem nodeItem;
         Node clickedNode;
-        dummy ()
+        dummyNodeItem ()
         {
-            switch ("")
+            switch (strDummy)
             {
             
                 case "CheckBox":
