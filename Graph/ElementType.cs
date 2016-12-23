@@ -48,6 +48,8 @@ namespace Graph
 		NodeNumericSliderItem,
 		NodeSliderItem,
 		NodeTextBoxItem,
-		NodeTitelItem
+        NodeMultilineTextBoxItem,
+        NodeTitelItem,
+        NodeCustomType
 	}
 }

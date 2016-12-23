@@ -127,11 +127,63 @@ namespace GraphNodes.CustomUI.Items
     public class CustomUIItem
     {
         public string CheckBoxText { get; set; } = string.Empty;
-        public string [] CheckListBoxListItems = new string [] { "CustomUINode", "Value1", "Value2", "Value3" };
-        public string [] DropDownListItems = new string [] { "CustomUINode", "Value1", "Value2", "Value3" };
+        public string [] CheckListBoxListItems = new string [] { "CustomUIItemCheckListBox", "Value1", "Value2", "Value3" };
+        public string [] DropDownListItems = new string [] { "CustomUIItemDropDown", "Value1", "Value2", "Value3" };
+        public Node customNode { get; set; }
+
+        public float SliderItemMin { get; set; } = 0f;
+        public float SliderItemMax { get; set; } = 10f;
+        public float SliderItemDef { get; set; } = 0f;
+
 
         public  CustomUIItem ()
         {
+        }
+
+        public void AddCustomUIItem2Node(Node node, ElementItemType type)
+        {
+            if (node == null)
+            {
+                node = new Node ("Unnamed Node");
+                
+            }
+
+            switch (type)
+            {
+                case ElementItemType.NodeCheckBoxItem:
+                    node.AddItem (CustomUIItemCheckBox (""));
+                    break;
+                case ElementItemType.NodeCheckListBoxItem:
+                    node.AddItem (CustomUIItemCheckListBox ("", null));
+                    break;
+                case ElementItemType.NodeColorItem:
+                    foreach (var item in CustomUIItemColorSlider (""))
+                    {
+                        node.AddItem (item);
+                    }
+                    break;
+                case ElementItemType.NodeDropDownItem:
+                    node.AddItem (CustomUIItemDropDown ("", null));
+                    break;
+                case ElementItemType.NodeImageItem:
+                    node.AddItem (CustomUIItemImage (""));
+                    break;
+                case ElementItemType.NodeLabelItem:
+                    node.AddItem (CustomUIItemLabel (""));
+                    break;
+                case ElementItemType.NodeNumericSliderItem:
+                    node.AddItem (CustomUIItemNumericSlider (""));
+                    break;
+                case ElementItemType.NodeSliderItem:
+                    node.AddItem (CustomUIItemSlider (""));
+                    break;
+                case ElementItemType.NodeTextBoxItem:
+                    node.AddItem (CustomUIItemTextBox (""));
+                    break;
+                default:
+                    node.AddItem (CustomUIItemLabel ("Unbenannt"));
+                    break;
+            }
         }
 
         public NodeLabelItem CustomUIItemLabel(string title)
@@ -157,7 +209,7 @@ namespace GraphNodes.CustomUI.Items
 
         public NodeCheckListBoxItem CustomUIItemCheckListBox (string title, string [] ListItems)
         {
-            if (ListItems.Length > 0)
+            if (ListItems != null && ListItems.Length > 0)
             {
                 CheckListBoxListItems = ListItems;
             }
@@ -166,21 +218,21 @@ namespace GraphNodes.CustomUI.Items
 
         public NodeDropDownItem CustomUIItemDropDown (string title, string [] ListItems)
         {
-            if (ListItems.Length > 0)
+            if (ListItems != null && ListItems.Length > 0)
             {
-                CheckListBoxListItems = ListItems;
+                DropDownListItems = ListItems;
             }
             return new NodeDropDownItem (DropDownListItems, 0, false, true) { Tag = "tagDropDown", outputTag = new object [] { "tagDropDown" } };
         }
 
-        public NodeNumericSliderItem CustomUIItemSlider (string title)
+        public NodeSliderItem CustomUIItemSlider (string title)
         {
-            return new NodeNumericSliderItem ("NodeSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagSlider", outputTag = new string [] { "tagNumericSlider", "tagSlider" } };
+            return new NodeSliderItem ("NodeSliderItem", 55.0f, 16.0f, SliderItemMin, SliderItemMax, SliderItemDef, false, true) { Tag = "tagSlider", outputTag = new string [] { "tagNumericSlider", "tagSlider" } };
         }
 
         public NodeNumericSliderItem CustomUIItemNumericSlider (string title)
         {
-            return new NodeNumericSliderItem ("NodeNumericSliderItem", 55.0f, 16.0f, 1, 10.0f, 1.0f, false, true) { Tag = "tagNumericSlider", outputTag = new string [] { "tagNumericSlider", "tagSlider" } };
+            return new NodeNumericSliderItem ("NodeNumericSliderItem", 55.0f, 16.0f, SliderItemMin, SliderItemMax, SliderItemDef, false, true) { Tag = "tagNumericSlider", outputTag = new string [] { "tagNumericSlider", "tagSlider" } };
         }
 
         public NodeItem[] CustomUIItemColorSlider (string title)

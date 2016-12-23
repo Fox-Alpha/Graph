@@ -104,7 +104,7 @@ namespace GraphNodes
 			//#####
 
 			nagiosNodes = new NagiosJSON ();
-			string [] connectorMenuItems = new string [] { "CheckBox", "CheckListBox", "ColorSlider", "DropDown", "Image", "Label", "NumericSlider", "Slider", "MultilineText", "TextBox" };
+			string [] connectorMenuItems = new string [] {"Label", "TextBox", "MultilineText", "CheckBox", "CheckListBox", "Slider", "NumericSlider", "ColorSlider", "DropDown", "Image", "Custom"  };
 
 			if (nagiosNodes.LoadSettings ())
 			{
@@ -173,14 +173,59 @@ namespace GraphNodes
         private void AddNodeItem2Node (ToolStripMenuItem toolStripMenuItem)
         {
             NodeItem nodeItem = null;
-            switch ((string) toolStripMenuItem.Tag)
+
+            CustomUI.Items.CustomUIItem cUI = new CustomUI.Items.CustomUIItem ();
+
+            Node node = clickedNode;
+            if (node != null)
             {
-                case "Bla":
-                    break;
-                //	"CheckBox", "CheckListBox", "ColorSlider", "DropDown", "Image", "Label", "NumericSlider", "Slider", "MultilineText", "TextBox" 
-                //	"tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"
+                //node.AddItem (nodeItem);
+                switch ((string) toolStripMenuItem.Tag)
+                {
+                    case "CheckBox":
+                        //nodeItem = cUI.CustomUIItemCheckBox ("");
+                        cUI.AddCustomUIItem2Node (node, ElementItemType.NodeCheckBoxItem);
+                        break;
+                    case "CheckListBox":
+                        //nodeItem = cUI.CustomUIItemCheckListBox ("", null);
+                        cUI.AddCustomUIItem2Node (node, ElementItemType.NodeCheckListBoxItem);
+                        break;
+                    case "ColorSlider":
+                        //nodeItem = cUI.CustomUIItemColorSlider ("");
+                        cUI.AddCustomUIItem2Node (node, ElementItemType.NodeColorItem);
+                        break;
+                    case "DropDown":
+                        //nodeItem = cUI.CustomUIItemDropDown ("", null);
+                        cUI.AddCustomUIItem2Node (node, ElementItemType.NodeDropDownItem);
+                        break;
+                    case "Image":
+                        //nodeItem = cUI.CustomUIItemImage ("");
+                        cUI.AddCustomUIItem2Node (node, ElementItemType.NodeImageItem);
+                        break;
+                    case "Label":
+                        //nodeItem = cUI.CustomUIItemLabel ("");
+                        cUI.AddCustomUIItem2Node (node, ElementItemType.NodeLabelItem);
+                        break;
+                    case "NumericSlider":
+                        //nodeItem = cUI.CustomUIItemNumericSlider ("");
+                        cUI.AddCustomUIItem2Node (node, ElementItemType.NodeNumericSliderItem);
+                        break;
+                    case "Slider":
+                        //nodeItem = cUI.CustomUIItemSlider ("");
+                        cUI.AddCustomUIItem2Node (node, ElementItemType.NodeSliderItem);
+                        break;
+                    case "TextBox":
+                        // nodeItem = cUI.CustomUIItemTextBox ("");
+                        cUI.AddCustomUIItem2Node (node, ElementItemType.NodeTextBoxItem);
+                        break;
+                    default:
+                        break;
+                }
             }
+            //	"CheckBox", "CheckListBox", "ColorSlider", "DropDown", "Image", "Label", "NumericSlider", "Slider", "MultilineText", "TextBox" 
+            //	"tagCheckBox", "tagCheckListBox", "tagColorSlider", "tagDropDown", "tagImage", "tagLabel", "tagNumericSlider", "tagSlider", "tagMultilineText", "tagTextBox"
         }
+    
 
         private void AddNagiosCustomUIItem (ToolStripMenuItem toolStripMenuItem)
 		{
@@ -218,9 +263,12 @@ namespace GraphNodes
 				case "TextBox":
 					node = new CustomUINodeTextBoxItem ("CustomUINodeTextBoxItem");
 					break;
-			}
+                case "Custom":
+                    node = new CustomUINodeLabelItem ("Benutzerdefiniert");
+                    break;
+            }
 
-			if (node != null)
+            if (node != null)
 			{
                 if (node.Items.Count<NodeItem>() > 0 && clickedNodeItem != null)
                 {
